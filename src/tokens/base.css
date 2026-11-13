@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-body);
+  font-size: var(--gl-text-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 1px solid var(--gl-ink);
+  outline-offset: -1px;
+}
+
+/* Textures: the instrument-panel feel. Use on empty or decorative cells. */
+.gl-dots {
+  background-image: radial-gradient(var(--gl-rule-strong) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.gl-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--gl-rule) 0 1px,
+    transparent 1px 6px
+  );
+}

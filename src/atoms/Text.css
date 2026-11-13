@@ -1,0 +1,6 @@
+.gl-text { margin: 0; font-family: var(--gl-font-body); font-size: var(--gl-text-md); line-height: 1.6; max-width: 68ch; }
+.gl-text--small { font-size: 12px; line-height: 1.5; }
+.gl-text--lead { font-family: var(--gl-font-display); font-size: 18px; line-height: 1.5; }
+.gl-text--ink { color: var(--gl-ink); }
+.gl-text--muted { color: var(--gl-ink-2); }
+.gl-text a { color: inherit; text-underline-offset: 2px; text-decoration-thickness: 1px; }

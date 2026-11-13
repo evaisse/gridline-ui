@@ -1,0 +1,16 @@
+.gl-meter-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(120px, 2fr) 88px 64px;
+  align-items: center;
+  gap: var(--gl-space-4);
+  min-height: 44px;
+  padding: 0 var(--gl-space-4);
+  border-bottom: 1px solid var(--gl-rule);
+}
+.gl-meter-row__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-meter-row__value, .gl-meter-row__rank { justify-self: end; }
+.gl-meter-row__rank { display: inline-flex; align-items: baseline; gap: 2px; }
+@media (max-width: 560px) {
+  .gl-meter-row { grid-template-columns: minmax(0, 1fr) auto auto; row-gap: var(--gl-space-2); padding-block: var(--gl-space-3); }
+  .gl-meter-row > .gl-meter { grid-column: 1 / -1; grid-row: 2; }
+}

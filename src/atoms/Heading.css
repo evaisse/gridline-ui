@@ -1,0 +1,13 @@
+.gl-heading {
+  margin: 0;
+  font-family: var(--gl-font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--gl-ink);
+  text-wrap: balance;
+}
+.gl-heading--md { font-size: var(--gl-text-lg); line-height: 1.3; }
+.gl-heading--lg { font-size: 19px; line-height: 1.25; }
+.gl-heading--xl { font-size: var(--gl-text-xl); }
+.gl-heading--2xl { font-size: var(--gl-text-2xl); }

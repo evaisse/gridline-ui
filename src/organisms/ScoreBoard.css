@@ -1,0 +1,20 @@
+.gl-score-board { border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-score-board > .gl-meter-row { border-inline: 1px solid var(--gl-rule-strong); }
+.gl-score-board > .gl-meter-row:last-child { border-bottom: 0; }
+.gl-score-board__head {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(120px, 2fr) 88px 64px;
+  align-items: center;
+  gap: var(--gl-space-4);
+  height: var(--gl-row-sm);
+  padding: 0 var(--gl-space-4);
+  border: 1px solid var(--gl-rule-strong);
+  border-top: 0;
+  background: var(--gl-surface-1);
+}
+.gl-score-board__num { justify-self: end; }
+@media (max-width: 560px) {
+  .gl-score-board__head { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .gl-score-board__head > span:empty { display: none; }
+  .gl-score-board .gl-tabs__tab { padding: 0 var(--gl-space-2); }
+}

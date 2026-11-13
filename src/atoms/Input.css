@@ -1,0 +1,25 @@
+.gl-input {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-2);
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  background: var(--gl-paper);
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+}
+.gl-input--cell { border: 0; border-radius: 0; background: transparent; }
+.gl-input:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-input__leading { color: var(--gl-ink-3); font-family: var(--gl-font-mono); }
+.gl-input__control {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--gl-ink);
+  font: inherit;
+  font-size: var(--gl-text-md);
+}
+.gl-input__control::placeholder { color: var(--gl-ink-3); }

@@ -1,0 +1,19 @@
+.gl-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-3);
+  width: 100%;
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  border: 0;
+  border-bottom: 1px solid var(--gl-rule);
+  background: var(--gl-surface-1);
+  color: var(--gl-ink);
+  text-align: left;
+  cursor: pointer;
+}
+.gl-nav-item:hover { background: var(--gl-surface-3); }
+.gl-nav-item[aria-current='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-nav-item__icon { display: grid; place-items: center; width: 16px; font-size: 12px; opacity: 0.8; }
+.gl-nav-item__label { flex: 1; }
+.gl-nav-item__count { opacity: 0.7; }

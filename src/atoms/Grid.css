@@ -1,0 +1,20 @@
+.gl-grid {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+}
+.gl-grid--framed { border: 1px solid var(--gl-rule-strong); }
+
+/* Each cell draws its right and bottom hairline into the 1px gap. */
+.gl-cell {
+  min-width: 0;
+  box-shadow: 1px 0 0 0 var(--gl-rule), 0 1px 0 0 var(--gl-rule), 1px 1px 0 0 var(--gl-rule);
+}
+.gl-cell--pad-none { padding: 0; }
+.gl-cell--pad-sm { padding: var(--gl-space-3); }
+.gl-cell--pad-md { padding: var(--gl-space-4); }
+.gl-cell--pad-lg { padding: var(--gl-space-5); }
+.gl-cell--paper { background: var(--gl-paper); }
+.gl-cell--surface-1 { background: var(--gl-surface-1); }
+.gl-cell--surface-2 { background: var(--gl-surface-2); }
+.gl-cell--invert { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

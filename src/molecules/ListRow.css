@@ -1,0 +1,21 @@
+.gl-row {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-3);
+  width: 100%;
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  border: 0;
+  border-bottom: 1px solid var(--gl-rule);
+  background: var(--gl-surface-1);
+  color: var(--gl-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.gl-row:hover { background: var(--gl-surface-3); }
+.gl-row[aria-current='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-row__meta { flex: none; width: 104px; opacity: 0.8; }
+.gl-row__icon { flex: none; display: grid; place-items: center; width: 16px; font-size: 12px; }
+.gl-row__title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-row__trailing { flex: none; display: inline-flex; align-items: center; font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); opacity: 0.8; }

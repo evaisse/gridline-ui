@@ -1,0 +1,9 @@
+.gl-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gl-space-3);
+  padding: var(--gl-space-4);
+  background: rgb(var(--gl-tone) / 0.08);
+}
+.gl-stat__figure { display: flex; align-items: baseline; gap: var(--gl-space-3); }
+.gl-stat__note { font-family: var(--gl-font-display); font-size: var(--gl-text-lg); color: var(--gl-ink-3); }

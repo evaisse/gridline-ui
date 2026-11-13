@@ -1,0 +1,18 @@
+.gl-toolbar {
+  display: flex;
+  align-items: stretch;
+  min-height: var(--gl-row);
+  border-bottom: 1px solid var(--gl-rule-strong);
+  background: var(--gl-surface-1);
+}
+.gl-toolbar__cell {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-2);
+  padding: 0 var(--gl-space-3);
+  border-right: 1px solid var(--gl-rule-strong);
+}
+.gl-toolbar__cell--flush { padding: 0; }
+.gl-toolbar__cell--flush > * { flex: 1; }
+.gl-toolbar__cell--grow { flex: 1; min-width: 0; }
+.gl-toolbar__cell:last-child { border-right: 0; }

@@ -1,0 +1,25 @@
+.gl-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gl-space-2);
+  height: var(--gl-row-sm);
+  padding: 0 var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-sm);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.gl-button--sm { height: 24px; padding: 0 var(--gl-space-2); font-size: var(--gl-text-xs); }
+.gl-button:hover { background: var(--gl-surface-2); }
+.gl-button:active { background: var(--gl-surface-3); }
+.gl-button--solid { background: var(--gl-invert-bg); border-color: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-button--solid:hover, .gl-button--solid:active { background: var(--gl-invert-bg); opacity: 0.88; }
+.gl-button--ghost { border-color: transparent; background: transparent; }
+.gl-button:disabled { color: var(--gl-ink-3); background: var(--gl-surface-1); border-color: var(--gl-rule); cursor: not-allowed; opacity: 1; }
+.gl-button__icon { display: inline-grid; place-items: center; font-size: 12px; line-height: 1; }

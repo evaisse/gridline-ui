@@ -1,0 +1,14 @@
+.gl-master-list { display: flex; flex-direction: column; min-height: 0; }
+.gl-master-list__search { border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-master-list__head {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-3);
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  border-bottom: 1px solid var(--gl-rule);
+  background: var(--gl-surface-1);
+}
+.gl-master-list__meta-head { width: 104px; }
+.gl-master-list__rows { overflow: auto; }
+.gl-master-list__empty { display: grid; place-items: center; height: 120px; }

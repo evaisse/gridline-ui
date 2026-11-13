@@ -1,0 +1,8 @@
+.gl-index__hero { display: grid; gap: var(--gl-space-4); max-width: 720px; }
+.gl-index__band { display: flex; align-items: center; height: var(--gl-row); padding: 0 var(--gl-space-3); }
+.gl-index__body { display: grid; grid-template-columns: 240px minmax(0, 1fr); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-index__nav { border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+@media (max-width: 760px) {
+  .gl-index__body { grid-template-columns: 1fr; }
+  .gl-index__nav { border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+}

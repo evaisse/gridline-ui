@@ -1,0 +1,5 @@
+.gl-numeric { display: inline-flex; align-items: baseline; gap: 0.3em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gl-numeric--data { font-family: var(--gl-font-mono); font-size: var(--gl-text-md); }
+.gl-numeric--display { font-family: var(--gl-font-display); font-size: var(--gl-text-2xl); line-height: 1; letter-spacing: -0.01em; font-variant-numeric: lining-nums tabular-nums; }
+.gl-numeric__unit { font-size: 0.72em; color: var(--gl-ink-3); }
+.gl-numeric--display .gl-numeric__unit { font-size: 0.45em; }

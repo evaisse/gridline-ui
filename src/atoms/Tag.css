@@ -1,0 +1,17 @@
+.gl-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+  padding: 0 6px;
+  border: 1px solid rgb(var(--gl-tone) / 0.3);
+  border-radius: var(--gl-radius);
+  background: rgb(var(--gl-tone) / 0.06);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-xs);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.gl-tag__dot { width: 6px; height: 6px; background: rgb(var(--gl-tone)); }

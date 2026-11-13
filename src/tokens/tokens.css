@@ -1,0 +1,79 @@
+/*
+ * Gridline tokens.
+ * One ink, one tint. Every rule and surface is the tint at an opacity,
+ * so changing --gl-tint re-themes the whole system.
+ */
+:root {
+  /* Colour */
+  --gl-tint: 28 52 84;
+  --gl-paper: #ffffff;
+  --gl-ink: #15171a;
+  --gl-ink-2: rgb(21 23 26 / 0.66);
+  --gl-ink-3: rgb(21 23 26 / 0.44);
+  --gl-brand: rgb(var(--gl-tint));
+
+  --gl-rule: rgb(var(--gl-tint) / 0.14);
+  --gl-rule-strong: rgb(var(--gl-tint) / 0.32);
+  --gl-surface-1: rgb(var(--gl-tint) / 0.04);
+  --gl-surface-2: rgb(var(--gl-tint) / 0.08);
+  --gl-surface-3: rgb(var(--gl-tint) / 0.14);
+
+  /* Selection is a full inversion, never a glow. */
+  --gl-invert-bg: rgb(var(--gl-tint));
+  --gl-invert-fg: #ffffff;
+
+  /* Data tones: saturated colour belongs to data, never to chrome. */
+  --gl-pos: 38 110 70;
+  --gl-neg: 184 66 54;
+  --gl-warn: 140 108 24;
+  --gl-info: 44 92 160;
+
+  /* Shape and rhythm */
+  --gl-radius: 2px;
+  --gl-row: 40px;
+  --gl-row-sm: 32px;
+  --gl-space-1: 4px;
+  --gl-space-2: 8px;
+  --gl-space-3: 12px;
+  --gl-space-4: 16px;
+  --gl-space-5: 24px;
+  --gl-space-6: 40px;
+  --gl-space-7: 64px;
+  --gl-frame: 1280px;
+
+  /* Type: three voices, three jobs. */
+  --gl-font-display: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, serif;
+  --gl-font-body: 'Inter Variable', Inter, system-ui, sans-serif;
+  --gl-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+
+  --gl-text-xs: 10px;
+  --gl-text-sm: 11px;
+  --gl-text-md: 13px;
+  --gl-text-lg: 16px;
+  --gl-text-xl: 24px;
+  --gl-text-2xl: 36px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --gl-tint: 196 212 232;
+  --gl-paper: #0f1113;
+  --gl-ink: #ecebe6;
+  --gl-ink-2: rgb(236 235 230 / 0.68);
+  --gl-ink-3: rgb(236 235 230 / 0.46);
+  --gl-invert-bg: #e3e8ee;
+  --gl-invert-fg: #0f1113;
+  --gl-pos: 110 190 140;
+  --gl-neg: 232 124 110;
+  --gl-warn: 214 178 86;
+  --gl-info: 124 168 232;
+  color-scheme: dark;
+}
+
+/* Tone scopes: set --gl-tone on any element that carries a data tone. */
+.gl-tone--neutral { --gl-tone: var(--gl-tint); }
+.gl-tone--pos { --gl-tone: var(--gl-pos); }
+.gl-tone--neg { --gl-tone: var(--gl-neg); }
+.gl-tone--warn { --gl-tone: var(--gl-warn); }
+.gl-tone--info { --gl-tone: var(--gl-info); }

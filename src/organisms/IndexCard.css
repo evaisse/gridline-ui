@@ -1,0 +1,18 @@
+.gl-index-card { display: flex; flex-direction: column; height: 100%; background: var(--gl-surface-1); }
+.gl-index-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-5);
+  border-bottom: 1px solid var(--gl-rule);
+  background: var(--gl-paper);
+}
+.gl-index-card__body { flex: 1; display: flex; flex-direction: column; gap: var(--gl-space-3); padding: var(--gl-space-5); }
+.gl-index-card__facts { display: grid; gap: var(--gl-space-1); margin: 0; }
+.gl-index-card__facts > div { display: flex; gap: 6px; }
+.gl-index-card__facts dd { margin: 0; }
+.gl-index-card__desc { font-size: 15px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.gl-index-card__foot { display: grid; gap: var(--gl-space-2); padding: var(--gl-space-4) var(--gl-space-5); border-top: 1px solid var(--gl-rule); }
+.gl-index-card__list { display: grid; gap: var(--gl-space-1); margin: 0; padding: 0; list-style: none; }
+.gl-index-card__list li { display: flex; align-items: baseline; gap: var(--gl-space-4); }

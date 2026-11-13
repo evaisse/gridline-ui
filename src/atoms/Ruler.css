@@ -1,0 +1,29 @@
+.gl-ruler {
+  position: relative;
+  height: 20px;
+  background: repeating-linear-gradient(90deg, var(--gl-ink-3) 0 1px, transparent 1px 4px) left bottom 4px / 100% 8px no-repeat;
+}
+.gl-ruler__range {
+  position: absolute;
+  inset: auto 0 4px 0;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, var(--gl-ink) 0 1px, transparent 1px 4px);
+  clip-path: inset(0 calc(100% - var(--gl-ruler-hi)) 0 var(--gl-ruler-lo));
+}
+.gl-ruler__marker {
+  position: absolute;
+  left: var(--gl-ruler-at);
+  bottom: 4px;
+  width: 1px;
+  height: 16px;
+  background: var(--gl-ink);
+}
+.gl-ruler__marker::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  bottom: -5px;
+  border: 3.5px solid transparent;
+  border-bottom-color: var(--gl-ink);
+  border-top: 0;
+}

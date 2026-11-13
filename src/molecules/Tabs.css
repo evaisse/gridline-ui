@@ -1,0 +1,14 @@
+.gl-tabs { display: flex; border: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-tabs__tab {
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-5);
+  border: 0;
+  border-right: 1px solid var(--gl-rule);
+  background: transparent;
+  color: var(--gl-ink-2);
+  cursor: pointer;
+}
+.gl-tabs--fill .gl-tabs__tab { flex: 1; }
+.gl-tabs__tab:last-child { border-right: 0; }
+.gl-tabs__tab:hover { background: var(--gl-surface-2); color: var(--gl-ink); }
+.gl-tabs__tab[aria-selected='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

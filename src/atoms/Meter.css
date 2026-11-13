@@ -1,0 +1,23 @@
+.gl-meter {
+  position: relative;
+  height: 12px;
+  min-width: 80px;
+  background-image: repeating-linear-gradient(90deg, rgb(var(--gl-tone) / 0.3) 0 1px, transparent 1px 4px);
+}
+.gl-meter__fill {
+  width: var(--gl-meter);
+  height: 100%;
+  background-color: rgb(var(--gl-tone) / 0.75);
+  background-image: repeating-linear-gradient(90deg, rgb(var(--gl-tone)) 0 1px, transparent 1px 2px);
+  border-right: 1px solid rgb(var(--gl-tone));
+}
+.gl-meter::after {
+  content: '';
+  position: absolute;
+  left: var(--gl-meter);
+  top: -3px;
+  bottom: -3px;
+  width: 1px;
+  margin-left: -1px;
+  background: rgb(var(--gl-tone));
+}

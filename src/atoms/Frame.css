@@ -1,0 +1,12 @@
+.gl-frame {
+  max-width: var(--gl-frame);
+  margin-inline: auto;
+  border-inline: 1px solid var(--gl-rule-strong);
+  background: var(--gl-paper);
+}
+.gl-section { border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-section--pad-none { padding: 0; }
+.gl-section--pad-md { padding: var(--gl-space-5); }
+.gl-section--pad-lg { padding: var(--gl-space-7) var(--gl-space-6); }
+.gl-section--surface-1 { background: var(--gl-surface-1); }
+.gl-section--invert { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
