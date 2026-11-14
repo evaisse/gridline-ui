@@ -1,0 +1,9 @@
+.gl-message { display: flex; gap: var(--gl-space-3); min-width: 0; }
+.gl-message--end { flex-direction: row-reverse; }
+.gl-message__avatar { flex: none; }
+.gl-message__main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--gl-space-1); }
+.gl-message--end .gl-message__main { align-items: flex-end; }
+.gl-message__header { display: flex; align-items: baseline; gap: var(--gl-space-2); min-height: 24px; align-items: center; }
+.gl-message__content { display: flex; flex-direction: column; gap: var(--gl-space-2); min-width: 0; max-width: 100%; }
+.gl-message--end .gl-message__content { align-items: flex-end; }
+.gl-message__footer { display: flex; align-items: center; gap: var(--gl-space-1); color: var(--gl-ink-2); }

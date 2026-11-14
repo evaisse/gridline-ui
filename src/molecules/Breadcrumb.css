@@ -1,0 +1,6 @@
+.gl-breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-2); margin: 0; padding: 0; list-style: none; }
+.gl-breadcrumb li { display: inline-flex; align-items: center; gap: var(--gl-space-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); letter-spacing: 0.02em; text-transform: uppercase; color: var(--gl-ink-2); }
+.gl-breadcrumb a { color: inherit; text-decoration: none; }
+.gl-breadcrumb a:hover { color: var(--gl-ink); text-decoration: underline; text-underline-offset: 2px; }
+.gl-breadcrumb [aria-current='page'] { color: var(--gl-ink); }
+.gl-breadcrumb__sep { color: var(--gl-ink-3); }

@@ -1,13 +1,13 @@
 import type { SelectHTMLAttributes } from 'react';
 import { cx } from '../utils/cx';
-import './Select.css';
+import './NativeSelect.css';
 
-export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+export interface NativeSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   variant?: 'ruled' | 'cell';
 }
 
 /** Native select dressed as a mono label with a ruled stepper. */
-export function Select({ variant = 'ruled', className, children, ...rest }: SelectProps) {
+export function NativeSelect({ variant = 'ruled', className, children, ...rest }: NativeSelectProps) {
   return (
     <span className={cx('gl-select', `gl-select--${variant}`, className)}>
       <select className="gl-select__control" {...rest}>{children}</select>

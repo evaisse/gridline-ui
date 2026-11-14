@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Button, Select } from '../atoms';
+import { Button, NativeSelect } from '../atoms';
 import { Toolbar, ToolbarCell } from './Toolbar';
 
 const meta = {
@@ -13,10 +13,10 @@ export const FiltersAndActions: StoryObj<typeof meta> = {
   render: () => (
     <Toolbar>
       <ToolbarCell flush style={{ width: 200 }}>
-        <Select variant="cell" aria-label="Category"><option>All packages</option><option>Parsing</option></Select>
+        <NativeSelect variant="cell" aria-label="Category"><option>All packages</option><option>Parsing</option></NativeSelect>
       </ToolbarCell>
       <ToolbarCell flush style={{ width: 200 }}>
-        <Select variant="cell" aria-label="Status"><option>Any status</option><option>Stable</option></Select>
+        <NativeSelect variant="cell" aria-label="Status"><option>Any status</option><option>Stable</option></NativeSelect>
       </ToolbarCell>
       <ToolbarCell grow />
       <ToolbarCell>

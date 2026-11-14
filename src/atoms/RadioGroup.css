@@ -1,0 +1,17 @@
+.gl-radio-group { display: grid; gap: var(--gl-space-2); }
+.gl-radio-group[data-orientation='horizontal'] { display: flex; flex-wrap: wrap; gap: var(--gl-space-4); }
+.gl-radio {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: 50%;
+  background: var(--gl-paper);
+  cursor: pointer;
+}
+.gl-radio:hover { background: var(--gl-surface-2); }
+.gl-radio__mark { display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--gl-invert-bg); }
+.gl-radio:disabled { opacity: 0.5; cursor: not-allowed; }

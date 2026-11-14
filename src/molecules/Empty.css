@@ -1,0 +1,4 @@
+.gl-empty { display: grid; place-items: center; min-height: 240px; padding: var(--gl-space-5); border: 1px solid var(--gl-rule-strong); }
+.gl-empty__box { display: grid; justify-items: center; gap: var(--gl-space-2); max-width: 320px; padding: var(--gl-space-5); border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); text-align: center; }
+.gl-empty__icon { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--gl-rule-strong); color: var(--gl-ink-2); }
+.gl-empty__action { display: flex; gap: var(--gl-space-2); margin-top: var(--gl-space-2); }

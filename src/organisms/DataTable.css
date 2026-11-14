@@ -1,7 +1,13 @@
-.gl-table { width: 100%; border-collapse: collapse; border: 1px solid var(--gl-rule-strong); font-size: var(--gl-text-md); }
-.gl-table__caption { padding: var(--gl-space-2) 0; text-align: left; }
-.gl-table th, .gl-table td { height: var(--gl-row); padding: 0 var(--gl-space-4); text-align: left; border-bottom: 1px solid var(--gl-rule); }
-.gl-table th { height: var(--gl-row-sm); background: var(--gl-surface-1); border-bottom-color: var(--gl-rule-strong); font-weight: 400; }
-.gl-table tbody tr:last-child td { border-bottom: 0; }
-.gl-table tbody tr:hover { background: var(--gl-surface-1); }
-.gl-table .gl-table__num { text-align: right; font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; }
+@import '../molecules/Table.css';
+.gl-data-table { min-width: 0; }
+.gl-data-table__scroll { overflow-x: auto; }
+.gl-data-table__check { width: 40px; padding-right: 0 !important; }
+.gl-data-table__check > * { vertical-align: middle; }
+.gl-data-table__rank { width: 40px; border-right: 1px solid var(--gl-rule); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-align: center !important; padding: 0 !important; }
+.gl-data-table__sort { display: inline-flex; align-items: center; gap: var(--gl-space-1); padding: 0; border: 0; background: transparent; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+.gl-data-table__sort:hover, .gl-data-table__sort[data-active] { color: var(--gl-ink); }
+.gl-data-table__sort:not([data-active]) > svg { opacity: 0.5; }
+.gl-data-table tr[data-top] { background: rgb(var(--gl-pos) / 0.07); }
+.gl-data-table tr[data-top='1'] { background: rgb(var(--gl-pos) / 0.22); }
+.gl-data-table tr[data-top='2'] { background: rgb(var(--gl-pos) / 0.14); }
+.gl-data-table__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--gl-space-3); padding: var(--gl-space-2) var(--gl-space-3); border: 1px solid var(--gl-rule-strong); border-top: 0; background: var(--gl-surface-1); }

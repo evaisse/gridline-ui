@@ -1,0 +1,4 @@
+.gl-message-scroller { position: relative; display: flex; min-height: 0; }
+.gl-message-scroller__viewport { flex: 1; overflow-y: auto; }
+.gl-message-scroller__content { display: flex; flex-direction: column; gap: var(--gl-space-5); padding: var(--gl-space-4); }
+.gl-message-scroller__jump { position: absolute; left: 50%; bottom: var(--gl-space-3); transform: translateX(-50%); }

@@ -1,0 +1,37 @@
+.gl-sidebar-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); min-height: 100%; transition: grid-template-columns 120ms ease-out; }
+.gl-sidebar-layout[data-sidebar='closed'] { grid-template-columns: 41px minmax(0, 1fr); }
+.gl-sidebar { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-sidebar__header, .gl-sidebar__footer { display: flex; align-items: center; gap: var(--gl-space-2); min-height: var(--gl-row); padding: 0 var(--gl-space-3); white-space: nowrap; }
+.gl-sidebar__header { border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-sidebar__footer { border-top: 1px solid var(--gl-rule-strong); }
+.gl-sidebar__content { flex: 1; overflow-y: auto; overflow-x: hidden; }
+.gl-sidebar__group-label { display: flex; align-items: center; height: 28px; padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); white-space: nowrap; }
+.gl-sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-3);
+  width: 100%;
+  height: var(--gl-row-sm);
+  padding: 0 var(--gl-space-3);
+  border: 0;
+  border-bottom: 1px solid var(--gl-rule);
+  background: transparent;
+  color: var(--gl-ink);
+  font: inherit;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.gl-sidebar__item:hover { background: var(--gl-surface-3); }
+.gl-sidebar__item[aria-current='page'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-sidebar__item-icon { flex: none; display: grid; }
+.gl-sidebar__item-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.gl-sidebar__item-badge { opacity: 0.7; }
+.gl-sidebar-layout[data-sidebar='closed'] :is(.gl-sidebar__item-label, .gl-sidebar__item-badge, .gl-sidebar__group-label, .gl-sidebar__header > :not(:first-child), .gl-sidebar__footer > :not(:first-child)) { display: none; }
+.gl-sidebar-inset { min-width: 0; }
+@media (max-width: 760px) {
+  .gl-sidebar-layout, .gl-sidebar-layout[data-sidebar='closed'] { grid-template-columns: 41px minmax(0, 1fr); }
+  .gl-sidebar-layout[data-sidebar='open'] .gl-sidebar { position: absolute; z-index: 30; width: 240px; height: 100%; }
+  .gl-sidebar-layout { position: relative; }
+  .gl-sidebar-layout[data-sidebar='open'] > .gl-sidebar-inset { grid-column: 2; }
+}

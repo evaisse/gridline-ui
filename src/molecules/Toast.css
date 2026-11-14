@@ -1,0 +1,16 @@
+.gl-toast-viewport { position: fixed; right: var(--gl-space-4); bottom: var(--gl-space-4); z-index: 70; display: grid; gap: var(--gl-space-2); width: min(340px, calc(100vw - 32px)); margin: 0; padding: 0; list-style: none; }
+.gl-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gl-space-3);
+  padding: var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  border-left: 3px solid rgb(var(--gl-tone));
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-body);
+  font-size: var(--gl-text-md);
+  animation: gl-pop-in 120ms ease-out;
+}
+.gl-toast__body { flex: 1; display: grid; gap: 2px; }
+.gl-toast__desc { color: var(--gl-ink-2); font-size: 12px; }

@@ -1,0 +1,4 @@
+.gl-separator { flex: none; background: var(--gl-rule); }
+.gl-separator--strong { background: var(--gl-rule-strong); }
+.gl-separator[data-orientation='horizontal'] { height: 1px; width: 100%; }
+.gl-separator[data-orientation='vertical'] { width: 1px; align-self: stretch; min-height: 1em; }

@@ -1,0 +1,11 @@
+.gl-bubble-wrap { display: flex; flex-direction: column; gap: var(--gl-space-1); max-width: min(100%, 60ch); }
+.gl-bubble-wrap--start { align-items: flex-start; align-self: flex-start; }
+.gl-bubble-wrap--end { align-items: flex-end; align-self: flex-end; }
+.gl-bubble { min-width: 0; max-width: 100%; padding: var(--gl-space-2) var(--gl-space-3); border-radius: var(--gl-radius); line-height: 1.55; overflow-wrap: anywhere; }
+.gl-bubble--tinted { background: var(--gl-surface-2); border: 1px solid var(--gl-rule); }
+.gl-bubble--ruled { border: 1px solid var(--gl-rule-strong); }
+.gl-bubble--solid { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-bubble--plain { padding: 0; }
+.gl-bubble__reactions { display: flex; gap: var(--gl-space-1); }
+.gl-bubble-group { display: flex; flex-direction: column; gap: 0; }
+.gl-bubble-group > .gl-bubble-wrap + .gl-bubble-wrap { margin-top: -1px; }

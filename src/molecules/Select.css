@@ -1,0 +1,23 @@
+.gl-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gl-space-3);
+  width: 100%;
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-sm);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.gl-select-trigger--cell { border: 0; border-radius: 0; background: transparent; }
+.gl-select-trigger:hover { background: var(--gl-surface-2); }
+.gl-select-trigger[data-placeholder] { color: var(--gl-ink-3); }
+.gl-select-trigger__icon { display: grid; color: var(--gl-ink-2); }
+.gl-select-content { width: var(--radix-select-trigger-width); max-height: var(--radix-select-content-available-height); overflow: auto; }

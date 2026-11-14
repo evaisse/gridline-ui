@@ -1,0 +1,6 @@
+.gl-button-group { display: inline-flex; }
+.gl-button-group--vertical { flex-direction: column; }
+.gl-button-group > * { border-radius: 0; }
+.gl-button-group--horizontal > * + * { margin-left: -1px; }
+.gl-button-group--vertical > * + * { margin-top: -1px; }
+.gl-button-group > :hover, .gl-button-group > :focus-visible, .gl-button-group > [data-state='on'] { position: relative; z-index: 1; }

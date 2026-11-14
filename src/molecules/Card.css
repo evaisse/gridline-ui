@@ -1,0 +1,6 @@
+.gl-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-card__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--gl-space-3); padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-card__heading { display: grid; gap: 2px; min-width: 0; }
+.gl-card__action { flex: none; display: flex; align-items: center; gap: var(--gl-space-2); }
+.gl-card__content { flex: 1; padding: var(--gl-space-4); }
+.gl-card__footer { display: flex; align-items: center; gap: var(--gl-space-2); padding: var(--gl-space-3) var(--gl-space-4); border-top: 1px solid var(--gl-rule); }

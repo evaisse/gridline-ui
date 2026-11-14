@@ -1,0 +1,18 @@
+.gl-otp { display: inline-flex; align-items: center; }
+.gl-otp__cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--gl-row);
+  height: var(--gl-row);
+  margin-left: -1px;
+  border: 1px solid var(--gl-rule-strong);
+  background: var(--gl-paper);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-lg);
+}
+.gl-otp__cell:first-child, .gl-otp__dash + .gl-otp__cell { margin-left: 0; }
+.gl-otp__cell[data-active] { z-index: 1; border-color: var(--gl-ink); }
+.gl-otp__dash { width: 8px; height: 1px; margin: 0 var(--gl-space-2); background: var(--gl-ink-3); }
+.gl-otp__caret { position: absolute; width: 1px; height: 16px; background: var(--gl-ink); animation: gl-caret 1s steps(1) infinite; }
+@keyframes gl-caret { 50% { opacity: 0; } }

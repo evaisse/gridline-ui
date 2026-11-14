@@ -1,0 +1,19 @@
+.gl-toggle-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gl-space-2);
+  min-width: var(--gl-row-sm);
+  height: var(--gl-row-sm);
+  padding: 0 var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-sm);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.gl-toggle-item:hover { background: var(--gl-surface-2); }
+.gl-toggle-item[data-state='on'] { background: var(--gl-invert-bg); border-color: var(--gl-invert-bg); color: var(--gl-invert-fg); }

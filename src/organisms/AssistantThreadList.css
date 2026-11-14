@@ -1,0 +1,11 @@
+.gl-thread-list { display: flex; flex-direction: column; min-height: 0; height: 100%; background: var(--gl-surface-1); font-size: var(--gl-text-md); }
+.gl-thread-list__head { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-2); min-height: var(--gl-row); padding: 0 var(--gl-space-2) 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-thread-list__items { flex: 1; overflow-y: auto; }
+.gl-thread-list__item { display: flex; align-items: stretch; height: var(--gl-row); border-bottom: 1px solid var(--gl-rule); color: var(--gl-ink); }
+.gl-thread-list__item:hover { background: var(--gl-surface-3); }
+.gl-thread-list__item:is([data-active], [aria-current='true']) { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-thread-list__trigger { flex: 1; min-width: 0; padding: 0 var(--gl-space-3); border: 0; background: transparent; color: inherit; font: inherit; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.gl-thread-list__delete { display: grid; place-items: center; width: 32px; border: 0; background: transparent; color: inherit; opacity: 0; cursor: pointer; }
+.gl-thread-list__item:hover .gl-thread-list__delete, .gl-thread-list__delete:focus-visible { opacity: 0.7; }
+.gl-thread-list__delete:hover { opacity: 1; }
+.gl-thread-list__empty { display: grid; place-items: center; height: 96px; margin: var(--gl-space-3); border: 1px solid var(--gl-rule); }

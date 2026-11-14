@@ -1,5 +1,6 @@
 // Invented data for the page stories. Nothing here is a real package or measurement.
-import type { Category, MasterListItem, ScoreView, Spec } from '../organisms';
+import type { Category, MasterListItem, ScatterSeries, ScoreView, Slice, Spec } from '../organisms';
+import type { ChartSeries } from '../tokens/series';
 
 export const packages: MasterListItem[] = [
   { id: 'tessera', title: 'tessera', meta: 'Nov 12, 2026', icon: '◆', trailing: '4.2.0' },
@@ -93,4 +94,51 @@ export const cards = [
     description: 'Project navigation: symbol index, references, and a fast fuzzy finder.',
     listTitle: 'Top modules', list: ['index', 'query', 'watch'],
   },
+];
+
+/* Dashboard */
+
+export const runtimeSeries: ChartSeries[] = [{ key: 'node', label: 'Node' }, { key: 'browser', label: 'Browser' }, { key: 'edge', label: 'Edge' }];
+
+export const installs = ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'].map((month, i) => ({
+  month,
+  node: [186, 305, 237, 273, 309, 344][i],
+  browser: [80, 120, 150, 190, 170, 220][i],
+  edge: [20, 34, 48, 61, 90, 118][i],
+}));
+
+export const runtimeShare: Slice[] = [
+  { key: 'node', label: 'Node', value: 344 },
+  { key: 'browser', label: 'Browser', value: 220 },
+  { key: 'edge', label: 'Edge', value: 118 },
+  { key: 'other', label: 'Other', value: 46, color: 8 },
+];
+
+export interface LeaderboardRow {
+  name: string;
+  status: 'Stable' | 'Beta' | 'Deprecated';
+  score: number;
+  cost: number;
+  build: number;
+}
+
+export const leaderboard: LeaderboardRow[] = [
+  { name: 'tessera', status: 'Stable', score: 71.31, cost: 4.1, build: 3.2 },
+  { name: 'castor', status: 'Stable', score: 70.45, cost: 9.84, build: 9.8 },
+  { name: 'marlin', status: 'Stable', score: 66.79, cost: 14.6, build: 12.1 },
+  { name: 'sextant', status: 'Stable', score: 65.02, cost: 2.2, build: 5.4 },
+  { name: 'quillmark', status: 'Beta', score: 62.52, cost: 6.44, build: 8.0 },
+  { name: 'lumen-fmt', status: 'Beta', score: 61.26, cost: 6.5, build: 21.5 },
+  { name: 'bramble', status: 'Beta', score: 59.85, cost: 18.9, build: 7.7 },
+  { name: 'ostinato', status: 'Stable', score: 59.05, cost: 8.52, build: 4.9 },
+  { name: 'fennel-io', status: 'Stable', score: 56.53, cost: 3.61, build: 6.3 },
+  { name: 'harrow', status: 'Deprecated', score: 43.42, cost: 0.66, build: 1.4 },
+  { name: 'juniper', status: 'Beta', score: 29.78, cost: 22.4, build: 30.2 },
+];
+
+const point = (row: LeaderboardRow) => ({ x: row.cost, y: row.score, label: row.name });
+
+export const scatterField: ScatterSeries[] = [
+  { key: 'stable', label: 'Stable', points: leaderboard.filter((row) => row.status === 'Stable').map(point) },
+  { key: 'beta', label: 'Beta', points: leaderboard.filter((row) => row.status === 'Beta').map(point) },
 ];

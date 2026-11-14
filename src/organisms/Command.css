@@ -1,0 +1,22 @@
+.gl-command { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); color: var(--gl-ink); font-size: var(--gl-text-md); }
+.gl-pop > .gl-command, .gl-dialog .gl-command { border: 0; }
+.gl-command__input { display: flex; align-items: center; gap: var(--gl-space-2); height: var(--gl-row); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); color: var(--gl-ink-3); }
+.gl-command__control { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--gl-ink); font: inherit; }
+.gl-command__control::placeholder { color: var(--gl-ink-3); }
+.gl-command__list { max-height: 280px; overflow: auto; }
+.gl-command__empty { display: grid; place-items: center; height: 80px; color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; }
+.gl-command__group [cmdk-group-heading] {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 var(--gl-space-3);
+  border-bottom: 1px solid var(--gl-rule);
+  background: var(--gl-surface-1);
+  color: var(--gl-ink-2);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-xs);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.gl-command__group:not(:last-child) { border-bottom: 1px solid var(--gl-rule); }
+.gl-command .gl-menu-item { cursor: pointer; }

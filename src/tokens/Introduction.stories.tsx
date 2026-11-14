@@ -14,9 +14,9 @@ const rules = [
 
 const layers = [
   ['tokens', 'CSS variables, tones, base styles'],
-  ['atoms', 'Label, Heading, Button, Grid…'],
-  ['molecules', 'Stat, Tabs, ListRow…'],
-  ['organisms', 'MasterList, ScoreBoard…'],
+  ['atoms', 'Label, Button, Checkbox, Tooltip…'],
+  ['molecules', 'Stat, Dialog, Field, Calendar…'],
+  ['organisms', 'DataTable, charts, assistant thread…'],
   ['templates', 'Page skeletons with slots'],
   ['pages', 'Templates filled with fixtures'],
 ];
@@ -24,7 +24,7 @@ const layers = [
 function Introduction() {
   return (
     <div className="gl-doc">
-      <span className="cap">Gridline UI · v0.1</span>
+      <span className="cap">Gridline UI · v0.2</span>
       <h1>A compact, hairline-ruled design system</h1>
       <p className="lead">
         Gridline treats the interface as a technical table. Structure comes from thin rules and a visible grid, not from

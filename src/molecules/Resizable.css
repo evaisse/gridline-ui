@@ -1,0 +1,6 @@
+.gl-resizable { border: 1px solid var(--gl-rule-strong); }
+.gl-resizable__handle { position: relative; flex: none; background: var(--gl-rule-strong); outline: 0; }
+.gl-resizable__handle[aria-orientation='vertical'] { width: 1px; }
+.gl-resizable__handle[aria-orientation='horizontal'] { height: 1px; }
+.gl-resizable__handle::after { content: ''; position: absolute; inset: -3px; z-index: 1; }
+.gl-resizable__handle:hover, .gl-resizable__handle:focus-visible, .gl-resizable__handle[data-separator='active'] { background: var(--gl-ink); }

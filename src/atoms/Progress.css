@@ -1,0 +1,4 @@
+.gl-progress { position: relative; height: 6px; overflow: hidden; border: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-progress__bar { height: 100%; background: var(--gl-invert-bg); transition: width 200ms ease-out; }
+.gl-progress[data-state='indeterminate'] .gl-progress__bar { width: 40% !important; animation: gl-progress 1.2s linear infinite; }
+@keyframes gl-progress { from { transform: translateX(-100%); } to { transform: translateX(250%); } }

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Button, Heading, Label, Ruler, Select, Text } from '../atoms';
+import { Button, Heading, Label, Ruler, NativeSelect, Text } from '../atoms';
 import { Stat } from '../molecules';
 import { MasterList, ScoreBoard, SpecSheet, StatGroup, Toolbar, ToolbarCell } from '../organisms';
 import { MasterDetailTemplate } from '../templates';
@@ -22,10 +22,10 @@ function PackageDetail() {
           filters={
             <Toolbar>
               <ToolbarCell flush grow>
-                <Select variant="cell" aria-label="Category"><option>All packages</option><option>Parsing</option></Select>
+                <NativeSelect variant="cell" aria-label="Category"><option>All packages</option><option>Parsing</option></NativeSelect>
               </ToolbarCell>
               <ToolbarCell flush grow>
-                <Select variant="cell" aria-label="Status"><option>Any status</option><option>Stable</option></Select>
+                <NativeSelect variant="cell" aria-label="Status"><option>Any status</option><option>Stable</option></NativeSelect>
               </ToolbarCell>
             </Toolbar>
           }

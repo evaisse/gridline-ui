@@ -1,0 +1,3 @@
+.gl-action-bar, .gl-branch-picker { display: inline-flex; align-items: center; gap: 2px; color: var(--gl-ink-2); }
+.gl-action-bar[data-floating] { position: absolute; background: var(--gl-paper); border: 1px solid var(--gl-rule-strong); }
+.gl-action-bar .gl-button[data-submitted] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

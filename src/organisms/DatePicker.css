@@ -1,0 +1,2 @@
+.gl-date-picker > span { font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-date-picker__pop { width: auto; padding: var(--gl-space-3); }

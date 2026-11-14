@@ -1,0 +1,19 @@
+.gl-input-group { display: flex; align-items: stretch; min-height: var(--gl-row); border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-input-group:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-input-group > * { border-radius: 0; }
+.gl-input-group > :is(.gl-input, .gl-textarea) { flex: 1; min-width: 0; border: 0; outline: 0; height: auto; }
+.gl-input-group > .gl-button { height: auto; border-block: 0; border-right: 0; }
+.gl-input-group > .gl-button:first-child { border-left: 0; border-right: 1px solid var(--gl-rule-strong); }
+.gl-input-group__addon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gl-space-1);
+  padding: 0 var(--gl-space-3);
+  background: var(--gl-surface-1);
+  color: var(--gl-ink-2);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-sm);
+  white-space: nowrap;
+}
+.gl-input-group__addon:not(:last-child) { border-right: 1px solid var(--gl-rule); }
+.gl-input-group__addon:not(:first-child) { border-left: 1px solid var(--gl-rule); }

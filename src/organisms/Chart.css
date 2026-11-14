@@ -1,0 +1,25 @@
+.gl-chart { display: flex; flex-direction: column; min-width: 0; margin: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-chart__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--gl-space-3); padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-chart__heading { display: grid; gap: 2px; min-width: 0; }
+.gl-chart__toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-2); padding: var(--gl-space-2) var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-chart .gl-chart__legend { padding: var(--gl-space-2) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule); }
+.gl-chart__plot { position: relative; min-width: 0; background-color: var(--gl-surface-1); }
+.gl-chart__plot .recharts-surface { overflow: visible; outline: 0; }
+.gl-chart__plot :focus { outline: 0; }
+.gl-chart__plot :focus-visible { outline: 1px solid var(--gl-ink); }
+.gl-chart__footer { padding: var(--gl-space-2) var(--gl-space-4); border-top: 1px solid var(--gl-rule); color: var(--gl-ink-2); font-size: 12px; }
+
+.gl-chart-legend { display: flex; flex-wrap: wrap; gap: var(--gl-space-1) var(--gl-space-4); margin: 0; padding: 0; list-style: none; font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.03em; text-transform: uppercase; color: var(--gl-ink); }
+.gl-chart-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.gl-chart-legend__swatch { width: 8px; height: 8px; }
+
+.gl-chart-tooltip { min-width: 128px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
+.gl-chart-tooltip__label { padding: 4px 8px; border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); color: var(--gl-ink-2); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-chart-tooltip__row { display: flex; align-items: center; gap: 8px; padding: 4px 8px; }
+.gl-chart-tooltip__row + .gl-chart-tooltip__row { border-top: 1px solid var(--gl-rule); }
+.gl-chart-tooltip__name { flex: 1; color: var(--gl-ink-2); text-transform: uppercase; }
+.gl-chart-tooltip__value { font-variant-numeric: tabular-nums; }
+.gl-chart-tooltip__mark { flex: none; }
+.gl-chart-tooltip__mark--square { width: 8px; height: 8px; background: var(--gl-mark); }
+.gl-chart-tooltip__mark--line { width: 2px; height: 12px; background: var(--gl-mark); }
+.gl-chart-tooltip__mark--dashed { width: 12px; height: 0; border-top: 2px dashed var(--gl-mark); }

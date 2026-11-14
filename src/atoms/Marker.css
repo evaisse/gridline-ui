@@ -1,0 +1,13 @@
+.gl-marker {
+  display: flex;
+  align-items: center;
+  gap: var(--gl-space-3);
+  color: var(--gl-ink-2);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-xs);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.gl-marker__content { display: inline-flex; align-items: center; gap: var(--gl-space-2); }
+.gl-marker--separator::before, .gl-marker--separator::after { content: ''; flex: 1; height: 1px; background: var(--gl-rule); }
+.gl-marker--row { min-height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border-block: 1px solid var(--gl-rule); background: var(--gl-surface-1); }

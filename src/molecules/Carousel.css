@@ -1,0 +1,7 @@
+.gl-carousel { display: grid; gap: var(--gl-space-2); min-width: 0; }
+.gl-carousel__track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border: 1px solid var(--gl-rule-strong); }
+.gl-carousel__track::-webkit-scrollbar { display: none; }
+.gl-carousel__slide { flex: 0 0 calc(100% / var(--gl-per-view)); min-width: 0; scroll-snap-align: start; border-right: 1px solid var(--gl-rule); }
+.gl-carousel__slide:last-child { border-right: 0; }
+.gl-carousel__nav { display: flex; gap: var(--gl-space-1); justify-content: flex-end; }
+@media (max-width: 560px) { .gl-carousel__slide { flex-basis: 100%; } }

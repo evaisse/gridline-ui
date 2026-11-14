@@ -1,0 +1,9 @@
+.gl-chat { display: grid; grid-template-columns: 260px minmax(0, 1fr); height: 100dvh; background: var(--gl-paper); }
+.gl-chat__sidebar { min-height: 0; border-right: 1px solid var(--gl-rule-strong); }
+.gl-chat__main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.gl-chat__header { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-3); min-height: var(--gl-row); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-chat__thread { flex: 1; min-height: 0; }
+@media (max-width: 760px) {
+  .gl-chat { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); }
+  .gl-chat__sidebar { max-height: 168px; border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+}

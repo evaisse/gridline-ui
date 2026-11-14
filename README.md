@@ -28,17 +28,145 @@ npm run check      # typecheck + lint + boundary self-test
 
 ```
 src/
-  tokens/      CSS variables, tones, base styles          (foundation)
-  utils/       helpers such as cx()                       (foundation)
-  atoms/       Label, Heading, Text, Numeric, Button, Tag, Input, Select, Meter, Ruler, Grid, Frame
-  molecules/   KeyValue, Stat, Tabs, ListRow, MeterRow, NavItem, SearchField
-  organisms/   Toolbar, MasterList, SpecSheet, StatGroup, ScoreBoard, IndexCard, CategoryNav, DataTable
-  templates/   MasterDetailTemplate, IndexTemplate
-  pages/       stories that fill a template with fixtures
+  tokens/      CSS variables, tones, data palette, icons, overlay styles   (foundation)
+  utils/       cx(), styled(), the mock assistant runtime for stories     (foundation)
+  atoms/       33 single-purpose elements
+  molecules/   35 small compositions
+  organisms/   28 self-contained blocks, including charts and the assistant
+  templates/   MasterDetail, Index, Chat, Dashboard
+  pages/       stories that fill a template with invented fixtures
 ```
 
 The import chain is `tokens → atoms → molecules → organisms → templates → pages`.
 A layer imports from the layers to its left and never from those to its right.
+
+## Component inventory
+
+Gridline covers the component sets of [shadcn/ui](https://ui.shadcn.com/docs/components) and
+[assistant-ui](https://www.assistant-ui.com/), restyled to the eight rules. Behaviour comes from the same
+headless libraries those projects use; the markup and CSS are Gridline's own.
+
+### shadcn/ui
+
+| shadcn/ui | Gridline | Layer |
+|---|---|---|
+| Accordion | `Accordion` | molecule |
+| Alert | `Alert` | molecule |
+| Alert Dialog | `AlertDialog` | molecule |
+| Aspect Ratio | `AspectRatio` | atom |
+| Attachment | `Attachment` | molecule |
+| Avatar | `Avatar` | atom |
+| Badge | `Tag` | atom |
+| Breadcrumb | `Breadcrumb` | molecule |
+| Bubble | `Bubble`, `BubbleGroup` | molecule |
+| Button | `Button` | atom |
+| Button Group | `ButtonGroup` | molecule |
+| Calendar | `Calendar` | molecule |
+| Card | `Card` | molecule |
+| Carousel | `Carousel` | molecule |
+| Chart | `ChartFrame` and the chart components below | organism |
+| Checkbox | `Checkbox` | atom |
+| Code Block | `CodeBlock` | molecule |
+| Collapsible | `Collapsible` | atom |
+| Combobox | `Combobox` | organism |
+| Command | `Command` | organism |
+| Context Menu | `ContextMenu` | molecule |
+| Data Table | `DataTable` | organism |
+| Date Picker | `DatePicker` | organism |
+| Dialog | `Dialog` | molecule |
+| Direction | `DirectionProvider` | atom |
+| Drawer | `Drawer` | molecule |
+| Dropdown Menu | `DropdownMenu` | molecule |
+| Empty | `Empty` | molecule |
+| Field | `Field`, `FieldSet` | molecule |
+| Hover Card | `HoverCard` | atom |
+| Input | `Input` | atom |
+| Input Group | `InputGroup` | molecule |
+| Input OTP | `InputOTP` | molecule |
+| Item | `Item`, `ItemGroup` | molecule |
+| Kbd | `Kbd` | atom |
+| Label | `Label`, and `Field` for form labels | atom |
+| Marker | `Marker` | atom |
+| Menubar | `Menubar` | organism |
+| Message | `Message` | organism |
+| Message Scroller | `MessageScroller` | organism |
+| Native Select | `NativeSelect` | atom |
+| Navigation Menu | `NavigationMenu` | organism |
+| Pagination | `Pagination` | molecule |
+| Popover | `Popover` | atom |
+| Progress | `Progress` | atom |
+| Questionnaire | `Questionnaire` | organism |
+| Radio Group | `RadioGroup`, `Radio` | atom |
+| Resizable | `ResizableGroup` | molecule |
+| Scroll Area | `ScrollArea` | atom |
+| Select | `Select` | molecule |
+| Separator | `Separator` | atom |
+| Sheet | `Sheet` | molecule |
+| Sidebar | `Sidebar` | organism |
+| Skeleton | `Skeleton` | atom |
+| Slider | `Slider` | atom |
+| Spinner | `Spinner` | atom |
+| Switch | `Switch` | atom |
+| Table | `Table` | molecule |
+| Tabs | `Tabs`, `TabPanels` | molecule |
+| Textarea | `Textarea` | atom |
+| Toast | `Toaster`, `useToast` | molecule |
+| Toggle | `Toggle` | atom |
+| Toggle Group | `ToggleGroup` | molecule |
+| Tooltip | `Tooltip` | atom |
+| Trace | `Trace` | organism |
+| Typography | `Heading`, `Text`, `Prose`, `Blockquote`, `InlineCode` | atom |
+
+### assistant-ui
+
+These wrap `@assistant-ui/react` primitives, so they work with any assistant-ui runtime.
+Render them under an `AssistantRuntimeProvider`.
+
+| assistant-ui | Gridline | Layer |
+|---|---|---|
+| Thread, Message, Suggestion, Error, Selection Toolbar | `AssistantThread` | organism |
+| Composer, Attachment | `AssistantComposer` | organism |
+| Thread List | `AssistantThreadList` | organism |
+| Assistant Modal | `AssistantModal` | organism |
+| Assistant Sidebar | `AssistantSidebar` | organism |
+| Action Bar | `AssistantActionBar`, `UserActionBar` | molecule |
+| Branch Picker | `BranchPicker` | molecule |
+| Markdown | `MarkdownText` | molecule |
+| Reasoning, Chain of Thought | `Reasoning` | molecule |
+| Tool fallback | `ToolCall` | molecule |
+
+The stories run on `src/utils/mockAssistant.tsx`, a canned local model that reasons, calls a tool
+and streams Markdown. It makes no network request.
+
+### Charts
+
+All charts sit in a `ChartFrame` and read their colours from `--gl-data-1` to `--gl-data-8`.
+
+| Chart | Component | Variants |
+|---|---|---|
+| Area | `AreaChart` | linear, monotone, step, stacked |
+| Bar | `BarChart` | grouped, stacked, horizontal, with labels |
+| Line | `LineChart` | linear, monotone, step, with dots |
+| Pie | `PieChart` | pie, donut with centre, with labels |
+| Radar | `RadarChart` | polygon or circular grid, filled or outline |
+| Radial | `RadialChart` | rings, 180° gauge |
+| Tooltip | `ChartTooltip` | square, line or dashed marker |
+| Ranked columns | `ColumnChart` | one colour per column or one colour |
+| Scatter | `ScatterPlot` | quadrants, connected paths |
+| Ranked bars | `ScoreBoard`, `MeterRow` | tabbed metrics |
+| Leaderboard | `DataTable` | ranked, top rows tinted, sortable |
+
+## Libraries
+
+| Purpose | Library |
+|---|---|
+| Accessible behaviour (dialogs, menus, sliders…) | `radix-ui` |
+| Charts | `recharts` |
+| Command palette | `cmdk` |
+| Calendar | `react-day-picker` |
+| Resizable panels | `react-resizable-panels` |
+| One-time code input | `input-otp` |
+| Assistant | `@assistant-ui/react`, `@assistant-ui/react-markdown`, `remark-gfm` |
 
 ## Import rules enforced by ESLint
 

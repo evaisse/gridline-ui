@@ -1,0 +1,7 @@
+.gl-scroll { position: relative; overflow: hidden; }
+.gl-scroll__viewport { width: 100%; height: 100%; }
+.gl-scroll__bar { display: flex; padding: 1px; background: var(--gl-surface-1); touch-action: none; user-select: none; }
+.gl-scroll__bar[data-orientation='vertical'] { width: 7px; border-left: 1px solid var(--gl-rule); }
+.gl-scroll__bar[data-orientation='horizontal'] { flex-direction: column; height: 7px; border-top: 1px solid var(--gl-rule); }
+.gl-scroll__thumb { flex: 1; background: var(--gl-ink-3); }
+.gl-scroll__thumb:hover { background: var(--gl-ink-2); }

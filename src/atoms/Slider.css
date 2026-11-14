@@ -1,0 +1,11 @@
+.gl-slider { position: relative; display: flex; align-items: center; height: 20px; touch-action: none; user-select: none; }
+.gl-slider__track {
+  position: relative;
+  flex: 1;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, var(--gl-ink-3) 0 1px, transparent 1px 4px);
+}
+.gl-slider__range { position: absolute; height: 100%; background: repeating-linear-gradient(90deg, var(--gl-ink) 0 1px, var(--gl-paper) 1px 2px); }
+.gl-slider__thumb { display: block; width: 7px; height: 20px; border: 1px solid var(--gl-ink); border-radius: var(--gl-radius); background: var(--gl-paper); cursor: grab; }
+.gl-slider__thumb:hover { background: var(--gl-surface-3); }
+.gl-slider[data-disabled] { opacity: 0.5; }

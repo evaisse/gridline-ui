@@ -1,0 +1,16 @@
+.gl-textarea {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  padding: var(--gl-space-2) var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font: inherit;
+  font-size: var(--gl-text-md);
+  line-height: 1.5;
+  resize: vertical;
+}
+.gl-textarea::placeholder { color: var(--gl-ink-3); }
+.gl-textarea:disabled { background: var(--gl-surface-1); color: var(--gl-ink-3); }

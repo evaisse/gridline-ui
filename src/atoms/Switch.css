@@ -1,0 +1,15 @@
+.gl-switch {
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 16px;
+  padding: 0;
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-surface-1);
+  cursor: pointer;
+}
+.gl-switch__thumb { display: block; width: 14px; height: 14px; background: var(--gl-ink-3); transition: transform 100ms ease-out; }
+.gl-switch[data-state='checked'] { background: var(--gl-surface-3); }
+.gl-switch[data-state='checked'] .gl-switch__thumb { transform: translateX(16px); background: var(--gl-invert-bg); }
+.gl-switch:disabled { opacity: 0.5; cursor: not-allowed; }

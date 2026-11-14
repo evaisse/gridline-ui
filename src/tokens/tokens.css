@@ -28,6 +28,16 @@
   --gl-warn: 140 108 24;
   --gl-info: 44 92 160;
 
+  /* Categorical series, in the order to assign them. Charts only. */
+  --gl-data-1: 44 92 160;
+  --gl-data-2: 200 84 48;
+  --gl-data-3: 38 118 76;
+  --gl-data-4: 178 132 24;
+  --gl-data-5: 112 84 168;
+  --gl-data-6: 24 126 132;
+  --gl-data-7: 176 62 104;
+  --gl-data-8: 96 108 124;
+
   /* Shape and rhythm */
   --gl-radius: 2px;
   --gl-row: 40px;
@@ -68,6 +78,14 @@
   --gl-neg: 232 124 110;
   --gl-warn: 214 178 86;
   --gl-info: 124 168 232;
+  --gl-data-1: 124 168 232;
+  --gl-data-2: 236 136 100;
+  --gl-data-3: 110 190 140;
+  --gl-data-4: 218 180 88;
+  --gl-data-5: 176 152 232;
+  --gl-data-6: 96 196 200;
+  --gl-data-7: 232 128 168;
+  --gl-data-8: 160 172 188;
   color-scheme: dark;
 }
 

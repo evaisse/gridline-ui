@@ -1,0 +1,16 @@
+.gl-avatar {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-surface-2);
+}
+.gl-avatar--sm { width: 18px; height: 18px; }
+.gl-avatar--lg { width: 40px; height: 40px; }
+.gl-avatar__image { width: 100%; height: 100%; object-fit: cover; }
+.gl-avatar__fallback { font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); text-transform: uppercase; color: var(--gl-ink-2); }
+.gl-avatar--lg .gl-avatar__fallback { font-size: var(--gl-text-md); }

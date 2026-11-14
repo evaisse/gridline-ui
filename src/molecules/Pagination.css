@@ -1,0 +1,18 @@
+.gl-pagination { display: inline-flex; border: 1px solid var(--gl-rule-strong); }
+.gl-pagination > * {
+  display: grid;
+  place-items: center;
+  min-width: var(--gl-row-sm);
+  height: var(--gl-row-sm);
+  padding: 0 var(--gl-space-2);
+  border: 0;
+  border-right: 1px solid var(--gl-rule);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+}
+.gl-pagination > :last-child { border-right: 0; }
+.gl-pagination button { cursor: pointer; }
+.gl-pagination button:hover:not(:disabled) { background: var(--gl-surface-2); }
+.gl-pagination button:disabled { color: var(--gl-ink-3); cursor: not-allowed; }
+.gl-pagination [aria-current='page'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-pagination__gap { color: var(--gl-ink-3); font-family: var(--gl-font-mono); }

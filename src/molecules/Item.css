@@ -1,0 +1,12 @@
+.gl-item { display: flex; align-items: center; gap: var(--gl-space-3); min-width: 0; padding: var(--gl-space-3) var(--gl-space-4); }
+.gl-item--sm { padding: var(--gl-space-2) var(--gl-space-3); }
+.gl-item--ruled { border: 1px solid var(--gl-rule-strong); }
+.gl-item--tinted { background: var(--gl-surface-1); }
+.gl-item__media { flex: none; display: grid; place-items: center; color: var(--gl-ink-2); }
+.gl-item__content { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.gl-item__title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-item__desc { color: var(--gl-ink-2); font-size: 12px; line-height: 1.4; }
+.gl-item__actions { flex: none; display: flex; align-items: center; gap: var(--gl-space-2); }
+.gl-item-group { border: 1px solid var(--gl-rule-strong); }
+.gl-item-group > .gl-item { border: 0; border-bottom: 1px solid var(--gl-rule); }
+.gl-item-group > .gl-item:last-child { border-bottom: 0; }

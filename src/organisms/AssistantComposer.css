@@ -1,0 +1,13 @@
+.gl-composer { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-composer:focus-within { border-color: var(--gl-ink); }
+.gl-composer__quote { display: flex; align-items: center; gap: var(--gl-space-2); padding: var(--gl-space-1) var(--gl-space-1) var(--gl-space-1) var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); color: var(--gl-ink-2); font-size: 12px; }
+.gl-composer__quote-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-composer__attachments { display: flex; flex-wrap: wrap; gap: var(--gl-space-2); padding: var(--gl-space-2); border-bottom: 1px solid var(--gl-rule); }
+.gl-composer__attachments > * { position: relative; }
+.gl-composer__remove { position: absolute; top: -5px; right: -5px; display: grid; place-items: center; width: 16px; height: 16px; padding: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); color: var(--gl-ink); cursor: pointer; }
+.gl-composer__remove:hover { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-composer__input { display: block; width: 100%; max-height: 200px; padding: var(--gl-space-3); border: 0; outline: 0; resize: none; background: transparent; color: var(--gl-ink); font: inherit; font-size: var(--gl-text-md); line-height: 1.5; }
+.gl-composer__input::placeholder { color: var(--gl-ink-3); }
+.gl-composer__bar { display: flex; align-items: center; gap: var(--gl-space-2); padding: var(--gl-space-1); border-top: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-composer__hint { flex: 1; padding-left: var(--gl-space-2); overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 560px) { .gl-composer__hint { visibility: hidden; } }

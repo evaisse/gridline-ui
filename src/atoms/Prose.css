@@ -1,0 +1,29 @@
+.gl-code {
+  padding: 1px 4px;
+  border: 1px solid var(--gl-rule);
+  border-radius: var(--gl-radius);
+  background: var(--gl-surface-1);
+  font-family: var(--gl-font-mono);
+  font-size: 0.9em;
+}
+.gl-blockquote { margin: 0; padding-left: var(--gl-space-4); border-left: 1px solid var(--gl-rule-strong); font-family: var(--gl-font-display); font-size: var(--gl-text-lg); color: var(--gl-ink-2); }
+
+.gl-prose { max-width: 68ch; font-size: var(--gl-text-md); line-height: 1.6; overflow-wrap: anywhere; }
+.gl-prose > * { margin-block: 0; }
+.gl-prose > * + * { margin-top: var(--gl-space-3); }
+.gl-prose :is(h1, h2, h3, h4) { font-family: var(--gl-font-display); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; }
+.gl-prose h1 { font-size: var(--gl-text-xl); }
+.gl-prose h2 { font-size: 19px; }
+.gl-prose :is(h3, h4) { font-size: var(--gl-text-lg); }
+.gl-prose :is(h1, h2, h3, h4):not(:first-child) { margin-top: var(--gl-space-5); }
+.gl-prose a { color: inherit; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.gl-prose :is(ul, ol) { padding-left: 20px; }
+.gl-prose li + li { margin-top: var(--gl-space-1); }
+.gl-prose li::marker { color: var(--gl-ink-3); font-family: var(--gl-font-mono); font-size: 0.85em; }
+.gl-prose blockquote { margin-inline: 0; padding-left: var(--gl-space-4); border-left: 1px solid var(--gl-rule-strong); color: var(--gl-ink-2); }
+.gl-prose hr { border: 0; border-top: 1px solid var(--gl-rule); }
+.gl-prose :not(pre) > code { padding: 1px 4px; border: 1px solid var(--gl-rule); border-radius: var(--gl-radius); background: var(--gl-surface-1); font-family: var(--gl-font-mono); font-size: 0.9em; }
+.gl-prose pre { margin-inline: 0; padding: var(--gl-space-3); overflow-x: auto; border: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); font-family: var(--gl-font-mono); font-size: 12px; line-height: 1.5; }
+.gl-prose table { width: 100%; border-collapse: collapse; border: 1px solid var(--gl-rule-strong); }
+.gl-prose :is(th, td) { padding: 6px var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); text-align: left; }
+.gl-prose th { background: var(--gl-surface-1); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); font-weight: 400; text-transform: uppercase; color: var(--gl-ink-2); }

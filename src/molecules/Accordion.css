@@ -1,0 +1,24 @@
+.gl-accordion { border: 1px solid var(--gl-rule-strong); }
+.gl-accordion__item { border-bottom: 1px solid var(--gl-rule); }
+.gl-accordion__item:last-child { border-bottom: 0; }
+.gl-accordion__header { margin: 0; }
+.gl-accordion__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gl-space-3);
+  width: 100%;
+  min-height: var(--gl-row);
+  padding: 0 var(--gl-space-4);
+  border: 0;
+  background: var(--gl-surface-1);
+  color: var(--gl-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.gl-accordion__trigger:hover { background: var(--gl-surface-2); }
+.gl-accordion__chevron { flex: none; color: var(--gl-ink-2); transition: transform 120ms ease-out; }
+.gl-accordion__trigger[data-state='open'] .gl-accordion__chevron { transform: rotate(180deg); }
+.gl-accordion__content { overflow: hidden; border-top: 1px solid var(--gl-rule); }
+.gl-accordion__body { padding: var(--gl-space-4); color: var(--gl-ink-2); line-height: 1.6; }

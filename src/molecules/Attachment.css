@@ -1,0 +1,9 @@
+.gl-attachment { display: inline-flex; align-items: stretch; max-width: 260px; min-width: 160px; height: var(--gl-row); border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-attachment--error { border-color: rgb(var(--gl-neg)); }
+.gl-attachment__media { flex: none; display: grid; place-items: center; width: 38px; border-right: 1px solid var(--gl-rule); background: var(--gl-surface-1); color: var(--gl-ink-2); overflow: hidden; }
+.gl-attachment__media img { width: 100%; height: 100%; object-fit: cover; }
+.gl-attachment__body { flex: 1; min-width: 0; display: grid; align-content: center; gap: 3px; padding: 0 var(--gl-space-2); }
+.gl-attachment__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.2; }
+.gl-attachment__error { color: rgb(var(--gl-neg)); }
+.gl-attachment__remove { flex: none; display: grid; place-items: center; width: 28px; border: 0; border-left: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink-2); cursor: pointer; }
+.gl-attachment__remove:hover { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

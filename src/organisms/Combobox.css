@@ -1,0 +1,20 @@
+.gl-combobox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gl-space-3);
+  width: 100%;
+  height: var(--gl-row);
+  padding: 0 var(--gl-space-3);
+  border: 1px solid var(--gl-rule-strong);
+  border-radius: var(--gl-radius);
+  background: var(--gl-paper);
+  color: var(--gl-ink);
+  font: inherit;
+  font-size: var(--gl-text-md);
+  cursor: pointer;
+}
+.gl-combobox:hover { background: var(--gl-surface-2); }
+.gl-combobox--empty > span { color: var(--gl-ink-3); }
+.gl-combobox > svg { color: var(--gl-ink-2); }
+.gl-combobox__pop { width: var(--radix-popover-trigger-width); min-width: 200px; padding: 0; }

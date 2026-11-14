@@ -1,0 +1,12 @@
+.gl-tooltip {
+  z-index: 60;
+  max-width: 260px;
+  padding: 4px 8px;
+  border-radius: var(--gl-radius);
+  background: var(--gl-invert-bg);
+  color: var(--gl-invert-fg);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-xs);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}

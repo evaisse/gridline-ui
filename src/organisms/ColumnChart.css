@@ -1,0 +1,21 @@
+.gl-column-chart { display: flex; align-items: stretch; height: 100%; margin: 0; padding: 0; list-style: none; overflow-x: auto; }
+.gl-column-chart__slot { flex: 1 0 64px; display: flex; align-items: flex-end; min-width: 0; }
+.gl-column-chart__bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--gl-space-2);
+  width: 100%;
+  min-height: 72px;
+  padding: var(--gl-space-2) 6px;
+  border-top: 1px solid;
+  border-right: 1px solid var(--gl-paper);
+  color: var(--gl-paper);
+  background-image: radial-gradient(rgb(128 128 128 / 0.25) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+.gl-column-chart__slot:last-child .gl-column-chart__bar { border-right: 0; }
+.gl-column-chart__value { font-variant-numeric: tabular-nums; }
+.gl-column-chart__foot { display: grid; gap: var(--gl-space-1); }
+.gl-column-chart__icon { display: grid; justify-content: start; }
+.gl-column-chart__name { white-space: normal; overflow-wrap: anywhere; line-height: 1.3; }

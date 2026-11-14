@@ -1,0 +1,11 @@
+.gl-tool-call { min-width: 0; border: 1px solid var(--gl-rule-strong); }
+.gl-tool-call + .gl-tool-call { margin-top: -1px; }
+.gl-tool-call__trigger { display: flex; align-items: center; gap: var(--gl-space-2); width: 100%; min-height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border: 0; background: var(--gl-surface-1); color: var(--gl-ink); text-align: left; cursor: pointer; }
+.gl-tool-call__trigger:hover { background: var(--gl-surface-2); }
+.gl-tool-call__icon { display: grid; place-items: center; width: 16px; color: var(--gl-ink-2); }
+.gl-tool-call__status { display: inline-flex; align-items: center; gap: 4px; margin-left: auto; }
+.gl-tool-call[data-status='error'] :is(.gl-tool-call__icon, .gl-tool-call__status) { color: rgb(var(--gl-neg)); }
+.gl-tool-call__chevron { color: var(--gl-ink-3); transition: transform 120ms ease-out; }
+.gl-tool-call__trigger[data-state='open'] .gl-tool-call__chevron { transform: rotate(90deg); }
+.gl-tool-call__content[hidden] { display: none; }
+.gl-tool-call__content { display: grid; gap: var(--gl-space-2); padding: var(--gl-space-2); border-top: 1px solid var(--gl-rule); }

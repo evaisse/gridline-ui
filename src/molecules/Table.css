@@ -1,0 +1,20 @@
+.gl-table { width: 100%; border-collapse: collapse; border: 1px solid var(--gl-rule-strong); font-size: var(--gl-text-md); }
+.gl-table__caption { padding: var(--gl-space-2) 0; text-align: left; font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; color: var(--gl-ink-2); }
+.gl-table :is(th, td) { height: var(--gl-row); padding: 0 var(--gl-space-4); text-align: left; border-bottom: 1px solid var(--gl-rule); }
+.gl-table th {
+  height: var(--gl-row-sm);
+  background: var(--gl-surface-1);
+  border-bottom-color: var(--gl-rule-strong);
+  color: var(--gl-ink-2);
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-sm);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.gl-table tbody tr:last-child td { border-bottom: 0; }
+.gl-table tbody tr:hover { background: var(--gl-surface-1); }
+.gl-table tbody tr[aria-selected='true'] { background: var(--gl-surface-3); }
+.gl-table tfoot td { border-top: 1px solid var(--gl-rule-strong); border-bottom: 0; background: var(--gl-surface-1); }
+.gl-table .gl-table__num { text-align: right; font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; }

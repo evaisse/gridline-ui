@@ -1,0 +1,3 @@
+.gl-skeleton { min-height: 12px; background-color: var(--gl-surface-1); border: 1px solid var(--gl-rule); animation: gl-skeleton 1.4s ease-in-out infinite; }
+@keyframes gl-skeleton { 50% { opacity: 0.5; } }
+@media (prefers-reduced-motion: reduce) { .gl-skeleton { animation: none; } }

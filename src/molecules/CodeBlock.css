@@ -1,0 +1,7 @@
+.gl-codeblock { border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); min-width: 0; }
+.gl-codeblock__header { display: flex; align-items: center; justify-content: space-between; min-height: var(--gl-row-sm); padding: 0 var(--gl-space-2) 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-codeblock__pre { margin: 0; padding: var(--gl-space-3) 0; overflow-x: auto; font-family: var(--gl-font-mono); font-size: 12px; line-height: 1.6; }
+.gl-codeblock__line { display: flex; gap: var(--gl-space-3); padding: 0 var(--gl-space-3); white-space: pre; }
+.gl-codeblock__line[data-diff='add'] { background: rgb(var(--gl-pos) / 0.12); }
+.gl-codeblock__line[data-diff='del'] { background: rgb(var(--gl-neg) / 0.12); }
+.gl-codeblock__no { flex: none; width: 2ch; text-align: right; color: var(--gl-ink-3); user-select: none; }

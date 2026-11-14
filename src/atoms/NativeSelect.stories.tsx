@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Select } from './Select';
+import { NativeSelect } from './NativeSelect';
 
 const meta = {
-  title: 'Atoms/Select',
-  component: Select,
+  title: 'Atoms/NativeSelect',
+  component: NativeSelect,
   args: { 'aria-label': 'Registry' },
   render: (args) => (
-    <Select {...args}>
+    <NativeSelect {...args}>
       <option>All registries</option>
       <option>Core</option>
       <option>Community</option>
-    </Select>
+    </NativeSelect>
   ),
   decorators: [(Story) => <div style={{ maxWidth: 240 }}><Story /></div>],
-} satisfies Meta<typeof Select>;
+} satisfies Meta<typeof NativeSelect>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

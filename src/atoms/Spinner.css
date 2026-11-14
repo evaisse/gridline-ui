@@ -1,0 +1,14 @@
+.gl-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--gl-rule-strong);
+  background: linear-gradient(currentColor, currentColor) 0 0 / 50% 50% no-repeat;
+  animation: gl-spinner 0.8s steps(1) infinite;
+}
+@keyframes gl-spinner {
+  25% { background-position: 100% 0; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .gl-spinner { animation-duration: 2.4s; } }

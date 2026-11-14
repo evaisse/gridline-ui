@@ -12,3 +12,5 @@
 .gl-tabs__tab:last-child { border-right: 0; }
 .gl-tabs__tab:hover { background: var(--gl-surface-2); color: var(--gl-ink); }
 .gl-tabs__tab[aria-selected='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-tabs__tab[data-state='active'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-tabs__panel { padding: var(--gl-space-4); border: 1px solid var(--gl-rule-strong); border-top: 0; }
