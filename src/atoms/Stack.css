@@ -1,0 +1,6 @@
+.gl-stack { display: flex; min-width: 0; }
+.gl-stack--column { flex-direction: column; }
+.gl-stack--row { flex-direction: row; align-items: center; }
+.gl-stack--wrap { flex-wrap: wrap; }
+.gl-stack--ruled.gl-stack--row > * + * { border-left: 1px solid var(--gl-rule); }
+.gl-stack--ruled.gl-stack--column > * + * { border-top: 1px solid var(--gl-rule); }

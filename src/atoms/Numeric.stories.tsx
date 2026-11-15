@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Numeric } from './Numeric';
 
 const meta = {
-  title: 'Atoms/Numeric',
+  title: 'Atoms/Data display/Numeric', tags: ['number', 'data'],
   component: Numeric,
   args: { children: '68.49', unit: '%' },
 } satisfies Meta<typeof Numeric>;

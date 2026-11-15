@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ScoreBoard } from './ScoreBoard';
 
 const meta = {
-  title: 'Organisms/ScoreBoard',
+  title: 'Organisms/Data display/ScoreBoard', tags: ['data', 'list'],
   component: ScoreBoard,
   args: {
     subject: 'Module',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TabPanels } from './TabPanels';
 
 const meta = {
-  title: 'Molecules/TabPanels',
+  title: 'Molecules/Navigation/TabPanels', tags: ['selection', 'disclosure'],
   component: TabPanels,
   args: {
     panels: [

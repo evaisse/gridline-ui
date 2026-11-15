@@ -8,7 +8,7 @@ const slot = (name: string, height: number) => (
 );
 
 const meta = {
-  title: 'Templates/Index',
+  title: 'Templates/Listings/Index', tags: ['page', 'list'],
   component: IndexTemplate,
   parameters: { layout: 'fullscreen' },
   args: { hero: slot('hero', 160), nav: slot('nav', 320), bandTitle: 'Band title', children: slot('children', 320) },

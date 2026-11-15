@@ -29,7 +29,7 @@ const columns: Column<Row>[] = [
 ];
 
 const meta = {
-  title: 'Organisms/DataTable',
+  title: 'Organisms/Data display/DataTable', tags: ['table', 'data'],
   component: DataTable<Row>,
   args: { columns, rows, rowKey: (row: Row) => row.name },
   decorators: [(Story) => <div style={{ maxWidth: 720 }}><Story /></div>],

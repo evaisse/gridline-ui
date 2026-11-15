@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Monitoring',
+  title: 'Templates/Dashboards/Monitoring', tags: ['page', 'status', 'data'],
   component: MonitoringTemplate,
   parameters: { layout: 'fullscreen' },
   args: { header: slot('header', 32), banner: slot('banner', 48), stats: slot('stats', 96), panels: <>{slot('panel', 200)}{slot('panel', 200)}</>, children: slot('children', 200), aside: slot('aside', '100%') },

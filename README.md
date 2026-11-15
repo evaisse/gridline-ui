@@ -32,16 +32,49 @@ npm run check      # typecheck + lint + boundary self-test
 ```
 src/
   tokens/      CSS variables, tones, data palette, icons, overlay styles   (foundation)
-  utils/       cx(), styled(), the mock assistant runtime for stories     (foundation)
-  atoms/       33 single-purpose elements
-  molecules/   35 small compositions
-  organisms/   28 self-contained blocks, including charts and the assistant
-  templates/   MasterDetail, Index, Chat, Dashboard, Queue, Monitoring, Home, Listing, Search
+  utils/       cx(), styled(), useControlled(), the mock assistant runtime (foundation)
+  atoms/       40 single-purpose elements
+  molecules/   45 small compositions
+  organisms/   37 self-contained blocks, including charts and the assistant
+  templates/   13 page layouts with named slots
   pages/       stories that fill a template with invented fixtures
+  catalog/     the component catalogue, its browser and the placeholders for planned components
 ```
 
 The import chain is `tokens → atoms → molecules → organisms → templates → pages`.
 A layer imports from the layers to its left and never from those to its right.
+
+## Catalogue, folders and tags
+
+`src/catalog/catalog.ts` lists every component, built or planned, with its layer, its category,
+its tags and the names other libraries use for the same thing. Everything else follows from it.
+
+| What | Where | How it is produced |
+|---|---|---|
+| Storybook folders | story `title`: `Layer/Category/Name` | written into each story by `npm run catalog` |
+| Tags | story `tags`, and the catalogue filters | written into each story by `npm run catalog` |
+| References to other libraries | `src/catalog/catalog.generated.json` | entries matched by alias against the harvested pages |
+| Placeholders for planned components | `src/catalog/planned/*.stories.tsx` | one per `plan(` entry, with `@see` links in a comment |
+| Harvested documentation pages | `src/catalog/sources.generated.json` | `npm run catalog:harvest` reads 19 documentation sites |
+
+In Storybook, open **Catalogue** to search and filter all components by status, layer, category,
+tag or library; each name links to its story, each reference to the other library's page.
+**Catalogue / Unclassified** lists harvested pages that no entry claims yet.
+Placeholders carry the `planned` tag, which is switched off in the sidebar filter by default.
+
+```bash
+npm run catalog            # apply catalog.ts: titles, tags, placeholders, references
+npm run catalog:check      # the same, read-only; part of `npm run check`
+npm run catalog:harvest    # re-read the documentation sites (needs network), then apply
+```
+
+To add a component, add an entry to `catalog.ts` and run `npm run catalog`.
+To build a planned one, write it, change its entry from `plan(` to `have(` and run it again.
+
+The harvested libraries are shadcn/ui, Radix Primitives, Base UI, Ark UI, Headless UI, React Aria,
+React Spectrum, Material UI, Ant Design, Chakra UI, Mantine, Carbon, Polaris, Primer,
+Atlassian Design System, Fluent 2, HeroUI, daisyUI and assistant-ui. A reference is listed only
+because the library's own site links to that page; nothing is guessed.
 
 ## Component inventory
 

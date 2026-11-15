@@ -3,7 +3,7 @@ import { Avatar, Label, Text } from '../atoms';
 import { CalendarIcon, ChatIcon, FileIcon, GlobeIcon, TerminalIcon } from '../tokens/icons';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader, SidebarInset, SidebarItem, SidebarProvider, SidebarTrigger } from './Sidebar';
 
-const meta = { title: 'Organisms/Sidebar', component: SidebarProvider, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof SidebarProvider>;
+const meta = { title: 'Organisms/Navigation/Sidebar', tags: ['shell', 'wayfinding'], component: SidebarProvider, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof SidebarProvider>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

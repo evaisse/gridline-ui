@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from './Table';
 
-const meta = { title: 'Molecules/Table', component: Table, decorators: [(Story) => <div style={{ maxWidth: 520 }}><Story /></div>] } satisfies Meta<typeof Table>;
+const meta = { title: 'Molecules/Data display/Table', tags: ['table'], component: Table, decorators: [(Story) => <div style={{ maxWidth: 520 }}><Story /></div>] } satisfies Meta<typeof Table>;
 export default meta;
 
 const rows = [['core', '12.4'], ['parser', '41.2'], ['cli', '7.9']];

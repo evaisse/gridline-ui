@@ -13,7 +13,7 @@ function Demo() {
   );
 }
 
-const meta = { title: 'Molecules/Toast', component: Toaster, args: { children: null }, render: () => <Toaster><Demo /></Toaster> } satisfies Meta<typeof Toaster>;
+const meta = { title: 'Molecules/Feedback/Toast', tags: ['message', 'popup'], component: Toaster, args: { children: null }, render: () => <Toaster><Demo /></Toaster> } satisfies Meta<typeof Toaster>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {};

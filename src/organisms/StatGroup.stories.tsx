@@ -4,7 +4,7 @@ import { Stat } from '../molecules';
 import { StatGroup } from './StatGroup';
 
 const meta = {
-  title: 'Organisms/StatGroup',
+  title: 'Organisms/Data display/StatGroup', tags: ['kpi'],
   component: StatGroup,
   decorators: [(Story) => <div style={{ maxWidth: 720 }}><Story /></div>],
 } satisfies Meta<typeof StatGroup>;

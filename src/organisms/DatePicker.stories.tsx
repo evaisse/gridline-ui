@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { DatePicker } from './DatePicker';
 
 const meta = {
-  title: 'Organisms/DatePicker',
+  title: 'Organisms/Forms/DatePicker', tags: ['input', 'date', 'popup'],
   component: DatePicker,
   args: { 'aria-label': 'Release date' },
   render: function Render(args) {

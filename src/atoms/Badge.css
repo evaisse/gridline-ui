@@ -1,0 +1,4 @@
+.gl-badge { display: inline-flex; position: relative; vertical-align: middle; }
+.gl-badge__mark { display: inline-grid; place-items: center; min-width: 16px; height: 16px; padding: 0 4px; border-radius: var(--gl-radius); background: rgb(var(--gl-tone)); color: var(--gl-paper); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); line-height: 1; font-variant-numeric: tabular-nums; }
+.gl-badge__mark--dot { min-width: 8px; width: 8px; height: 8px; padding: 0; }
+.gl-badge--pinned > .gl-badge__mark { position: absolute; top: 0; right: 0; transform: translate(50%, -50%); outline: 1px solid var(--gl-paper); }

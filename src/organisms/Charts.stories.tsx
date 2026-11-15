@@ -8,7 +8,7 @@ import { ColumnChart } from './ColumnChart';
 import { PieChart, RadarChart, RadialChart } from './PolarCharts';
 import { ScatterPlot } from './ScatterPlot';
 
-const meta = { title: 'Organisms/Charts', component: ChartFrame, decorators: [(Story) => <div style={{ maxWidth: 720 }}><Story /></div>] } satisfies Meta<typeof ChartFrame>;
+const meta = { title: 'Organisms/Charts/Charts', tags: ['data', 'container'], component: ChartFrame, decorators: [(Story) => <div style={{ maxWidth: 720 }}><Story /></div>] } satisfies Meta<typeof ChartFrame>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -1,0 +1,4 @@
+.gl-swatch { display: inline-block; flex: none; width: 24px; height: 24px; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); vertical-align: middle; }
+.gl-swatch--sm { width: 16px; height: 16px; }
+.gl-swatch--lg { width: 40px; height: 40px; }
+.gl-swatch[data-selected] { outline: 1px solid var(--gl-ink); outline-offset: 2px; }

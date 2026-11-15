@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Avatar } from './Avatar';
 
-const meta = { title: 'Atoms/Avatar', component: Avatar, args: { fallback: 'TL', size: 'md' } } satisfies Meta<typeof Avatar>;
+const meta = { title: 'Atoms/Data display/Avatar', tags: ['identity', 'media'], component: Avatar, args: { fallback: 'TL', size: 'md' } } satisfies Meta<typeof Avatar>;
 export default meta;
 
 export const Fallback: StoryObj<typeof meta> = {};

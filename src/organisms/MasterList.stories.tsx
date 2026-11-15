@@ -11,7 +11,7 @@ const items: MasterListItem[] = [
 ];
 
 const meta = {
-  title: 'Organisms/MasterList',
+  title: 'Organisms/Data display/MasterList', tags: ['list', 'selection'],
   component: MasterList,
   args: { items, selectedId: 'tessera', metaHeader: 'Released ↓', titleHeader: 'Package', searchable: true },
   render: function Render(args) {

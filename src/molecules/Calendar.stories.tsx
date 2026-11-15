@@ -3,7 +3,7 @@ import { useState } from 'react';
 import type { DateRange } from 'react-day-picker';
 import { Calendar } from './Calendar';
 
-const meta = { title: 'Molecules/Calendar', component: Calendar } satisfies Meta<typeof Calendar>;
+const meta = { title: 'Molecules/Forms/Calendar', tags: ['date', 'selection'], component: Calendar } satisfies Meta<typeof Calendar>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -1,0 +1,6 @@
+.gl-tags-input { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-1); min-height: var(--gl-row); padding: var(--gl-space-2) var(--gl-space-3); border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); cursor: text; }
+.gl-tags-input:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-tags-input__control { flex: 1; min-width: 80px; height: 20px; padding: 0; border: 0; outline: 0; background: transparent; color: var(--gl-ink); font: inherit; font-size: var(--gl-text-md); }
+.gl-tags-input__control::placeholder { color: var(--gl-ink-3); }
+.gl-tags-input__remove { display: grid; place-items: center; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; opacity: 0.6; }
+.gl-tags-input__remove:hover { opacity: 1; }

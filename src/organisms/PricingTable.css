@@ -1,0 +1,9 @@
+.gl-pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-pricing__plan { display: flex; flex-direction: column; gap: var(--gl-space-4); padding: var(--gl-space-5); box-shadow: 1px 0 0 0 var(--gl-rule), 0 1px 0 0 var(--gl-rule); }
+.gl-pricing__plan[data-featured] { background: var(--gl-surface-2); }
+.gl-pricing__head { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-2); min-height: 24px; }
+.gl-pricing__price { display: grid; gap: var(--gl-space-1); }
+.gl-pricing__desc { margin: 0; color: var(--gl-ink-2); font-size: 12px; line-height: 1.5; }
+.gl-pricing__features { flex: 1; display: grid; align-content: start; gap: var(--gl-space-2); margin: 0; padding: 0; list-style: none; font-size: 12px; }
+.gl-pricing__features > li { display: flex; align-items: center; gap: var(--gl-space-2); }
+.gl-pricing__action { display: grid; }

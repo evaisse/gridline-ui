@@ -9,7 +9,7 @@ const items = [
 ];
 
 const meta = {
-  title: 'Molecules/Tabs',
+  title: 'Molecules/Navigation/Tabs', tags: ['selection', 'wayfinding'],
   component: Tabs,
   args: { items, value: 'coverage', fill: true },
   render: function Render(args) {

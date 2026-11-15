@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SpecSheet } from './SpecSheet';
 
 const meta = {
-  title: 'Organisms/SpecSheet',
+  title: 'Organisms/Data display/SpecSheet', tags: ['data', 'list'],
   component: SpecSheet,
   args: {
     columns: 2,

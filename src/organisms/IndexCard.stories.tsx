@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IndexCard } from './IndexCard';
 
 const meta = {
-  title: 'Organisms/IndexCard',
+  title: 'Organisms/Data display/IndexCard', tags: ['container', 'list'],
   component: IndexCard,
   args: {
     eyebrow: 'Parsing',

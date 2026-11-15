@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Select, SelectGroup, SelectItem, SelectLabel, SelectSeparator } from './Select';
 
 const meta = {
-  title: 'Molecules/Select',
+  title: 'Molecules/Forms/Select', tags: ['input', 'selection', 'popup'],
   component: Select,
   args: { placeholder: 'Pick a category', 'aria-label': 'Category', children: null },
   render: (args) => (

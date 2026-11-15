@@ -6,7 +6,7 @@ import {
   DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger,
 } from './Menu';
 
-const meta = { title: 'Molecules/Menu', component: DropdownMenu } satisfies Meta<typeof DropdownMenu>;
+const meta = { title: 'Molecules/Overlays/Menu', tags: ['menu', 'popup'], component: DropdownMenu } satisfies Meta<typeof DropdownMenu>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

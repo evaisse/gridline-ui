@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, Text } from '../atoms';
 import { Card, CardContent, CardFooter, CardHeader } from './Card';
 
-const meta = { title: 'Molecules/Card', component: Card, decorators: [(Story) => <div style={{ maxWidth: 360 }}><Story /></div>] } satisfies Meta<typeof Card>;
+const meta = { title: 'Molecules/Data display/Card', tags: ['container'], component: Card, decorators: [(Story) => <div style={{ maxWidth: 360 }}><Story /></div>] } satisfies Meta<typeof Card>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

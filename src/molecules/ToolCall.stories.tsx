@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ToolCall } from './ToolCall';
 
 const meta = {
-  title: 'Molecules/ToolCall',
+  title: 'Molecules/Assistant/ToolCall', tags: ['ai', 'status'],
   component: ToolCall,
   args: { toolName: 'read_report', argsText: '{\n  "release": "4.2.0"\n}', result: { modules: 4, coverage: 68.49 } },
   decorators: [(Story) => <div style={{ maxWidth: 480 }}><Story /></div>],

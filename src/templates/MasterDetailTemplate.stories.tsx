@@ -8,7 +8,7 @@ const slot = (name: string, height: number) => (
 );
 
 const meta = {
-  title: 'Templates/MasterDetail',
+  title: 'Templates/Application/MasterDetail', tags: ['page', 'list'],
   component: MasterDetailTemplate,
   parameters: { layout: 'fullscreen' },
   args: { master: slot('master', 480), toolbar: slot('toolbar', 40), children: slot('children', 320) },

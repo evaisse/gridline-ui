@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './Collapsible';
 
-const meta = { title: 'Atoms/Collapsible', component: Collapsible } satisfies Meta<typeof Collapsible>;
+const meta = { title: 'Atoms/Layout/Collapsible', tags: ['disclosure'], component: Collapsible } satisfies Meta<typeof Collapsible>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

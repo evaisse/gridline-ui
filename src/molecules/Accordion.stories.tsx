@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './Accordion';
 
-const meta = { title: 'Molecules/Accordion', component: Accordion, decorators: [(Story) => <div style={{ maxWidth: 520 }}><Story /></div>] } satisfies Meta;
+const meta = { title: 'Molecules/Layout/Accordion', tags: ['disclosure'], component: Accordion, decorators: [(Story) => <div style={{ maxWidth: 520 }}><Story /></div>] } satisfies Meta;
 export default meta;
 
 export const Single: StoryObj = {

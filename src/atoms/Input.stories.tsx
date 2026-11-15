@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Input } from './Input';
 
 const meta = {
-  title: 'Atoms/Input',
+  title: 'Atoms/Forms/Input', tags: ['input', 'text'],
   component: Input,
   args: { placeholder: 'Package name', 'aria-label': 'Package name' },
   decorators: [(Story) => <div style={{ maxWidth: 320 }}><Story /></div>],

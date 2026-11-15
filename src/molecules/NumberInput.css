@@ -1,0 +1,9 @@
+.gl-number-input { display: inline-flex; align-items: stretch; height: var(--gl-row); border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-number-input:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-number-input > button { display: grid; place-items: center; width: var(--gl-row); padding: 0; border: 0; background: var(--gl-surface-1); color: var(--gl-ink); cursor: pointer; }
+.gl-number-input > button:first-child { border-right: 1px solid var(--gl-rule-strong); }
+.gl-number-input > button:last-child { border-left: 1px solid var(--gl-rule-strong); }
+.gl-number-input > button:hover { background: var(--gl-surface-3); }
+.gl-number-input > button:disabled { color: var(--gl-ink-3); background: var(--gl-surface-1); cursor: not-allowed; }
+.gl-number-input__control { width: 72px; min-width: 0; flex: 1; padding: 0 var(--gl-space-2); border: 0; outline: 0; background: transparent; color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-md); font-variant-numeric: tabular-nums; text-align: center; appearance: textfield; -moz-appearance: textfield; }
+.gl-number-input__control::-webkit-inner-spin-button, .gl-number-input__control::-webkit-outer-spin-button { appearance: none; margin: 0; }

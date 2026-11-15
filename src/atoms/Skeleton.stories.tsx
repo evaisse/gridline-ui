@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Skeleton } from './Skeleton';
 
-const meta = { title: 'Atoms/Skeleton', component: Skeleton } satisfies Meta<typeof Skeleton>;
+const meta = { title: 'Atoms/Feedback/Skeleton', tags: ['loading'], component: Skeleton } satisfies Meta<typeof Skeleton>;
 export default meta;
 
 export const Lines: StoryObj<typeof meta> = {

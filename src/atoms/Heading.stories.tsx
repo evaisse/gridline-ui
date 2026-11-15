@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading } from './Heading';
 
 const meta = {
-  title: 'Atoms/Heading',
+  title: 'Atoms/Typography/Heading', tags: ['text'],
   component: Heading,
   args: { children: 'Measured, ruled, compact', level: 1 },
 } satisfies Meta<typeof Heading>;

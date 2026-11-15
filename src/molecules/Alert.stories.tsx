@@ -4,7 +4,7 @@ import { AlertIcon, InfoIcon } from '../tokens/icons';
 import { Alert } from './Alert';
 
 const meta = {
-  title: 'Molecules/Alert',
+  title: 'Molecules/Feedback/Alert', tags: ['message', 'status'],
   component: Alert,
   args: { title: 'Build queued', children: 'Results appear here in about two minutes.', icon: <InfoIcon />, tone: 'info' },
   decorators: [(Story) => <div style={{ maxWidth: 520 }}><Story /></div>],

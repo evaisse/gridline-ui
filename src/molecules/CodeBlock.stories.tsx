@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { CodeBlock } from './CodeBlock';
 
 const meta = {
-  title: 'Molecules/CodeBlock',
+  title: 'Molecules/Data display/CodeBlock', tags: ['code'],
   component: CodeBlock,
   args: { title: 'parse.ts', lineNumbers: true, code: "import { parse } from 'tessera';\n\nconst tree = parse(source, { recover: true });\nconsole.log(tree.errors.length);\n" },
   decorators: [(Story) => <div style={{ maxWidth: 560 }}><Story /></div>],

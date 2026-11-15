@@ -1,0 +1,340 @@
+/**
+ * The Gridline component catalogue: one entry per component, built or planned.
+ *
+ * This file is the single place where a component gets its layer, its Storybook folder, its tags
+ * and the names other libraries use for the same thing. `npm run catalog` reads it and
+ *
+ *   - matches every entry against the documentation pages harvested from other libraries
+ *     (sources.generated.json), by alias, and writes the result to catalog.generated.json;
+ *   - rewrites the `title` and `tags` of each story so Storybook folders and tags follow this file;
+ *   - writes one placeholder story per planned component under src/catalog/planned/.
+ *
+ * To add a component: add an entry here, run `npm run catalog`. To build a planned one: write it,
+ * change `plan(` to `have(` and run `npm run catalog` again; its placeholder is removed.
+ *
+ * This file must stay free of imports and of non-erasable TypeScript: Node loads it directly.
+ */
+
+export type Layer = 'atoms' | 'molecules' | 'organisms' | 'templates';
+
+/** Storybook folders. A story's title is `Layer/Category title/Name`. */
+export const CATEGORIES = {
+  actions: { title: 'Actions', description: 'Things you press: buttons, toggles, links.' },
+  forms: { title: 'Forms', description: 'Fields and everything that collects a value.' },
+  'data-display': { title: 'Data display', description: 'Values, records, lists and tables.' },
+  charts: { title: 'Charts', description: 'Plots that read their colours from the data palette.' },
+  feedback: { title: 'Feedback', description: 'Status, progress, messages and empty states.' },
+  navigation: { title: 'Navigation', description: 'Moving between places and steps.' },
+  overlays: { title: 'Overlays', description: 'Content that floats above the page.' },
+  layout: { title: 'Layout', description: 'Structure, spacing and disclosure.' },
+  typography: { title: 'Typography', description: 'Text in the three voices.' },
+  media: { title: 'Media', description: 'Images, icons and embedded content.' },
+  assistant: { title: 'Assistant', description: 'Chat and agent interfaces.' },
+  marketing: { title: 'Marketing', description: 'Blocks for public pages.' },
+  commerce: { title: 'Commerce', description: 'Products, prices and carts.' },
+  application: { title: 'Application', description: 'Templates for working screens.' },
+  dashboards: { title: 'Dashboards', description: 'Templates that monitor figures.' },
+  listings: { title: 'Listings', description: 'Templates that browse a collection.' },
+  utility: { title: 'Utility', description: 'Templates for sign-in, errors and other single-purpose pages.' },
+} as const;
+export type Category = keyof typeof CATEGORIES;
+
+/** The tag vocabulary. Tags cut across layers and folders; Storybook filters on them. */
+export const TAGS = {
+  action: 'Triggers something',
+  input: 'Collects a value typed or set by the user',
+  selection: 'Chooses among options',
+  toggle: 'Switches between two states',
+  text: 'Runs or labels text',
+  number: 'Shows or edits a figure',
+  date: 'Dates and times',
+  color: 'Colours',
+  file: 'Files and uploads',
+  search: 'Finding and filtering',
+  auth: 'Signing in and credentials',
+  form: 'Form structure and validation',
+  status: 'Reports a state',
+  loading: 'Waiting and progress',
+  message: 'Tells the user something',
+  list: 'Repeated records',
+  table: 'Rows and columns',
+  tree: 'Hierarchies',
+  data: 'Encodes a value',
+  kpi: 'Headline figures',
+  identity: 'People and accounts',
+  media: 'Pictures and embeds',
+  code: 'Source code',
+  menu: 'Lists of commands',
+  modal: 'Blocks the page until dismissed',
+  popup: 'Anchored to another element',
+  disclosure: 'Shows and hides content',
+  container: 'Holds other content',
+  spacing: 'Arranges children',
+  wayfinding: 'Says where you are',
+  steps: 'Sequences and wizards',
+  shell: 'Application chrome',
+  chat: 'Conversation',
+  ai: 'Model output and agent activity',
+  board: 'Cards in columns',
+  history: 'Events over time',
+  page: 'A whole screen',
+  a11y: 'Accessibility helpers',
+  planned: 'Not built yet: a placeholder with references',
+} as const;
+export type Tag = keyof typeof TAGS;
+
+export interface CatalogEntry {
+  /** The component name. For a built component, its main export. */
+  name: string;
+  layer: Layer;
+  category: Category;
+  tags: Tag[];
+  /** One line on what it is for. */
+  summary: string;
+  status: 'available' | 'planned';
+  /**
+   * Names other libraries use, lowercased with separators removed (`date-picker` → `datepicker`).
+   * A harvested documentation page whose last path segment matches becomes a reference.
+   */
+  aliases: string[];
+  /** Other exports documented by the same entry. */
+  exports?: string[];
+  /** The name in the story title when it differs from `name`, or `null` when it has no story. */
+  story?: string | null;
+}
+
+type Options = Pick<CatalogEntry, 'exports' | 'story'>;
+const entry = (status: CatalogEntry['status']) =>
+  (name: string, layer: Layer, category: Category, tags: Tag[], summary: string, aliases: string[] = [], options: Options = {}): CatalogEntry =>
+    ({ name, layer, category, tags, summary, status, aliases, ...options });
+/** A component that exists in the library. */
+const have = entry('available');
+/** A component seen in other libraries and not built yet. */
+const plan = entry('planned');
+
+const A = 'atoms', M = 'molecules', O = 'organisms', T = 'templates';
+
+export const catalog: CatalogEntry[] = [
+  /* ───────────── Atoms ───────────── */
+  have('Button', A, 'actions', ['action'], 'Triggers an action. Solid, ruled or ghost.', ['button', 'unstyledbutton', 'actionbutton', 'linkbutton', 'clickable']),
+  have('IconButton', A, 'actions', ['action'], 'A square button holding one glyph.', ['iconbutton', 'actionicon', 'closebutton', 'tooltipiconbutton']),
+  have('Link', A, 'actions', ['action', 'text'], 'A text link underlined with a hairline.', ['link', 'linkoverlay']),
+  have('Toggle', A, 'actions', ['action', 'toggle'], 'A button that stays pressed.', ['toggle', 'togglebutton']),
+  have('Checkbox', A, 'forms', ['input', 'selection'], 'A square that is checked, unchecked or indeterminate.', ['checkbox', 'checkmark']),
+  have('Input', A, 'forms', ['input', 'text'], 'A single-line text field.', ['input', 'textfield', 'textinput', 'emailfield', 'urlfield', 'moneyfield']),
+  have('NativeSelect', A, 'forms', ['input', 'selection'], 'The browser select, dressed.', ['nativeselect']),
+  have('RadioGroup', A, 'forms', ['input', 'selection'], 'One choice among a few, all visible.', ['radiogroup', 'radio', 'radiobutton', 'radiomark'], { exports: ['Radio'] }),
+  have('Slider', A, 'forms', ['input', 'number'], 'A value or a range on a graduated track.', ['slider', 'range', 'rangeslider']),
+  have('Switch', A, 'forms', ['input', 'toggle'], 'An immediate on/off setting.', ['switch', 'toggleswitch']),
+  have('Textarea', A, 'forms', ['input', 'text'], 'A multi-line text field.', ['textarea', 'textareaautosize']),
+  have('Avatar', A, 'data-display', ['identity', 'media'], 'A square picture or initials for a person.', ['avatar', 'persona']),
+  have('Badge', A, 'data-display', ['status', 'number'], 'A count or a dot pinned to another element.', ['badge', 'indicator', 'counterlabel', 'circlebadge']),
+  have('ColorSwatch', A, 'data-display', ['color'], 'A ruled square filled with one colour.', ['colorswatch']),
+  have('Kbd', A, 'data-display', ['text'], 'A keyboard key.', ['kbd', 'keybindinghint']),
+  have('Meter', A, 'data-display', ['data', 'status'], 'A graduated bar for a value within a range.', ['meter']),
+  have('Numeric', A, 'data-display', ['number', 'data'], 'A figure in tabular mono, with prefix and unit.', ['number', 'formatnumber', 'numberformatter', 'formatbyte']),
+  have('Ruler', A, 'data-display', ['data'], 'Places a value among its peers on a scale.'),
+  have('Tag', A, 'data-display', ['status', 'text'], 'A short label, optionally toned.', ['tag', 'chip', 'lozenge', 'pill', 'token', 'statelabel', 'clickablechip']),
+  have('Progress', A, 'feedback', ['loading', 'status'], 'A bar that fills as work completes.', ['progress', 'progressbar', 'progresslinear']),
+  have('Skeleton', A, 'feedback', ['loading'], 'A grey block standing in for content that is loading.', ['skeleton', 'skeletontext', 'skeletonbox', 'skeletonavatar']),
+  have('Spinner', A, 'feedback', ['loading'], 'Indicates that something is running.', ['spinner', 'loader', 'loading', 'spin', 'inlineloading']),
+  have('HoverCard', A, 'overlays', ['popup'], 'A preview that opens when a link is hovered.', ['hovercard', 'previewcard'], { exports: ['HoverCardContent', 'HoverCardTrigger'] }),
+  have('Popover', A, 'overlays', ['popup'], 'Free content anchored to a trigger.', ['popover', 'popup', 'popper', 'inlinedialog', 'anchoredoverlay'], { exports: ['PopoverContent', 'PopoverTrigger', 'PopoverAnchor', 'PopoverClose'] }),
+  have('Tooltip', A, 'overlays', ['popup', 'text'], 'A short hint on hover or focus.', ['tooltip', 'toggletip', 'infolabel', 'contextualhelp']),
+  have('AspectRatio', A, 'layout', ['container', 'media'], 'Holds its child at a fixed ratio.', ['aspectratio']),
+  have('Collapsible', A, 'layout', ['disclosure'], 'One region that opens and closes.', ['collapsible', 'disclosure', 'details', 'spoiler'], { exports: ['CollapsibleContent', 'CollapsibleTrigger'] }),
+  have('DirectionProvider', A, 'layout', ['a11y'], 'Sets the reading direction for the components below it.', ['direction', 'localeprovider', 'configprovider', 'provider', 'fluentprovider', 'environmentprovider'], { story: null, exports: ['useDirection'] }),
+  have('Frame', A, 'layout', ['container'], 'The page frame and its ruled sections.', ['container', 'box', 'paper', 'surface', 'section'], { exports: ['Section'] }),
+  have('Grid', A, 'layout', ['spacing', 'container'], 'Cells that share their borders.', ['grid', 'simplegrid'], { exports: ['Cell'] }),
+  have('ScrollArea', A, 'layout', ['container'], 'A scrolling region with a thin ruled scrollbar.', ['scrollarea', 'scroller', 'scrollshadow']),
+  have('Separator', A, 'layout', ['spacing'], 'A hairline between two things.', ['separator', 'divider']),
+  have('Stack', A, 'layout', ['spacing'], 'Lays children out in one direction with a gap from the scale.', ['stack', 'flex', 'group', 'space', 'wrap', 'join']),
+  have('VisuallyHidden', A, 'layout', ['a11y'], 'Text for screen readers only.', ['visuallyhidden']),
+  have('Heading', A, 'typography', ['text'], 'A title in the display serif.', ['heading', 'title']),
+  have('Highlight', A, 'typography', ['text', 'search'], 'Marks a search term inside a string.', ['highlight', 'mark']),
+  have('Label', A, 'typography', ['text'], 'Uppercase mono for metadata.', ['label']),
+  have('Marker', A, 'typography', ['text'], 'A labelled rule that separates or annotates.', ['marker']),
+  have('Prose', A, 'typography', ['text'], 'Styles for long-form content, with quote and inline code.', ['prose', 'typography', 'blockquote', 'code', 'em'], { exports: ['Blockquote', 'InlineCode'] }),
+  have('Text', A, 'typography', ['text'], 'Body copy in three sizes.', ['text', 'paragraph']),
+
+  plan('Icon', A, 'media', ['media'], 'A glyph from the icon set at a named size and tone. Today icons are bare SVG components in tokens/icons.', ['icon', 'themeicon']),
+  plan('Image', A, 'media', ['media'], 'A picture with a fallback and a loading state.', ['image', 'backgroundimage', 'thumbnail']),
+  plan('ProgressCircle', A, 'feedback', ['loading', 'status', 'data'], 'Progress drawn on a ring.', ['progresscircle', 'progresscircular', 'ringprogress', 'radialprogress', 'semicircleprogress']),
+  plan('Status', A, 'data-display', ['status'], 'A coloured mark with a label: online, degraded, down.', ['status', 'statuslight']),
+  plan('Center', A, 'layout', ['spacing'], 'Centres its child on both axes.', ['center', 'absolutecenter', 'float', 'bleed']),
+  plan('Truncate', A, 'typography', ['text'], 'Cuts text to a number of lines with an ellipsis.', ['truncate']),
+  plan('RelativeTime', A, 'data-display', ['date', 'text'], 'A date written as "3 hours ago", updated as time passes.', ['relativetime', 'datelabel', 'timevalue']),
+  plan('Countdown', A, 'data-display', ['date', 'number'], 'Time left until a moment.', ['countdown', 'timer']),
+  plan('Backdrop', A, 'overlays', ['modal'], 'The dimmed layer behind a modal or over a loading region.', ['backdrop', 'overlay', 'blanket', 'loadingoverlay']),
+  plan('Portal', A, 'layout', ['container'], 'Renders children elsewhere in the document.', ['portal']),
+  plan('QRCode', A, 'media', ['media', 'data'], 'Encodes a string as a QR code.', ['qrcode']),
+  plan('Watermark', A, 'media', ['media'], 'Repeats a faint mark behind content.', ['watermark']),
+
+  /* ───────────── Molecules ───────────── */
+  have('ButtonGroup', M, 'actions', ['action'], 'Buttons sharing their borders.', ['buttongroup', 'actionbuttongroup']),
+  have('CopyButton', M, 'actions', ['action'], 'Copies a string and confirms.', ['copybutton', 'clipboard']),
+  have('ToggleGroup', M, 'actions', ['toggle', 'selection'], 'A set of toggles where one or several stay pressed.', ['togglegroup', 'togglebuttongroup', 'segmentedcontrol', 'segmented', 'segmentgroup', 'contentswitcher'], { exports: ['ToggleGroupItem'] }),
+  have('Calendar', M, 'forms', ['date', 'selection'], 'A month grid for picking a day or a range.', ['calendar', 'rangecalendar', 'minicalendar']),
+  have('Field', M, 'forms', ['form', 'text'], 'A label, a control, a hint and an error, wired together.', ['field', 'fieldset', 'form', 'formcontrol', 'fielderror', 'errormessage', 'description'], { exports: ['FieldSet'] }),
+  have('FileUpload', M, 'forms', ['file', 'input'], 'A drop zone that also opens the file picker.', ['fileupload', 'fileuploader', 'dropzone', 'upload', 'fileinput', 'filetrigger', 'filebutton']),
+  have('InputGroup', M, 'forms', ['input'], 'A field with attached addons and buttons.', ['inputgroup']),
+  have('InputOTP', M, 'forms', ['input', 'auth'], 'One cell per character of a one-time code.', ['inputotp', 'pininput', 'otp', 'otpfield', 'onetimepasswordfield']),
+  have('NumberInput', M, 'forms', ['input', 'number'], 'A number field with decrement and increment cells.', ['numberinput', 'numberfield', 'inputnumber']),
+  have('PasswordInput', M, 'forms', ['input', 'auth'], 'A password field that can reveal what was typed.', ['passwordinput', 'passwordfield', 'passwordtogglefield']),
+  have('Rating', M, 'forms', ['input', 'number'], 'A score out of a few marks.', ['rating', 'rate', 'ratinggroup']),
+  have('SearchField', M, 'forms', ['input', 'search'], 'A text field for a query.', ['searchfield', 'search', 'searchbox']),
+  have('Select', M, 'forms', ['input', 'selection', 'popup'], 'One choice from a list that opens on demand.', ['select', 'listbox', 'picker'], { exports: ['SelectItem', 'SelectGroup', 'SelectLabel', 'SelectSeparator'] }),
+  have('TagsInput', M, 'forms', ['input', 'selection'], 'A field that turns each entry into a tag.', ['tagsinput', 'taggroup', 'tagpicker', 'pillsinput', 'tokenfield', 'textinputwithtokens', 'labelgroup']),
+  have('AvatarGroup', M, 'data-display', ['identity'], 'Avatars sharing borders, with the overflow counted.', ['avatargroup', 'avatarstack']),
+  have('Card', M, 'data-display', ['container'], 'A ruled box with header, content and footer.', ['card', 'tile', 'panel'], { exports: ['CardHeader', 'CardContent', 'CardFooter'] }),
+  have('Carousel', M, 'media', ['media', 'list'], 'Slides shown one at a time.', ['carousel']),
+  have('CodeBlock', M, 'data-display', ['code'], 'Source code with a header, line numbers and diff tints.', ['codeblock', 'codesnippet', 'mockupcode', 'syntaxhighlighter', 'shikihighlighter', 'terminalblock']),
+  have('Item', M, 'data-display', ['list'], 'A row with media, title, description and actions.', ['item', 'list', 'listy', 'structuredlist', 'containedlist', 'actionlist', 'orderedlist', 'unorderedlist'], { exports: ['ItemGroup'] }),
+  have('KeyValue', M, 'data-display', ['data', 'list'], 'A label and its value on one ruled line.', ['labeledvalue', 'datalist', 'descriptions']),
+  have('ListRow', M, 'data-display', ['list'], 'A selectable row for a master list.'),
+  have('MeterRow', M, 'data-display', ['data', 'list'], 'A name, a meter, a figure and a rank.'),
+  have('Stat', M, 'data-display', ['kpi', 'number'], 'A headline figure in a tinted cell.', ['stat', 'statistic']),
+  have('Table', M, 'data-display', ['table'], 'Bare table parts for hand-built tables.', ['table']),
+  have('Timeline', M, 'data-display', ['history', 'list'], 'Events in order along a vertical hairline.', ['timeline']),
+  have('Alert', M, 'feedback', ['message', 'status'], 'A message inside content, toned by severity.', ['alert', 'inlinealert', 'inlinemessage', 'sectionmessage', 'messagebar']),
+  have('Banner', M, 'feedback', ['message', 'status'], 'An announcement strip across the top of a page.', ['banner']),
+  have('Empty', M, 'feedback', ['status', 'message'], 'What to show when there is nothing to show.', ['empty', 'emptystate', 'blankslate', 'illustratedmessage']),
+  have('Toast', M, 'feedback', ['message', 'popup'], 'A brief message that appears and leaves by itself.', ['toast', 'sonner', 'snackbar', 'notification', 'flag'], { exports: ['Toaster', 'useToast'] }),
+  have('Breadcrumb', M, 'navigation', ['wayfinding'], 'The path from the root to the current page.', ['breadcrumb', 'breadcrumbs']),
+  have('NavItem', M, 'navigation', ['wayfinding', 'list'], 'An entry of a ruled sidebar, with a count.', ['navlink']),
+  have('Pagination', M, 'navigation', ['wayfinding'], 'Page cells with shared borders.', ['pagination']),
+  have('Steps', M, 'navigation', ['steps', 'status'], 'Progress through a sequence.', ['steps', 'stepper', 'progressindicator', 'progresstracker']),
+  have('Tabs', M, 'navigation', ['selection', 'wayfinding'], 'A strip of tabs; the selected one inverts.', ['tabs', 'tab', 'tablist', 'underlinenav', 'underlinepanels']),
+  have('TabPanels', M, 'navigation', ['selection', 'disclosure'], 'Tabs wired to their panels.'),
+  have('Dialog', M, 'overlays', ['modal'], 'A modal window, and its drawer, sheet and confirmation variants.', ['dialog', 'modal', 'modaldialog', 'alertdialog', 'drawer', 'sheet', 'confirmationdialog'], { exports: ['AlertDialog', 'Drawer', 'Sheet'] }),
+  have('Menu', M, 'overlays', ['menu', 'popup'], 'A list of commands: dropdown and context menu.', ['menu', 'dropdownmenu', 'dropdown', 'contextmenu', 'actionmenu'], { exports: ['DropdownMenu', 'ContextMenu'] }),
+  have('Accordion', M, 'layout', ['disclosure'], 'Stacked headings that each reveal a section.', ['accordion', 'collapse', 'disclosuregroup'], { exports: ['AccordionItem', 'AccordionTrigger', 'AccordionContent'] }),
+  have('Resizable', M, 'layout', ['container'], 'Panels separated by a handle you can drag.', ['resizable', 'splitter'], { exports: ['ResizableGroup', 'ResizablePanel', 'ResizableHandle'] }),
+  have('Attachment', M, 'assistant', ['ai', 'file'], 'A file attached to a message.', ['attachment', 'composerattachments', 'file']),
+  have('AssistantActionBar', M, 'assistant', ['ai', 'action'], 'Copy, retry and feedback under a message, with the branch picker.', ['branchpicker', 'messageactions', 'messagebranches', 'actionbarmore'], { story: null, exports: ['UserActionBar', 'BranchPicker'] }),
+  have('Bubble', M, 'assistant', ['chat'], 'One message in a conversation.', ['bubble', 'chat'], { exports: ['BubbleGroup'] }),
+  have('MarkdownText', M, 'assistant', ['ai', 'text'], 'Streams Markdown from a model into Prose.', ['markdowntext', 'streamingtext'], { story: null }),
+  have('Reasoning', M, 'assistant', ['ai', 'disclosure'], 'The model\'s reasoning, folded by default.', ['reasoning', 'chainofthought']),
+  have('ToolCall', M, 'assistant', ['ai', 'status'], 'One tool invocation with its arguments and result.', ['toolcall', 'toolfallback']),
+
+  plan('ActionBar', M, 'actions', ['action', 'selection'], 'A bar that appears when rows are selected, with bulk actions.', ['actionbar']),
+  plan('FloatButton', M, 'actions', ['action'], 'A button pinned to a corner of the viewport, optionally opening more.', ['affix', 'floatbutton', 'fab', 'floatingactionbutton', 'speeddial']),
+  plan('Cascader', M, 'forms', ['input', 'selection', 'tree'], 'Picks a value in a hierarchy, one column per level.', ['cascader']),
+  plan('TreeSelect', M, 'forms', ['input', 'selection', 'tree'], 'A select whose options form a tree.', ['treeselect']),
+  plan('CheckboxGroup', M, 'forms', ['input', 'selection', 'form'], 'Several checkboxes under one legend, with a shared value.', ['checkboxgroup', 'choicelist']),
+  plan('ChoiceCard', M, 'forms', ['input', 'selection'], 'A checkbox or radio drawn as a whole card.', ['checkboxcard', 'radiocard', 'selectboxgroup']),
+  plan('ColorPicker', M, 'forms', ['input', 'color'], 'Picks a colour by area, sliders, swatches or text.', ['colorpicker', 'colorinput', 'colorfield', 'colorarea', 'colorslider', 'colorwheel', 'colorswatchpicker', 'hueslider', 'alphaslider']),
+  plan('TimePicker', M, 'forms', ['input', 'date'], 'Picks a time of day.', ['timepicker', 'timefield', 'timeinput', 'timegrid']),
+  plan('DateRangePicker', M, 'forms', ['input', 'date'], 'Picks a start and an end date in one control.', ['daterangepicker']),
+  plan('MonthPicker', M, 'forms', ['input', 'date'], 'Picks a month, a quarter, a week or a year.', ['monthpicker', 'monthpickerinput', 'yearpicker', 'yearpickerinput', 'quarterpicker', 'quarterpickerinput', 'weekpicker', 'weekpickerinput']),
+  plan('Mentions', M, 'forms', ['input', 'text', 'selection'], 'A text field that suggests people or things after a trigger character.', ['mentions', 'composermentions']),
+  plan('MaskedInput', M, 'forms', ['input', 'text'], 'A field that constrains typing to a pattern: phone, date, card.', ['maskinput', 'maskeddateinput', 'phoneinput']),
+  plan('Editable', M, 'forms', ['input', 'text'], 'Text that turns into a field when clicked.', ['editable', 'inlineedit']),
+  plan('Transfer', M, 'forms', ['selection', 'list'], 'Moves items between two lists.', ['transfer', 'transferlist']),
+  plan('RichTextEditor', M, 'forms', ['input', 'text'], 'Formatted text editing with a toolbar.', ['richtexteditor']),
+  plan('JsonInput', M, 'forms', ['input', 'code'], 'A text area that validates and formats JSON.', ['jsoninput']),
+  plan('SignaturePad', M, 'forms', ['input', 'media'], 'Captures a hand-drawn signature.', ['signaturepad']),
+  plan('AngleSlider', M, 'forms', ['input', 'number'], 'Sets an angle on a dial.', ['angleslider']),
+  plan('ImageCropper', M, 'media', ['media', 'input'], 'Selects a region of a picture.', ['imagecropper']),
+  plan('ImageGallery', M, 'media', ['media', 'list'], 'Pictures in a grid or masonry, opening larger.', ['imagelist', 'masonry', 'imagegallery', 'hovergallery']),
+  plan('Comment', M, 'data-display', ['identity', 'text', 'history'], 'An author, a time and a body, with replies nested under it.', ['comment']),
+  plan('Diff', M, 'data-display', ['code'], 'Two versions of a text side by side or unified.', ['diff', 'codediff', 'reviewablediff']),
+  plan('Sparkline', M, 'charts', ['data', 'kpi'], 'A tiny line without axes, for a table cell or a stat.', ['sparkline']),
+  plan('Result', M, 'feedback', ['status', 'message', 'page'], 'The outcome of an operation: success, failure, forbidden.', ['result']),
+  plan('Popconfirm', M, 'overlays', ['popup', 'action'], 'A small confirmation anchored to the button that asked.', ['popconfirm']),
+  plan('Tour', M, 'overlays', ['popup', 'steps'], 'Steps that point at parts of the interface in turn.', ['tour', 'onboarding']),
+  plan('FloatingPanel', M, 'overlays', ['container'], 'A window that can be dragged and resized over the page.', ['floatingpanel', 'floatingwindow']),
+  plan('TableOfContents', M, 'navigation', ['wayfinding'], 'Links to the headings of the page, tracking the scroll position.', ['anchor', 'tableofcontents', 'toc']),
+  plan('Dock', M, 'navigation', ['wayfinding', 'shell'], 'A bar of destinations pinned to the bottom on small screens.', ['dock', 'bottomnavigation']),
+  plan('Marquee', M, 'media', ['media'], 'Content that scrolls sideways in a loop.', ['marquee']),
+
+  /* ───────────── Organisms ───────────── */
+  have('Toolbar', O, 'actions', ['action', 'container'], 'A 40px ruled strip of cells.', ['toolbar'], { exports: ['ToolbarCell'] }),
+  have('AuthForm', O, 'forms', ['auth', 'form'], 'A sign-in or sign-up card.'),
+  have('Combobox', O, 'forms', ['input', 'selection', 'search', 'popup'], 'A select you can type into.', ['combobox', 'autocomplete', 'multiselect', 'comboboxpopover', 'selectpanel']),
+  have('DatePicker', O, 'forms', ['input', 'date', 'popup'], 'A field that opens a calendar.', ['datepicker', 'datepickerinput', 'dateinput', 'datefield', 'datetimepicker', 'inlinedatetimepicker']),
+  have('FilterPanel', O, 'forms', ['search', 'selection'], 'Facets for a result list.', ['filter'], { exports: ['FilterSection'] }),
+  have('Questionnaire', O, 'forms', ['form', 'steps', 'ai'], 'Questions asked one at a time.', ['questionnaire', 'questionflow', 'elicitationform']),
+  have('DataTable', O, 'data-display', ['table', 'data'], 'Sortable, selectable, paginated rows.', ['datatable', 'dynamictable', 'tableview']),
+  have('IndexCard', O, 'data-display', ['container', 'list'], 'A catalogue entry: tag, title, facts and a short list.'),
+  have('Kanban', O, 'data-display', ['board', 'list'], 'Cards in ruled columns, one per stage.'),
+  have('MasterList', O, 'data-display', ['list', 'selection'], 'The list side of a master-detail view.', ['gridlist', 'listview']),
+  have('ScoreBoard', O, 'data-display', ['data', 'list'], 'Ranked bars with tabs to switch metric.', ['barslist']),
+  have('SpecSheet', O, 'data-display', ['data', 'list'], 'Facts about one record in ruled columns.', ['specsheet']),
+  have('StatGroup', O, 'data-display', ['kpi'], 'Headline figures side by side.'),
+  have('TreeView', O, 'data-display', ['tree', 'selection'], 'A nested list with branches that open and close.', ['treeview', 'tree', 'filetree', 'navigationtree', 'tabletree']),
+  have('Trace', O, 'data-display', ['history', 'ai', 'status'], 'The steps of a run, each with a status.', ['trace', 'tracewaterfall', 'tooltimeline']),
+  have('ChartFrame', O, 'charts', ['data', 'container'], 'The frame every chart sits in: title, legend, plot, footer.', ['chart'], { story: 'Charts', exports: ['ChartLegend', 'ChartTooltip'] }),
+  have('AreaChart', O, 'charts', ['data'], 'Filled series over a continuous axis.', ['areachart'], { story: 'Charts' }),
+  have('BarChart', O, 'charts', ['data'], 'Grouped or stacked bars.', ['barchart'], { story: 'Charts' }),
+  have('LineChart', O, 'charts', ['data'], 'Lines over a continuous axis.', ['linechart'], { story: 'Charts' }),
+  have('PieChart', O, 'charts', ['data'], 'Shares of a whole, as a pie or a donut.', ['piechart', 'donutchart'], { story: 'Charts' }),
+  have('RadarChart', O, 'charts', ['data'], 'Several measures on radial axes.', ['radarchart'], { story: 'Charts' }),
+  have('RadialChart', O, 'charts', ['data'], 'Values as rings or a gauge.', ['radialbarchart', 'gaugechart'], { story: 'Charts' }),
+  have('ColumnChart', O, 'charts', ['data'], 'Ranked columns, each labelled.', [], { story: 'Charts' }),
+  have('ScatterPlot', O, 'charts', ['data'], 'Points on two axes, with quadrants.', ['scatterchart', 'bubblechart'], { story: 'Charts' }),
+  have('CategoryNav', O, 'navigation', ['wayfinding', 'list'], 'A ruled list of categories with counts.', ['navlist']),
+  have('Command', O, 'navigation', ['search', 'menu'], 'A palette that filters commands as you type.', ['command', 'commandpalette', 'spotlight'], { exports: ['CommandInput', 'CommandList', 'CommandItem', 'CommandGroup'] }),
+  have('Menubar', O, 'navigation', ['menu', 'shell'], 'A row of menus, as in a desktop application.', ['menubar']),
+  have('NavigationMenu', O, 'navigation', ['menu', 'wayfinding'], 'Site sections that open panels of links.', ['navigationmenu', 'megamenu']),
+  have('PageHeader', O, 'navigation', ['wayfinding', 'shell'], 'The top of a page: where you are, what it is, what you can do.', ['pageheader']),
+  have('Sidebar', O, 'navigation', ['shell', 'wayfinding'], 'A collapsible application sidebar.', ['sidebar', 'sidenav', 'sidenavigation', 'nav', 'navigationsystem', 'uishellleftpanel', 'sidenavpanel']),
+  have('TopBar', O, 'navigation', ['shell', 'wayfinding'], 'A site or application header in ruled cells.', ['appbar', 'navbar', 'uishellheader', 'atlassiannavigation']),
+  have('Hero', O, 'marketing', ['page', 'text'], 'The opening block of a public page.', ['hero']),
+  have('PricingTable', O, 'marketing', ['data', 'list'], 'Plans side by side in ruled columns.'),
+  have('ProductCard', O, 'commerce', ['container', 'media'], 'One product: picture, name, rating, price, action.'),
+  have('AssistantThread', O, 'assistant', ['ai', 'chat'], 'A full conversation: messages, suggestions, composer.', ['thread', 'suggestion', 'error', 'selectiontoolbar'], { story: 'Assistant' }),
+  have('AssistantComposer', O, 'assistant', ['ai', 'chat', 'input'], 'The message field with attachments and send.', ['composer'], { story: 'Assistant' }),
+  have('AssistantThreadList', O, 'assistant', ['ai', 'chat', 'list'], 'Past conversations.', ['threadlist', 'threadlistitem', 'threadlistsidebar', 'threadlistitemmore'], { story: 'Assistant' }),
+  have('AssistantModal', O, 'assistant', ['ai', 'chat', 'popup'], 'A chat that opens from a corner button.', ['assistantmodal', 'launcherbubble'], { story: 'Assistant' }),
+  have('AssistantSidebar', O, 'assistant', ['ai', 'chat', 'shell'], 'A chat docked beside the page.', ['assistantsidebar', 'chatpanel'], { story: 'Assistant' }),
+  have('Message', O, 'assistant', ['ai', 'chat'], 'One turn of a conversation, with its parts.', ['message', 'messagepart']),
+  have('MessageScroller', O, 'assistant', ['ai', 'chat', 'container'], 'Keeps the latest message in view while it streams.', ['messagescroller', 'scrollanchor'], { story: null }),
+
+  plan('Footer', O, 'marketing', ['shell', 'wayfinding'], 'Link columns and legal line at the bottom of a public page.', ['footer']),
+  plan('FeatureGrid', O, 'marketing', ['list', 'text'], 'Benefits in ruled cells, each with a number, a title and a line.'),
+  plan('Testimonial', O, 'marketing', ['text', 'identity'], 'A quote with its author.'),
+  plan('Cart', O, 'commerce', ['list', 'number'], 'Chosen products with quantities and a total.'),
+  plan('CommentThread', O, 'data-display', ['history', 'identity', 'input'], 'A discussion with replies and a field to add one.'),
+  plan('ActivityFeed', O, 'data-display', ['history', 'list'], 'Who did what, newest first, grouped by day.'),
+  plan('NotificationCenter', O, 'feedback', ['message', 'list', 'popup'], 'Unread and past notifications behind a bell.'),
+  plan('Scheduler', O, 'data-display', ['date', 'board'], 'Events placed on a day, week or month grid.'),
+  plan('Wizard', O, 'forms', ['steps', 'form'], 'A form split into steps with back and next.'),
+  plan('Heatmap', O, 'charts', ['data'], 'Values as tints on a grid, such as activity by day.', ['heatmap', 'heatgraph', 'matrixchart', 'activitygraph']),
+  plan('FunnelChart', O, 'charts', ['data'], 'How many remain at each stage.', ['funnelchart']),
+  plan('SankeyChart', O, 'charts', ['data'], 'Flows between stages, sized by quantity.', ['sankeychart', 'flowgraph']),
+  plan('Treemap', O, 'charts', ['data', 'tree'], 'Nested rectangles sized by value.', ['treemap', 'sunburstchart']),
+  plan('CandlestickChart', O, 'charts', ['data'], 'Open, high, low and close per period.', ['candlestickchart']),
+  plan('CompositeChart', O, 'charts', ['data'], 'Bars, lines and areas on shared axes.', ['compositechart', 'wafflechart']),
+  plan('ModelSelector', O, 'assistant', ['ai', 'selection'], 'Chooses the model and its settings for the next message.', ['modelselector', 'composermodelpicker', 'reasoningeffort']),
+  plan('Sources', O, 'assistant', ['ai', 'list'], 'The documents an answer drew on, with inline citations.', ['sources', 'inlinecitation', 'documentreference', 'retrievalchunks']),
+  plan('VoiceInput', O, 'assistant', ['ai', 'input', 'media'], 'Dictation and spoken conversation.', ['composervoice', 'voiceconversation', 'readaloud']),
+
+  /* ───────────── Templates ───────────── */
+  have('ChatTemplate', T, 'application', ['page', 'chat', 'shell'], 'Conversations on the left, one thread on the right.', [], { story: 'Chat' }),
+  have('MasterDetailTemplate', T, 'application', ['page', 'list'], 'List on the left, record on the right.', ['splitpagelayout'], { story: 'MasterDetail' }),
+  have('QueueTemplate', T, 'application', ['page', 'list', 'kpi'], 'A work queue beside the selected record.', [], { story: 'Queue' }),
+  have('SettingsTemplate', T, 'application', ['page', 'form'], 'Sections listed on the left, forms on the right.', [], { story: 'Settings', exports: ['SettingsSection'] }),
+  have('DocsTemplate', T, 'application', ['page', 'text', 'tree'], 'Documents, article and outline in three columns.', [], { story: 'Docs' }),
+  have('DashboardTemplate', T, 'dashboards', ['page', 'kpi', 'data'], 'Header, figures, a grid of charts, a table.', [], { story: 'Dashboard' }),
+  have('MonitoringTemplate', T, 'dashboards', ['page', 'status', 'data'], 'Status on top, live panels, an event rail.', [], { story: 'Monitoring' }),
+  have('IndexTemplate', T, 'listings', ['page', 'list'], 'A hero, then a ruled sidebar beside a grid.', [], { story: 'Index' }),
+  have('ListingTemplate', T, 'listings', ['page', 'list'], 'Title, controls, entries edge to edge, pagination.', [], { story: 'Listing' }),
+  have('SearchTemplate', T, 'listings', ['page', 'search'], 'The query on top, facets left, results right.', [], { story: 'Search' }),
+  have('HomeTemplate', T, 'marketing', ['page', 'text'], 'Top bar, two-column hero, stacked sections, footer.', [], { story: 'Home' }),
+  have('AuthTemplate', T, 'utility', ['page', 'auth'], 'A centred form with an optional side panel.', [], { story: 'Auth' }),
+  have('ErrorTemplate', T, 'utility', ['page', 'status'], 'A full-page status: not found, server error, maintenance.', [], { story: 'Error' }),
+
+  plan('AppShellTemplate', T, 'application', ['page', 'shell'], 'Header, sidebar, main and aside regions that every working screen shares.', ['appshell', 'pagelayout', 'page', 'layout']),
+  plan('BoardTemplate', T, 'application', ['page', 'board'], 'A header with filters above a full-width board.'),
+  plan('InboxTemplate', T, 'application', ['page', 'list', 'message'], 'Folders, message list and reading pane.'),
+  plan('CalendarTemplate', T, 'application', ['page', 'date'], 'A mini calendar and calendars list beside a scheduler.'),
+  plan('WizardTemplate', T, 'application', ['page', 'steps', 'form'], 'Steps on top or on the side, one form step at a time.'),
+  plan('ProfileTemplate', T, 'application', ['page', 'identity'], 'A person or organisation: header, facts, tabs of activity.'),
+  plan('ReportTemplate', T, 'dashboards', ['page', 'data', 'text'], 'A printable page mixing commentary, figures and charts.'),
+  plan('CheckoutTemplate', T, 'listings', ['page', 'form', 'number'], 'Steps of an order on the left, its summary on the right.'),
+  plan('ProductTemplate', T, 'listings', ['page', 'media'], 'One product: gallery, options, description, related items.'),
+  plan('PricingTemplate', T, 'marketing', ['page', 'data'], 'Plans, a comparison table and questions.'),
+  plan('ArticleTemplate', T, 'marketing', ['page', 'text'], 'A long read with a title block, body and related links.'),
+  plan('OnboardingTemplate', T, 'utility', ['page', 'steps'], 'First-run questions that set up an account.'),
+];

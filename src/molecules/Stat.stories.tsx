@@ -3,7 +3,7 @@ import { Ruler } from '../atoms';
 import { Stat } from './Stat';
 
 const meta = {
-  title: 'Molecules/Stat',
+  title: 'Molecules/Data display/Stat', tags: ['kpi', 'number'],
   component: Stat,
   args: { label: 'Coverage', value: '68.49', unit: '%', note: '±0.99', tone: 'pos' },
   decorators: [(Story) => <div style={{ maxWidth: 280 }}><Story /></div>],

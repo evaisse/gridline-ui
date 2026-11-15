@@ -1,0 +1,7 @@
+.gl-icon-button { display: inline-grid; place-items: center; flex: none; width: var(--gl-row-sm); height: var(--gl-row-sm); padding: 0; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); cursor: pointer; }
+.gl-icon-button--sm { width: 24px; height: 24px; }
+.gl-icon-button:hover { background: var(--gl-surface-2); }
+.gl-icon-button--ghost { border-color: transparent; background: transparent; }
+.gl-icon-button--solid { background: var(--gl-invert-bg); border-color: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-icon-button--solid:hover { background: var(--gl-invert-bg); opacity: 0.88; }
+.gl-icon-button:disabled { color: var(--gl-ink-3); background: var(--gl-surface-1); border-color: var(--gl-rule); cursor: not-allowed; }

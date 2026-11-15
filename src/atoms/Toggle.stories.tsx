@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Toggle } from './Toggle';
 
-const meta = { title: 'Atoms/Toggle', component: Toggle, args: { children: 'Log scale', defaultPressed: true } } satisfies Meta<typeof Toggle>;
+const meta = { title: 'Atoms/Actions/Toggle', tags: ['action', 'toggle'], component: Toggle, args: { children: 'Log scale', defaultPressed: true } } satisfies Meta<typeof Toggle>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

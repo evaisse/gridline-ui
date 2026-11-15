@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { CategoryNav } from './CategoryNav';
 
 const meta = {
-  title: 'Organisms/CategoryNav',
+  title: 'Organisms/Navigation/CategoryNav', tags: ['wayfinding', 'list'],
   component: CategoryNav,
   args: {
     value: 'parsing',

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Popover, PopoverContent, PopoverTrigger } from './Popover';
 
-const meta = { title: 'Atoms/Popover', component: Popover } satisfies Meta<typeof Popover>;
+const meta = { title: 'Atoms/Overlays/Popover', tags: ['popup'], component: Popover } satisfies Meta<typeof Popover>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

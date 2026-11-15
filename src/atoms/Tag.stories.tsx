@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Tag } from './Tag';
 
 const meta = {
-  title: 'Atoms/Tag',
+  title: 'Atoms/Data display/Tag', tags: ['status', 'text'],
   component: Tag,
   args: { children: 'Stable', tone: 'neutral', dot: true },
 } satisfies Meta<typeof Tag>;

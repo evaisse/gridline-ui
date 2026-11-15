@@ -3,7 +3,7 @@ import { Button } from '../atoms';
 import { ChevronDownIcon } from '../tokens/icons';
 import { ButtonGroup } from './ButtonGroup';
 
-const meta = { title: 'Molecules/ButtonGroup', component: ButtonGroup } satisfies Meta<typeof ButtonGroup>;
+const meta = { title: 'Molecules/Actions/ButtonGroup', tags: ['action'], component: ButtonGroup } satisfies Meta<typeof ButtonGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Meter } from './Meter';
 
 const meta = {
-  title: 'Atoms/Meter',
+  title: 'Atoms/Data display/Meter', tags: ['data', 'status'],
   component: Meter,
   args: { value: 68, max: 100, tone: 'neutral', label: 'Coverage' },
   decorators: [(Story) => <div style={{ maxWidth: 420, padding: '8px 0' }}><Story /></div>],

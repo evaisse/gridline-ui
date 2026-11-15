@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Kbd } from '../atoms';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from './Command';
 
-const meta = { title: 'Organisms/Command', component: Command, decorators: [(Story) => <div style={{ maxWidth: 420 }}><Story /></div>] } satisfies Meta<typeof Command>;
+const meta = { title: 'Organisms/Navigation/Command', tags: ['search', 'menu'], component: Command, decorators: [(Story) => <div style={{ maxWidth: 420 }}><Story /></div>] } satisfies Meta<typeof Command>;
 export default meta;
 
 export const Palette: StoryObj<typeof meta> = {

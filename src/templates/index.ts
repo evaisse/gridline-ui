@@ -7,3 +7,7 @@ export { ListingTemplate, type ListingTemplateProps } from './ListingTemplate';
 export { MonitoringTemplate, type MonitoringTemplateProps } from './MonitoringTemplate';
 export { QueueTemplate, type QueueTemplateProps } from './QueueTemplate';
 export { SearchTemplate, type SearchTemplateProps } from './SearchTemplate';
+export { AuthTemplate, type AuthTemplateProps } from './AuthTemplate';
+export { DocsTemplate, type DocsTemplateProps } from './DocsTemplate';
+export { ErrorTemplate, type ErrorTemplateProps } from './ErrorTemplate';
+export { SettingsSection, SettingsTemplate, type SettingsSectionProps, type SettingsTemplateProps } from './SettingsTemplate';

@@ -1,0 +1,10 @@
+.gl-auth-form { width: 100%; max-width: 400px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-auth-form__head { display: grid; gap: var(--gl-space-1); padding: var(--gl-space-5); border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-auth-form__body { display: grid; gap: var(--gl-space-4); padding: var(--gl-space-5); }
+.gl-auth-form__body > .gl-button { justify-content: center; height: var(--gl-row); }
+.gl-auth-form__remember { display: flex; align-items: center; gap: var(--gl-space-2); cursor: pointer; }
+.gl-auth-form__or { display: flex; align-items: center; gap: var(--gl-space-3); }
+.gl-auth-form__or::before, .gl-auth-form__or::after { content: ''; flex: 1; height: 1px; background: var(--gl-rule-strong); }
+.gl-auth-form__providers { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--gl-space-2); }
+.gl-auth-form__providers > .gl-button { justify-content: center; }
+.gl-auth-form__foot { padding: var(--gl-space-3) var(--gl-space-5); border-top: 1px solid var(--gl-rule); background: var(--gl-surface-1); font-size: 12px; color: var(--gl-ink-2); }

@@ -1,0 +1,7 @@
+.gl-banner { display: flex; align-items: stretch; min-height: var(--gl-row); border-bottom: 1px solid rgb(var(--gl-tone) / 0.3); background: rgb(var(--gl-tone) / 0.08); font-size: var(--gl-text-md); }
+.gl-banner__text { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-1) var(--gl-space-3); padding: var(--gl-space-2) var(--gl-space-4); }
+.gl-banner__label { color: rgb(var(--gl-tone)); }
+.gl-banner.gl-tone--neutral .gl-banner__label { color: var(--gl-ink); }
+.gl-banner__action { display: flex; align-items: center; gap: var(--gl-space-2); padding: 0 var(--gl-space-3); }
+.gl-banner__close { display: grid; place-items: center; width: var(--gl-row); padding: 0; border: 0; border-left: 1px solid rgb(var(--gl-tone) / 0.3); background: transparent; color: var(--gl-ink-2); cursor: pointer; }
+.gl-banner__close:hover { color: var(--gl-ink); background: rgb(var(--gl-tone) / 0.1); }

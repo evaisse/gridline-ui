@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { NativeSelect } from './NativeSelect';
 
 const meta = {
-  title: 'Atoms/NativeSelect',
+  title: 'Atoms/Forms/NativeSelect', tags: ['input', 'selection'],
   component: NativeSelect,
   args: { 'aria-label': 'Registry' },
   render: (args) => (

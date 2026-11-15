@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Marker } from './Marker';
 
 const meta = {
-  title: 'Atoms/Marker',
+  title: 'Atoms/Typography/Marker', tags: ['text'],
   component: Marker,
   args: { children: 'Today', variant: 'separator' },
   decorators: [(Story) => <div style={{ maxWidth: 480 }}><Story /></div>],

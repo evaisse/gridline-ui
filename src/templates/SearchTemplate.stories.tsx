@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Search',
+  title: 'Templates/Listings/Search', tags: ['page', 'search'],
   component: SearchTemplate,
   parameters: { layout: 'fullscreen' },
   args: { search: slot('search', 96), filters: slot('filters', '100%'), summary: slot('summary', 24), children: slot('children', 480), footer: slot('footer', 32) },

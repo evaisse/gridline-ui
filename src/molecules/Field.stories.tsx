@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Checkbox, Input, Switch, Textarea } from '../atoms';
 import { Field, FieldSet } from './Field';
 
-const meta = { title: 'Molecules/Field', component: Field, decorators: [(Story) => <div style={{ maxWidth: 360 }}><Story /></div>] } satisfies Meta<typeof Field>;
+const meta = { title: 'Molecules/Forms/Field', tags: ['form', 'text'], component: Field, decorators: [(Story) => <div style={{ maxWidth: 360 }}><Story /></div>] } satisfies Meta<typeof Field>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

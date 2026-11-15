@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Kbd } from '../atoms';
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from './Menubar';
 
-const meta = { title: 'Organisms/Menubar', component: Menubar, decorators: [(Story) => <div style={{ minHeight: 200 }}><Story /></div>] } satisfies Meta<typeof Menubar>;
+const meta = { title: 'Organisms/Navigation/Menubar', tags: ['menu', 'shell'], component: Menubar, decorators: [(Story) => <div style={{ minHeight: 200 }}><Story /></div>] } satisfies Meta<typeof Menubar>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

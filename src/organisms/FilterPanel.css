@@ -1,0 +1,5 @@
+.gl-filter-panel { min-width: 0; background: var(--gl-surface-1); }
+.gl-filter-panel__head { display: flex; align-items: center; justify-content: space-between; min-height: var(--gl-row); padding: 0 var(--gl-space-2) 0 var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-filter-panel__section { display: grid; gap: var(--gl-space-3); padding: var(--gl-space-4); border-bottom: 1px solid var(--gl-rule); }
+.gl-filter-panel__option { display: flex; align-items: center; gap: var(--gl-space-2); cursor: pointer; }
+.gl-filter-panel__label { flex: 1; min-width: 0; font-size: var(--gl-text-md); }

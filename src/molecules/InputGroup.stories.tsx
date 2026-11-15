@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, Input } from '../atoms';
 import { InputGroup, InputGroupAddon } from './InputGroup';
 
-const meta = { title: 'Molecules/InputGroup', component: InputGroup, decorators: [(Story) => <div style={{ maxWidth: 360, display: 'grid', gap: 12 }}><Story /></div>] } satisfies Meta<typeof InputGroup>;
+const meta = { title: 'Molecules/Forms/InputGroup', tags: ['input'], component: InputGroup, decorators: [(Story) => <div style={{ maxWidth: 360, display: 'grid', gap: 12 }}><Story /></div>] } satisfies Meta<typeof InputGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

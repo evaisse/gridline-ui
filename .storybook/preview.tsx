@@ -35,7 +35,8 @@ const preview: Preview = {
     controls: { expanded: false },
     options: {
       storySort: {
-        order: ['Introduction', 'Pages', 'Templates', 'Organisms', 'Molecules', 'Atoms', 'Tokens'],
+        method: 'alphabetical',
+        order: ['Introduction', 'Catalogue', 'Pages', 'Templates', 'Organisms', 'Molecules', 'Atoms', 'Tokens'],
       },
     },
   },

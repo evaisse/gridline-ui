@@ -1,0 +1,10 @@
+.gl-timeline { display: grid; margin: 0; padding: 0; list-style: none; }
+.gl-timeline__event { position: relative; display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: var(--gl-space-3); padding-bottom: var(--gl-space-4); }
+.gl-timeline__event::before { content: ''; position: absolute; top: 20px; bottom: 0; left: 9.5px; width: 1px; background: var(--gl-rule-strong); }
+.gl-timeline__event:last-child { padding-bottom: 0; }
+.gl-timeline__event:last-child::before { display: none; }
+.gl-timeline__mark { display: grid; place-items: center; width: 20px; height: 20px; color: rgb(var(--gl-tone)); }
+.gl-timeline__mark:not([data-icon])::after { content: ''; width: 8px; height: 8px; background: rgb(var(--gl-tone)); }
+.gl-timeline__body { display: grid; gap: var(--gl-space-1); min-width: 0; }
+.gl-timeline__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--gl-space-3); min-height: 20px; }
+.gl-timeline__content { color: var(--gl-ink-2); font-size: 12px; line-height: 1.5; }

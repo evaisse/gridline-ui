@@ -1,0 +1,11 @@
+.gl-tree, .gl-tree ul { margin: 0; padding: 0; list-style: none; }
+.gl-tree { border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-tree__row { display: flex; align-items: center; gap: var(--gl-space-2); width: 100%; height: var(--gl-row-sm); padding-right: var(--gl-space-3); border: 0; border-bottom: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink); font-size: var(--gl-text-md); text-align: left; cursor: pointer; }
+.gl-tree > li:last-child > .gl-tree__row:last-child { border-bottom: 0; }
+.gl-tree__row:hover { background: var(--gl-surface-2); }
+.gl-tree__row[data-selected] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-tree__chevron { display: grid; place-items: center; width: 12px; flex: none; }
+.gl-tree__chevron[data-open] { transform: rotate(90deg); }
+.gl-tree__icon { display: grid; place-items: center; opacity: 0.8; }
+.gl-tree__label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-tree__meta { opacity: 0.7; }

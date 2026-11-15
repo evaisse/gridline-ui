@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Progress } from './Progress';
 
 const meta = {
-  title: 'Atoms/Progress',
+  title: 'Atoms/Feedback/Progress', tags: ['loading', 'status'],
   component: Progress,
   args: { value: 62, 'aria-label': 'Upload' },
   decorators: [(Story) => <div style={{ maxWidth: 320 }}><Story /></div>],

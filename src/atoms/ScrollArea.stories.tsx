@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ScrollArea } from './ScrollArea';
 
-const meta = { title: 'Atoms/ScrollArea', component: ScrollArea } satisfies Meta<typeof ScrollArea>;
+const meta = { title: 'Atoms/Layout/ScrollArea', tags: ['container'], component: ScrollArea } satisfies Meta<typeof ScrollArea>;
 export default meta;
 
 export const Vertical: StoryObj<typeof meta> = {

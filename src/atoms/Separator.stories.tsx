@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Separator } from './Separator';
 
-const meta = { title: 'Atoms/Separator', component: Separator, args: { strength: 'faint' } } satisfies Meta<typeof Separator>;
+const meta = { title: 'Atoms/Layout/Separator', tags: ['spacing'], component: Separator, args: { strength: 'faint' } } satisfies Meta<typeof Separator>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Label } from './Label';
 
 const meta = {
-  title: 'Atoms/Label',
+  title: 'Atoms/Typography/Label', tags: ['text'],
   component: Label,
   args: { children: 'Release date', tone: 'muted', size: 'sm' },
 } satisfies Meta<typeof Label>;

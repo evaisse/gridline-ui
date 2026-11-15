@@ -1,0 +1,4 @@
+.gl-link { color: var(--gl-ink); text-decoration: underline; text-decoration-color: var(--gl-rule-strong); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.gl-link:hover { text-decoration-color: var(--gl-ink); }
+.gl-link--plain { text-decoration-color: transparent; }
+.gl-link__arrow { margin-left: 2px; font-family: var(--gl-font-mono); font-size: 0.85em; color: var(--gl-ink-2); }

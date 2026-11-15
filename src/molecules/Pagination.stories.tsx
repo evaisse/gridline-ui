@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Pagination } from './Pagination';
 
 const meta = {
-  title: 'Molecules/Pagination',
+  title: 'Molecules/Navigation/Pagination', tags: ['wayfinding'],
   component: Pagination,
   args: { page: 4, pageCount: 12 },
   render: function Render(args) {

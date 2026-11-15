@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { NavigationMenu, NavigationMenuCard, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger } from './NavigationMenu';
 
-const meta = { title: 'Organisms/NavigationMenu', component: NavigationMenu, decorators: [(Story) => <div style={{ minHeight: 240 }}><Story /></div>] } satisfies Meta<typeof NavigationMenu>;
+const meta = { title: 'Organisms/Navigation/NavigationMenu', tags: ['menu', 'wayfinding'], component: NavigationMenu, decorators: [(Story) => <div style={{ minHeight: 240 }}><Story /></div>] } satisfies Meta<typeof NavigationMenu>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './HoverCard';
 
-const meta = { title: 'Atoms/HoverCard', component: HoverCard } satisfies Meta<typeof HoverCard>;
+const meta = { title: 'Atoms/Overlays/HoverCard', tags: ['popup'], component: HoverCard } satisfies Meta<typeof HoverCard>;
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {

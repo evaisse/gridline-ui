@@ -6,7 +6,7 @@ import {
 } from './Dialog';
 import { Field } from './Field';
 
-const meta = { title: 'Molecules/Dialog', component: Dialog, parameters: { layout: 'centered' } } satisfies Meta<typeof Dialog>;
+const meta = { title: 'Molecules/Overlays/Dialog', tags: ['modal'], component: Dialog, parameters: { layout: 'centered' } } satisfies Meta<typeof Dialog>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

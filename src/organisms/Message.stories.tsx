@@ -5,7 +5,7 @@ import { CopyIcon, RefreshIcon } from '../tokens/icons';
 import { Message } from './Message';
 import { MessageScroller } from './MessageScroller';
 
-const meta = { title: 'Organisms/Message', component: Message, decorators: [(Story) => <div style={{ maxWidth: 560 }}><Story /></div>] } satisfies Meta<typeof Message>;
+const meta = { title: 'Organisms/Assistant/Message', tags: ['ai', 'chat'], component: Message, decorators: [(Story) => <div style={{ maxWidth: 560 }}><Story /></div>] } satisfies Meta<typeof Message>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

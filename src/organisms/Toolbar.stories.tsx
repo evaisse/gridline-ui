@@ -3,7 +3,7 @@ import { Button, NativeSelect } from '../atoms';
 import { Toolbar, ToolbarCell } from './Toolbar';
 
 const meta = {
-  title: 'Organisms/Toolbar',
+  title: 'Organisms/Actions/Toolbar', tags: ['action', 'container'],
   component: Toolbar,
   decorators: [(Story) => <div style={{ border: '1px solid var(--gl-rule-strong)', borderBottom: 0 }}><Story /></div>],
 } satisfies Meta<typeof Toolbar>;

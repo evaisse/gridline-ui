@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Chat',
+  title: 'Templates/Application/Chat', tags: ['page', 'chat', 'shell'],
   component: ChatTemplate,
   parameters: { layout: 'fullscreen' },
   args: { sidebar: slot('sidebar', '100%'), header: slot('header', 39), children: slot('children', '100%') },

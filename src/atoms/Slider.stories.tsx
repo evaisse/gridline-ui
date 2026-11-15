@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Slider } from './Slider';
 
 const meta = {
-  title: 'Atoms/Slider',
+  title: 'Atoms/Forms/Slider', tags: ['input', 'number'],
   component: Slider,
   args: { defaultValue: [40], max: 100, step: 1 },
   decorators: [(Story) => <div style={{ maxWidth: 320 }}><Story /></div>],

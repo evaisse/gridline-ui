@@ -1,0 +1,11 @@
+.gl-file-upload { display: grid; }
+.gl-file-upload__zone { display: grid; place-items: center; width: 100%; min-height: 144px; padding: var(--gl-space-4); border: 1px dashed var(--gl-rule-strong); background-color: var(--gl-paper); color: var(--gl-ink); cursor: pointer; }
+.gl-file-upload__zone:hover, .gl-file-upload__zone[data-over] { border-style: solid; border-color: var(--gl-ink); }
+.gl-file-upload__zone:disabled { cursor: not-allowed; color: var(--gl-ink-3); }
+.gl-file-upload__box { display: grid; justify-items: center; gap: var(--gl-space-2); padding: var(--gl-space-3) var(--gl-space-4); border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-file-upload__hint { color: var(--gl-ink-2); font-size: 12px; }
+.gl-file-upload__list { margin: 0; padding: 0; list-style: none; border: 1px solid var(--gl-rule-strong); border-top: 0; }
+.gl-file-upload__list > li { display: flex; align-items: center; gap: var(--gl-space-2); min-height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); color: var(--gl-ink-2); }
+.gl-file-upload__list > li:last-child { border-bottom: 0; }
+.gl-file-upload__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--gl-ink); }
+.gl-file-upload__list button { display: grid; place-items: center; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }

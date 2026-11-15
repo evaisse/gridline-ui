@@ -1,0 +1,8 @@
+.gl-auth { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 100dvh; background: var(--gl-paper); }
+.gl-auth--split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.gl-auth__main { display: flex; flex-direction: column; min-width: 0; }
+.gl-auth__brand { display: flex; align-items: center; min-height: 48px; padding: 0 var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-auth__form { flex: 1; display: grid; place-items: center; padding: var(--gl-space-5) var(--gl-space-4); }
+.gl-auth__footer { padding: var(--gl-space-3) var(--gl-space-4); border-top: 1px solid var(--gl-rule); }
+.gl-auth__aside { display: grid; align-content: center; min-width: 0; padding: var(--gl-space-6); border-left: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+@media (max-width: 860px) { .gl-auth--split { grid-template-columns: minmax(0, 1fr); } .gl-auth__aside { display: none; } }

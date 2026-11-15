@@ -5,7 +5,7 @@ import { Label } from './Label';
 import { Text } from './Text';
 
 const meta = {
-  title: 'Atoms/Frame',
+  title: 'Atoms/Layout/Frame', tags: ['container'],
   component: Frame,
   parameters: { layout: 'fullscreen' },
 } satisfies Meta<typeof Frame>;

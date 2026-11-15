@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Home',
+  title: 'Templates/Marketing/Home', tags: ['page', 'text'],
   component: HomeTemplate,
   parameters: { layout: 'fullscreen' },
   args: { nav: slot('nav', 32), hero: <div style={{ width: '100%' }}>{slot('hero', 240)}</div>, heroAside: slot('hero aside', 240), children: <>{slot('section', 200)}{slot('section', 200)}</>, footer: slot('footer', 120) },

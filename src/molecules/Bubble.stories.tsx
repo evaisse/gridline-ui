@@ -3,7 +3,7 @@ import { Button } from '../atoms';
 import { ThumbUpIcon } from '../tokens/icons';
 import { Bubble, BubbleGroup } from './Bubble';
 
-const meta = { title: 'Molecules/Bubble', component: Bubble, args: { children: 'How did the 4.2.0 release do?' } } satisfies Meta<typeof Bubble>;
+const meta = { title: 'Molecules/Assistant/Bubble', tags: ['chat'], component: Bubble, args: { children: 'How did the 4.2.0 release do?' } } satisfies Meta<typeof Bubble>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

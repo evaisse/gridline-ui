@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { InputOTP } from './InputOTP';
 
-const meta = { title: 'Molecules/InputOTP', component: InputOTP, args: { maxLength: 6, 'aria-label': 'Verification code' } } satisfies Meta<typeof InputOTP>;
+const meta = { title: 'Molecules/Forms/InputOTP', tags: ['input', 'auth'], component: InputOTP, args: { maxLength: 6, 'aria-label': 'Verification code' } } satisfies Meta<typeof InputOTP>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

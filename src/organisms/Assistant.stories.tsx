@@ -7,7 +7,7 @@ import { AssistantSidebar } from './AssistantSidebar';
 import { AssistantThread } from './AssistantThread';
 import { AssistantThreadList } from './AssistantThreadList';
 
-const meta = { title: 'Organisms/Assistant', component: AssistantThread, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof AssistantThread>;
+const meta = { title: 'Organisms/Assistant/Assistant', tags: ['ai', 'chat', 'input', 'list', 'popup', 'shell'], component: AssistantThread, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof AssistantThread>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Blockquote, InlineCode, Prose } from './Prose';
 
-const meta = { title: 'Atoms/Prose', component: Prose } satisfies Meta<typeof Prose>;
+const meta = { title: 'Atoms/Typography/Prose', tags: ['text'], component: Prose } satisfies Meta<typeof Prose>;
 export default meta;
 
 export const Article: StoryObj<typeof meta> = {

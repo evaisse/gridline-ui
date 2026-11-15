@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Queue',
+  title: 'Templates/Application/Queue', tags: ['page', 'list', 'kpi'],
   component: QueueTemplate,
   parameters: { layout: 'fullscreen' },
   args: { header: slot('header', 32), stats: slot('stats', 96), charts: <>{slot('chart', 200)}{slot('chart', 200)}</>, toolbar: slot('toolbar', 40), children: slot('children', 360), aside: slot('aside', '100%') },

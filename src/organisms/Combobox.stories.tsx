@@ -5,7 +5,7 @@ import { Combobox } from './Combobox';
 const options = ['tessera', 'quillmark', 'harrow', 'lumen-fmt', 'castor', 'bramble', 'sextant'].map((name) => ({ value: name, label: name }));
 
 const meta = {
-  title: 'Organisms/Combobox',
+  title: 'Organisms/Forms/Combobox', tags: ['input', 'selection', 'search', 'popup'],
   component: Combobox,
   args: { options, placeholder: 'Select a package', 'aria-label': 'Package' },
   render: function Render(args) {

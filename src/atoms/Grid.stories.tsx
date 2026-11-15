@@ -3,7 +3,7 @@ import { Cell, Grid } from './Grid';
 import { Label } from './Label';
 
 const meta = {
-  title: 'Atoms/Grid',
+  title: 'Atoms/Layout/Grid', tags: ['spacing', 'container'],
   component: Grid,
   args: { columns: 3, framed: true },
 } satisfies Meta<typeof Grid>;

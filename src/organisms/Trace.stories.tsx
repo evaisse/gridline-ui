@@ -3,7 +3,7 @@ import { GlobeIcon, SearchIcon, SparkIcon, TerminalIcon } from '../tokens/icons'
 import { Trace } from './Trace';
 
 const meta = {
-  title: 'Organisms/Trace',
+  title: 'Organisms/Data display/Trace', tags: ['history', 'ai', 'status'],
   component: Trace,
   args: {
     title: 'Worked for 12s',

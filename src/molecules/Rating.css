@@ -1,0 +1,9 @@
+.gl-rating { display: inline-flex; align-items: center; gap: 2px; }
+.gl-rating__mark { display: inline-grid; place-items: center; width: 20px; height: 20px; padding: 0; border: 0; background: transparent; color: var(--gl-ink-3); }
+button.gl-rating__mark { cursor: pointer; }
+button.gl-rating__mark:hover { color: var(--gl-ink); }
+.gl-rating__mark[data-fill='full'] { color: var(--gl-ink); }
+.gl-rating__mark[data-fill='full'] path { fill: currentColor; }
+.gl-rating__mark[data-fill='half'] { color: var(--gl-ink); }
+.gl-rating__mark[data-fill='half'] path { fill: var(--gl-surface-3); }
+.gl-rating__value { margin-left: var(--gl-space-2); }

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Questionnaire } from './Questionnaire';
 
 const meta = {
-  title: 'Organisms/Questionnaire',
+  title: 'Organisms/Forms/Questionnaire', tags: ['form', 'steps', 'ai'],
   component: Questionnaire,
   args: {
     questions: [

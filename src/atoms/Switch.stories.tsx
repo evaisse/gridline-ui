@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Switch } from './Switch';
 
-const meta = { title: 'Atoms/Switch', component: Switch, args: { 'aria-label': 'Log scale', defaultChecked: true } } satisfies Meta<typeof Switch>;
+const meta = { title: 'Atoms/Forms/Switch', tags: ['input', 'toggle'], component: Switch, args: { 'aria-label': 'Log scale', defaultChecked: true } } satisfies Meta<typeof Switch>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

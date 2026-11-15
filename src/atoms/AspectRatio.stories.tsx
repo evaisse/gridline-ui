@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AspectRatio } from './AspectRatio';
 
 const meta = {
-  title: 'Atoms/AspectRatio',
+  title: 'Atoms/Layout/AspectRatio', tags: ['container', 'media'],
   component: AspectRatio,
   args: { ratio: 16 / 9 },
   render: (args) => (

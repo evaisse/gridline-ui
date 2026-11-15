@@ -4,7 +4,7 @@ import { FileIcon } from '../tokens/icons';
 import { Item, ItemGroup } from './Item';
 
 const meta = {
-  title: 'Molecules/Item',
+  title: 'Molecules/Data display/Item', tags: ['list'],
   component: Item,
   args: { media: <FileIcon />, title: 'release-notes.md', description: 'Edited 2 hours ago · 4 kB', actions: <Button size="sm">Open</Button> },
   decorators: [(Story) => <div style={{ maxWidth: 440 }}><Story /></div>],

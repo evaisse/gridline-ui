@@ -6,7 +6,7 @@ const slot = (name: string, height: number | string) => (
 );
 
 const meta = {
-  title: 'Templates/Dashboard',
+  title: 'Templates/Dashboards/Dashboard', tags: ['page', 'kpi', 'data'],
   component: DashboardTemplate,
   parameters: { layout: 'fullscreen' },
   args: { header: slot('header', 32), stats: slot('stats', 96), charts: <>{slot('chart', 220)}{slot('chart', 220)}</>, children: slot('children', 200) },
