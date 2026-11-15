@@ -2,3 +2,8 @@ export { ChatTemplate, type ChatTemplateProps } from './ChatTemplate';
 export { DashboardTemplate, type DashboardTemplateProps } from './DashboardTemplate';
 export { IndexTemplate, type IndexTemplateProps } from './IndexTemplate';
 export { MasterDetailTemplate, type MasterDetailTemplateProps } from './MasterDetailTemplate';
+export { HomeTemplate, type HomeTemplateProps } from './HomeTemplate';
+export { ListingTemplate, type ListingTemplateProps } from './ListingTemplate';
+export { MonitoringTemplate, type MonitoringTemplateProps } from './MonitoringTemplate';
+export { QueueTemplate, type QueueTemplateProps } from './QueueTemplate';
+export { SearchTemplate, type SearchTemplateProps } from './SearchTemplate';

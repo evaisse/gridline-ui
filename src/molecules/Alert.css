@@ -7,6 +7,7 @@
   background: rgb(var(--gl-tone) / 0.06);
 }
 .gl-alert__icon { flex: none; display: grid; color: rgb(var(--gl-tone)); padding-top: 1px; }
-.gl-alert__body { flex: 1; min-width: 0; display: grid; gap: var(--gl-space-1); }
+.gl-alert__body { flex: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gl-space-1); }
+.gl-alert__body > .gl-label { white-space: normal; }
 .gl-alert__text { color: var(--gl-ink-2); line-height: 1.5; }
 .gl-alert__action { flex: none; display: flex; align-items: center; gap: var(--gl-space-2); }

@@ -36,7 +36,7 @@ src/
   atoms/       33 single-purpose elements
   molecules/   35 small compositions
   organisms/   28 self-contained blocks, including charts and the assistant
-  templates/   MasterDetail, Index, Chat, Dashboard
+  templates/   MasterDetail, Index, Chat, Dashboard, Queue, Monitoring, Home, Listing, Search
   pages/       stories that fill a template with invented fixtures
 ```
 

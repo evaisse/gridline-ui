@@ -1,0 +1,5 @@
+.gl-listing__nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--gl-space-2) var(--gl-space-4); min-height: 48px; padding: var(--gl-space-2) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-listing__header { display: grid; gap: var(--gl-space-3); padding: var(--gl-space-5) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-listing__header > * { max-width: 720px; }
+.gl-listing__main { min-width: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-listing__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--gl-space-3); padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
