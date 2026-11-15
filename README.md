@@ -4,6 +4,9 @@ A compact, hairline-ruled design system for data-dense interfaces, documented in
 
 Gridline treats the interface as a technical table: structure comes from 1px rules and a visible grid, not from floating cards.
 
+Live demo: <https://evaisse.github.io/gridline-ui/> — the static Storybook, deployed by
+`.github/workflows/pages.yml` on every push to `main`.
+
 ## Run it
 
 ```bash
