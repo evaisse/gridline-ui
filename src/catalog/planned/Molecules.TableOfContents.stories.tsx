@@ -10,6 +10,10 @@ import { Placeholder } from '../Placeholder';
  * @see https://ant.design/components/anchor Ant Design
  * @see https://mantine.dev/core/anchor/ Mantine
  * @see https://mantine.dev/core/table-of-contents/ Mantine
+ * @see https://element-plus.org/en-US/component/anchor Element Plus
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/scroll-spy Flowbite Svelte
+ * @see https://ng.ant.design/components/anchor/en NG-ZORRO
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenToc.razor Radzen Blazor
  */
 const meta = {
   title: 'Molecules/Navigation/TableOfContents',

@@ -9,6 +9,25 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/core/mask-input/ Mantine
  * @see https://mantine.dev/core/phone-input/ Mantine
  * @see https://mantine.dev/dates/masked-date-input/ Mantine
+ * @see https://www.telerik.com/kendo-angular-ui/maskedtextbox Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/maskedtextbox Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/maskedtextbox KendoReact
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/inputmask PrimeFaces
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/inputphone PrimeFaces
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/keyfilter PrimeFaces
+ * @see https://v18.primeng.org/inputmask PrimeNG 18
+ * @see https://v18.primeng.org/keyfilter PrimeNG 18
+ * @see https://v10.primereact.org/inputmask/ PrimeReact 10
+ * @see https://v10.primereact.org/keyfilter/ PrimeReact 10
+ * @see https://v4.primevue.org/inputmask/ PrimeVue 4
+ * @see https://v4.primevue.org/keyfilter/ PrimeVue 4
+ * @see https://www.htmlelements.com/docs/maskedtextbox/ Smart UI
+ * @see https://www.syncfusion.com/blazor-components/blazor-input-mask Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-input-mask Syncfusion EJ2
+ * @see https://docs.tabler.io/ui/plugins/input-mask Tabler
+ * @see https://www.telerik.com/blazor-ui/maskedtextbox Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/maskedentry Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/products/wpf/maskedinput.aspx Telerik UI for WPF
  */
 const meta = {
   title: 'Molecules/Forms/MaskedInput',

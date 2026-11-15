@@ -4,8 +4,11 @@ import { CATEGORIES, TAGS, type CatalogEntry, type Category, type Layer, type Ta
 export interface Reference {
   /** Library id, a key of `libraries`. */
   library: string;
+  /** The component's name or path in that library. */
   slug: string;
   url: string;
+  /** The category given by the imported directory, when the page comes from it. */
+  category?: string;
 }
 
 /** A catalogue entry with its Storybook location and its matched documentation pages. */
@@ -16,7 +19,23 @@ export interface ResolvedEntry extends CatalogEntry {
 }
 
 export const entries = generated.entries as ResolvedEntry[];
-export const libraries = generated.libraries as Record<string, { name: string; components: number }>;
+export interface Library {
+  name: string;
+  /** Number of documented components known for it. */
+  components: number;
+  /** Where its list comes from: the site harvest, the imported directory, or both. */
+  origin: 'harvest' | 'directory' | 'both';
+  stack?: string;
+  platform?: string;
+  license?: string;
+  maturity?: string;
+  description?: string;
+  url?: string;
+}
+
+export const libraries = generated.libraries as Record<string, Library>;
+/** The date of the imported UI component directory. */
+export const directoryDate = generated.directoryDate as string | null;
 /** Harvested documentation pages that no entry claims yet. */
 export const unclassified = generated.unclassified as Reference[];
 

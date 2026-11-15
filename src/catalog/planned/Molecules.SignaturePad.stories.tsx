@@ -7,6 +7,18 @@ import { Placeholder } from '../Placeholder';
  * Captures a hand-drawn signature.
  *
  * @see https://ark-ui.com/docs/components/signature-pad Ark UI
+ * @see https://www.telerik.com/kendo-angular-ui/signature Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/signature Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/signature KendoReact
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/signature PrimeFaces
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenSignaturePad.razor Radzen Blazor
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.signature.Signature.html Sencha Ext JS
+ * @see https://www.syncfusion.com/blazor-components/blazor-signature Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-signature Syncfusion EJ2
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://docs.tabler.io/ui/plugins/signature Tabler
+ * @see https://www.telerik.com/blazor-ui/signature Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/signaturepad Telerik UI for .NET MAUI
  */
 const meta = {
   title: 'Molecules/Forms/SignaturePad',

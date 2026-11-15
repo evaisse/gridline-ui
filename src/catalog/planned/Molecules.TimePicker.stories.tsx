@@ -13,6 +13,27 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/dates/time-input/ Mantine
  * @see https://mantine.dev/dates/time-picker/ Mantine
  * @see https://www.heroui.com/docs/react/components/time-field HeroUI
+ * @see https://docs.dhtmlx.com/suite/timepicker/ DHTMLX Suite
+ * @see https://element-plus.org/en-US/component/time-picker Element Plus
+ * @see https://element-plus.org/en-US/component/time-select Element Plus
+ * @see https://flatpickr.js.org/examples/#time-picker flatpickr
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/showTimePicker.html Flutter Material
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/time-picker Ignite UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/timepicker Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/timedurationpicker Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-jquery-ui/timepicker Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/timepicker KendoReact
+ * @see https://ng.ant.design/components/time-picker/en NG-ZORRO
+ * @see https://quasar.dev/vue-components/time Quasar
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenTimeSpanPicker.razor Radzen Blazor
+ * @see https://www.htmlelements.com/docs/timepicker/ Smart UI
+ * @see https://www.syncfusion.com/blazor-components/blazor-timepicker Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-timepicker Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/timepicker Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/timepicker Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/maui-ui/timespanpicker Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/products/wpf/timespanpicker.aspx Telerik UI for WPF
+ * @see https://webawesome.com/docs/components/time-input/ Web Awesome
  */
 const meta = {
   title: 'Molecules/Forms/TimePicker',

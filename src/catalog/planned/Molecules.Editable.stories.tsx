@@ -9,6 +9,12 @@ import { Placeholder } from '../Placeholder';
  * @see https://ark-ui.com/docs/components/editable Ark UI
  * @see https://chakra-ui.com/docs/components/editable Chakra UI
  * @see https://atlassian.design/components/inline-edit Atlassian Design System
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/inplace PrimeFaces
+ * @see https://v18.primeng.org/inplace PrimeNG 18
+ * @see https://v10.primereact.org/inplace/ PrimeReact 10
+ * @see https://v4.primevue.org/inplace/ PrimeVue 4
+ * @see https://www.syncfusion.com/blazor-components/blazor-in-place-editor Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-in-place-editor Syncfusion EJ2
  */
 const meta = {
   title: 'Molecules/Forms/Editable',

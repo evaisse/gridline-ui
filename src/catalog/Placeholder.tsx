@@ -33,10 +33,10 @@ export function Placeholder({ name }: PlaceholderProps) {
         {entry.aliases.length > 0 && <KeyValue label="Also called">{entry.aliases.join(', ')}</KeyValue>}
         <div className="gl-placeholder__section">
           <Label tone="ink">References · {entry.refs.length}</Label>
-          {entry.refs.length === 0 && <Text tone="muted">No documentation page was matched in the harvested libraries.</Text>}
+          {entry.refs.length === 0 && <Text tone="muted">No documentation page was matched in the libraries the catalogue draws on.</Text>}
           <ul className="gl-placeholder__refs">
             {entry.refs.map((ref) => (
-              <li key={ref.url}><Label>{libraryName(ref.library)}</Label><Link external href={ref.url}>{ref.slug}</Link></li>
+              <li key={ref.url + ref.slug}><Label>{libraryName(ref.library)}</Label><Link external href={ref.url}>{ref.slug}</Link></li>
             ))}
           </ul>
         </div>

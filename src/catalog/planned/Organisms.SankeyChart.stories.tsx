@@ -8,6 +8,13 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://mantine.dev/charts/sankey-chart/ Mantine
  * @see https://www.assistant-ui.com/elements/flow-graph assistant-ui
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxSankey/ DevExtreme
+ * @see https://www.telerik.com/kendo-angular-ui/sankey-diagram Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-react-ui/sankey-chart KendoReact
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenSankeyDiagram.razor Radzen Blazor
+ * @see https://www.syncfusion.com/blazor-components/blazor-sankey-diagram Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-sankey Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/sankey-chart Telerik UI for Blazor
  */
 const meta = {
   title: 'Organisms/Charts/SankeyChart',

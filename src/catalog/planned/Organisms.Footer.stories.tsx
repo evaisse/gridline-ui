@@ -7,6 +7,9 @@ import { Placeholder } from '../Placeholder';
  * Link columns and legal line at the bottom of a public page.
  *
  * @see https://daisyui.com/components/footer/ daisyUI
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/footer Flowbite Svelte
+ * @see https://ionicframework.com/docs/api/footer Ionic
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenFooter.razor Radzen Blazor
  */
 const meta = {
   title: 'Organisms/Marketing/Footer',

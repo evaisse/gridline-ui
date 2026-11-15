@@ -7,6 +7,14 @@ import { Placeholder } from '../Placeholder';
  * Open, high, low and close per period.
  *
  * @see https://mantine.dev/charts/candlestick-chart/ Mantine
+ * @see https://www.syncfusion.com/blazor-components/blazor-stock-chart Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-stock-chart Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/candlestick-chart Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/ohlc-chart Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/stock-chart Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/candlestick-chart Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/maui-ui/financial-chart Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/maui-ui/ohlc-chart Telerik UI for .NET MAUI
  */
 const meta = {
   title: 'Organisms/Charts/CandlestickChart',

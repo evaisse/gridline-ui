@@ -7,6 +7,19 @@ import { Placeholder } from '../Placeholder';
  * A tiny line without axes, for a table cell or a stat.
  *
  * @see https://mantine.dev/charts/sparkline/ Mantine
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxSparkline/ DevExtreme
+ * @see https://www.telerik.com/kendo-angular-ui/sparkline Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/sparklines Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/sparkline KendoReact
+ * @see https://www.syncfusion.com/blazor-components/blazor-sparkline Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-sparkline Syncfusion EJ2
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://docs.tabler.io/ui/components/sparkline Tabler
+ * @see https://www.telerik.com/products/wpf/sparklines.aspx Telerik UI for WPF
+ * @see https://webawesome.com/docs/components/sparkline/ Web Awesome
  */
 const meta = {
   title: 'Molecules/Charts/Sparkline',

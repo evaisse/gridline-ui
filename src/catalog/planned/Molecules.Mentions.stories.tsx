@@ -9,6 +9,12 @@ import { Placeholder } from '../Placeholder';
  * @see https://ant.design/components/mentions Ant Design
  * @see https://mantine.dev/core/mentions/ Mantine
  * @see https://www.assistant-ui.com/elements/composer-mentions assistant-ui
+ * @see https://element-plus.org/en-US/component/mention Element Plus
+ * @see https://ng.ant.design/components/mention/en NG-ZORRO
+ * @see https://v10.primereact.org/mention/ PrimeReact 10
+ * @see https://www.syncfusion.com/blazor-components/blazor-mention Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-mention Syncfusion EJ2
+ * @see https://docs.tabler.io/ui/components/mention Tabler
  */
 const meta = {
   title: 'Molecules/Forms/Mentions',

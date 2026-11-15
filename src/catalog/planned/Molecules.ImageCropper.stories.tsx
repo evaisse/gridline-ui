@@ -7,6 +7,12 @@ import { Placeholder } from '../Placeholder';
  * Selects a region of a picture.
  *
  * @see https://ark-ui.com/docs/components/image-cropper Ark UI
+ * @see https://www.telerik.com/kendo-jquery-ui/image-editor Kendo UI for jQuery
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/imagecropper PrimeFaces
+ * @see https://www.syncfusion.com/blazor-components/blazor-image-editor Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-image-editor Syncfusion EJ2
+ * @see https://www.telerik.com/maui-ui/imageeditor Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/products/wpf/imageeditor.aspx Telerik UI for WPF
  */
 const meta = {
   title: 'Molecules/Media/ImageCropper',

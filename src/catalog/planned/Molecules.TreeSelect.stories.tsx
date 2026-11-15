@@ -8,6 +8,19 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://ant.design/components/tree-select Ant Design
  * @see https://mantine.dev/core/tree-select/ Mantine
+ * @see https://element-plus.org/en-US/component/tree-select Element Plus
+ * @see https://www.telerik.com/kendo-angular-ui/dropdowntree Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/multiselecttree Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/dropdowntree Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/dropdowntree KendoReact
+ * @see https://www.telerik.com/kendo-react-ui/multiselecttree KendoReact
+ * @see https://ng.ant.design/components/tree-select/en NG-ZORRO
+ * @see https://v18.primeng.org/treeselect PrimeNG 18
+ * @see https://v10.primereact.org/treeselect/ PrimeReact 10
+ * @see https://v4.primevue.org/treeselect/ PrimeVue 4
+ * @see https://www.syncfusion.com/blazor-components/blazor-dropdowntree Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-dropdown-tree Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/dropdowntree Telerik UI for Blazor
  */
 const meta = {
   title: 'Molecules/Forms/TreeSelect',

@@ -9,6 +9,8 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/dates/time-value/ Mantine
  * @see https://primer.style/product/components/relative-time/ Primer
  * @see https://atlassian.design/components/date-label Atlassian Design System
+ * @see https://webawesome.com/docs/components/format-date/ Web Awesome
+ * @see https://webawesome.com/docs/components/relative-time/ Web Awesome
  */
 const meta = {
   title: 'Atoms/Data display/RelativeTime',

@@ -7,6 +7,12 @@ import { Placeholder } from '../Placeholder';
  * A small confirmation anchored to the button that asked.
  *
  * @see https://ant.design/components/popconfirm Ant Design
+ * @see https://element-plus.org/en-US/component/popconfirm Element Plus
+ * @see https://ng.ant.design/components/popconfirm/en NG-ZORRO
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/confirmpopup PrimeFaces
+ * @see https://v18.primeng.org/confirmpopup PrimeNG 18
+ * @see https://v10.primereact.org/confirmpopup/ PrimeReact 10
+ * @see https://v4.primevue.org/confirmpopup/ PrimeVue 4
  */
 const meta = {
   title: 'Molecules/Overlays/Popconfirm',

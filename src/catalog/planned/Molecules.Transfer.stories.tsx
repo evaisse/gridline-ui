@@ -8,6 +8,14 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://mui.com/material-ui/react-transfer-list/ Material UI
  * @see https://ant.design/components/transfer Ant Design
+ * @see https://element-plus.org/en-US/component/transfer Element Plus
+ * @see https://ng.ant.design/components/transfer/en NG-ZORRO
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/picklist PrimeFaces
+ * @see https://v18.primeng.org/picklist PrimeNG 18
+ * @see https://v10.primereact.org/picklist/ PrimeReact 10
+ * @see https://v4.primevue.org/picklist/ PrimeVue 4
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenPickList.razor Radzen Blazor
+ * @see https://docs.webix.com/desktop__double_list.html Webix
  */
 const meta = {
   title: 'Molecules/Forms/Transfer',

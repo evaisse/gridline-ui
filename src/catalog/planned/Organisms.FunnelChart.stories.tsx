@@ -7,6 +7,14 @@ import { Placeholder } from '../Placeholder';
  * How many remain at each stage.
  *
  * @see https://mantine.dev/charts/funnel-chart/ Mantine
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxFunnel/ DevExtreme
+ * @see https://www.telerik.com/kendo-angular-ui/funnel-chart Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/pyramid-chart Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/pyramid-chart Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/funnel-chart KendoReact
+ * @see https://www.telerik.com/kendo-react-ui/pyramid-chart KendoReact
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
  */
 const meta = {
   title: 'Organisms/Charts/FunnelChart',

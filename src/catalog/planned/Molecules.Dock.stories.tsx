@@ -8,6 +8,17 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://mui.com/material-ui/react-bottom-navigation/ Material UI
  * @see https://daisyui.com/components/dock/ daisyUI
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/bottom-navigation Flowbite Svelte
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/BottomNavigationBar-class.html Flutter Material
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/NavigationBar-class.html Flutter Material
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/tabbar Ignite UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/bottomnavigation Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/bottomnavigation Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/bottomnavigation KendoReact
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/dock PrimeFaces
+ * @see https://v18.primeng.org/dock PrimeNG 18
+ * @see https://v10.primereact.org/dock/ PrimeReact 10
+ * @see https://v4.primevue.org/dock/ PrimeVue 4
  */
 const meta = {
   title: 'Molecules/Navigation/Dock',

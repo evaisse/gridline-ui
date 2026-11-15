@@ -85,7 +85,7 @@ export function CatalogueBrowser({ query: initialQuery = '', layer, status, cate
           <Text variant="small" tone="muted"><Highlight query={query}>{entry.summary}</Highlight></Text>
           {entry.refs.length > 0 && (
             <div className="gl-catalogue__refs">
-              {entry.refs.map((ref) => <Link key={ref.url} variant="plain" external href={ref.url} title={ref.slug}>{libraryName(ref.library)}{normalised(ref.slug) !== entry.name.toLowerCase() && ` · ${ref.slug.split('/').pop()}`}</Link>)}
+              {entry.refs.map((ref) => <Link key={ref.url + ref.slug} variant="plain" external href={ref.url} title={ref.slug}>{libraryName(ref.library)}{normalised(ref.slug) !== entry.name.toLowerCase() && ` · ${ref.slug.split('/').pop()}`}</Link>)}
             </div>
           )}
         </article>

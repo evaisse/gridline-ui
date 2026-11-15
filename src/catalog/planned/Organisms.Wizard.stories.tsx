@@ -6,7 +6,10 @@ import { Placeholder } from '../Placeholder';
  * Wizard — planned organism, not built yet.
  * A form split into steps with back and next.
  *
- * No documentation page was matched in the harvested libraries.
+ * @see https://www.telerik.com/kendo-jquery-ui/wizard Kendo UI for jQuery
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/wizard PrimeFaces
+ * @see https://www.telerik.com/blazor-ui/wizard Telerik UI for Blazor
+ * @see https://www.telerik.com/products/wpf/wizard.aspx Telerik UI for WPF
  */
 const meta = {
   title: 'Organisms/Forms/Wizard',

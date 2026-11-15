@@ -31,6 +31,44 @@ import { Placeholder } from '../Placeholder';
  * @see https://www.heroui.com/docs/react/components/color-picker HeroUI
  * @see https://www.heroui.com/docs/react/components/color-slider HeroUI
  * @see https://www.heroui.com/docs/react/components/color-swatch-picker HeroUI
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxColorBox/ DevExtreme
+ * @see https://docs.dhtmlx.com/suite/colorpicker/ DHTMLX Suite
+ * @see https://element-plus.org/en-US/component/color Element Plus
+ * @see https://element-plus.org/en-US/component/color-picker Element Plus
+ * @see https://element-plus.org/en-US/component/color-picker-panel Element Plus
+ * @see https://www.telerik.com/kendo-angular-ui/colorgradient Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/colorpalette Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/colorpicker Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/flatcolorpicker Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/colorgradient Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-jquery-ui/colorpicker Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/colorgradient KendoReact
+ * @see https://www.telerik.com/kendo-react-ui/colorpalette KendoReact
+ * @see https://www.telerik.com/kendo-react-ui/colorpicker KendoReact
+ * @see https://www.telerik.com/kendo-react-ui/flatcolorpicker KendoReact
+ * @see https://ng.ant.design/components/color-picker/en NG-ZORRO
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/colorpicker PrimeFaces
+ * @see https://v18.primeng.org/colorpicker PrimeNG 18
+ * @see https://v10.primereact.org/colorpicker/ PrimeReact 10
+ * @see https://v4.primevue.org/colorpicker/ PrimeVue 4
+ * @see https://quasar.dev/vue-components/color-picker Quasar
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenColorPicker.razor Radzen Blazor
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.menu.ColorPicker.html Sencha Ext JS
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.picker.Color.html Sencha Ext JS
+ * @see https://www.htmlelements.com/docs/colorpicker/ Smart UI
+ * @see https://www.syncfusion.com/blazor-components/blazor-color-picker Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-color-picker Syncfusion EJ2
+ * @see https://docs.tabler.io/ui/plugins/color-picker Tabler
+ * @see https://www.telerik.com/blazor-ui/colorgradient Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/colorpalette Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/colorpicker Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/flatcolorpicker Telerik UI for Blazor
+ * @see https://www.telerik.com/products/wpf/coloreditor.aspx Telerik UI for WPF
+ * @see https://www.telerik.com/products/wpf/colorpicker.aspx Telerik UI for WPF
+ * @see https://webawesome.com/docs/components/color-picker/ Web Awesome
+ * @see https://docs.webix.com/desktop__colorpicker.html Webix
+ * @see https://docs.webix.com/desktop__colorselector.html Webix
+ * @see https://docs.webix.com/desktop__colorboard.html Webix
  */
 const meta = {
   title: 'Molecules/Forms/ColorPicker',

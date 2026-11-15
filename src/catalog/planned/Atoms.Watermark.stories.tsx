@@ -7,6 +7,8 @@ import { Placeholder } from '../Placeholder';
  * Repeats a faint mark behind content.
  *
  * @see https://ant.design/components/watermark Ant Design
+ * @see https://element-plus.org/en-US/component/watermark Element Plus
+ * @see https://ng.ant.design/components/watermark/en NG-ZORRO
  */
 const meta = {
   title: 'Atoms/Media/Watermark',

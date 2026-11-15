@@ -12,6 +12,12 @@ import { Placeholder } from '../Placeholder';
  * @see https://shopify.dev/docs/api/app-home/latest/web-components/forms/choice-list Polaris
  * @see https://primer.style/product/components/checkbox-group/ Primer
  * @see https://www.heroui.com/docs/react/components/checkbox-group HeroUI
+ * @see https://www.telerik.com/kendo-jquery-ui/checkboxgroup Kendo UI for jQuery
+ * @see https://ng.ant.design/components/check-list/en NG-ZORRO
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenCheckBoxList.razor Radzen Blazor
+ * @see https://docs.sencha.com/extjs/8.0.0/modern/Ext.field.CheckboxGroup.html Sencha Ext JS
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.form.CheckboxGroup.html Sencha Ext JS
+ * @see https://webawesome.com/docs/components/checkbox-group/ Web Awesome
  */
 const meta = {
   title: 'Molecules/Forms/CheckboxGroup',

@@ -6,7 +6,23 @@ import { Placeholder } from '../Placeholder';
  * Scheduler — planned organism, not built yet.
  * Events placed on a day, week or month grid.
  *
- * No documentation page was matched in the harvested libraries.
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxScheduler/ DevExtreme
+ * @see https://www.telerik.com/kendo-angular-ui/scheduler Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/scheduler Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/scheduler KendoReact
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/schedule PrimeFaces
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenAgendaView.razor Radzen Blazor
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenDayView.razor Radzen Blazor
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenScheduler.razor Radzen Blazor
+ * @see https://www.htmlelements.com/docs/scheduler/ Smart UI
+ * @see https://www.syncfusion.com/blazor-components/blazor-scheduler Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-scheduler Syncfusion EJ2
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://docs.tabler.io/ui/plugins/fullcalendar Tabler
+ * @see https://www.telerik.com/blazor-ui/scheduler Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/scheduler Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/products/wpf/scheduleview.aspx Telerik UI for WPF
+ * @see https://docs.webix.com/desktop__desktop_scheduler.html Webix
  */
 const meta = {
   title: 'Organisms/Data display/Scheduler',

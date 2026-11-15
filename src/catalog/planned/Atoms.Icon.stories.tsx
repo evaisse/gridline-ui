@@ -12,6 +12,21 @@ import { Placeholder } from '../Placeholder';
  * @see https://shopify.dev/docs/api/app-home/latest/web-components/media-and-visuals/icon Polaris
  * @see https://atlassian.design/components/icon Atlassian Design System
  * @see https://fluent2.microsoft.design/components/web/react/core/icon/usage Fluent 2
+ * @see https://element-plus.org/en-US/component/icon Element Plus
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/layouts/icon Ignite UI for Angular
+ * @see https://ionicframework.com/docs/api/icon Ionic
+ * @see https://www.telerik.com/kendo-angular-ui/icon Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/svgicon Kendo UI for Angular
+ * @see https://ng.ant.design/components/icon/en NG-ZORRO
+ * @see https://quasar.dev/vue-components/icon Quasar
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenIcon.razor Radzen Blazor
+ * @see https://docs.tabler.io/ui/components/icon Tabler
+ * @see https://docs.tabler.io/ui/components/icon-list Tabler
+ * @see https://docs.tabler.io/ui/plugins/social-icons Tabler
+ * @see https://www.telerik.com/blazor-ui/fonticon Telerik UI for Blazor
+ * @see https://www.telerik.com/blazor-ui/svgicon Telerik UI for Blazor
+ * @see https://webawesome.com/docs/components/icon/ Web Awesome
+ * @see https://docs.webix.com/desktop__icon.html Webix
  */
 const meta = {
   title: 'Atoms/Media/Icon',

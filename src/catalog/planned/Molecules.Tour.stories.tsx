@@ -11,6 +11,8 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/core/tour/ Mantine
  * @see https://atlassian.design/components/onboarding Atlassian Design System
  * @see https://www.assistant-ui.com/elements/onboarding assistant-ui
+ * @see https://element-plus.org/en-US/component/tour Element Plus
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/tour Flowbite Svelte
  */
 const meta = {
   title: 'Molecules/Overlays/Tour',

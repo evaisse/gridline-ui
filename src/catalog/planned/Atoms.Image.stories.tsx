@@ -16,6 +16,16 @@ import { Placeholder } from '../Placeholder';
  * @see https://atlassian.design/components/image Atlassian Design System
  * @see https://fluent2.microsoft.design/components/web/react/core/image/usage Fluent 2
  * @see https://www.assistant-ui.com/elements/image assistant-ui
+ * @see https://element-plus.org/en-US/component/image Element Plus
+ * @see https://ionicframework.com/docs/api/img Ionic
+ * @see https://ionicframework.com/docs/api/thumbnail Ionic
+ * @see https://ng.ant.design/components/image/en NG-ZORRO
+ * @see https://v18.primeng.org/image PrimeNG 18
+ * @see https://v10.primereact.org/image/ PrimeReact 10
+ * @see https://v4.primevue.org/image/ PrimeVue 4
+ * @see https://quasar.dev/vue-components/img Quasar
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenImage.razor Radzen Blazor
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.Img.html Sencha Ext JS
  */
 const meta = {
   title: 'Atoms/Media/Image',

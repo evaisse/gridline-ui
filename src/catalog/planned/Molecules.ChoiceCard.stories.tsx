@@ -9,6 +9,8 @@ import { Placeholder } from '../Placeholder';
  * @see https://react-spectrum.adobe.com/SelectBoxGroup React Spectrum
  * @see https://chakra-ui.com/docs/components/checkbox-card Chakra UI
  * @see https://chakra-ui.com/docs/components/radio-card Chakra UI
+ * @see https://docs.tabler.io/ui/forms/color-check Tabler
+ * @see https://docs.tabler.io/ui/forms/image-check Tabler
  */
 const meta = {
   title: 'Molecules/Forms/ChoiceCard',

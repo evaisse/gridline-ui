@@ -8,6 +8,12 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://ant.design/components/cascader Ant Design
  * @see https://mantine.dev/core/cascader/ Mantine
+ * @see https://element-plus.org/en-US/component/cascader Element Plus
+ * @see https://ng.ant.design/components/cascader/en NG-ZORRO
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/cascadeselect PrimeFaces
+ * @see https://v18.primeng.org/cascadeselect PrimeNG 18
+ * @see https://v10.primereact.org/cascadeselect/ PrimeReact 10
+ * @see https://v4.primevue.org/cascadeselect/ PrimeVue 4
  */
 const meta = {
   title: 'Molecules/Forms/Cascader',

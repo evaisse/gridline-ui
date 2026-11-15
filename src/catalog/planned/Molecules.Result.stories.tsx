@@ -7,6 +7,8 @@ import { Placeholder } from '../Placeholder';
  * The outcome of an operation: success, failure, forbidden.
  *
  * @see https://ant.design/components/result Ant Design
+ * @see https://element-plus.org/en-US/component/result Element Plus
+ * @see https://ng.ant.design/components/result/en NG-ZORRO
  */
 const meta = {
   title: 'Molecules/Feedback/Result',

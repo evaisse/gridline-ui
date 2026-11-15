@@ -8,7 +8,25 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://react-aria.adobe.com/DateRangePicker React Aria
  * @see https://react-spectrum.adobe.com/DateRangePicker React Spectrum
+ * @see https://ant.design/components/date-picker/#rangepicker Ant Design
  * @see https://www.heroui.com/docs/react/components/date-range-picker HeroUI
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxDateRangeBox/ DevExtreme
+ * @see https://flatpickr.js.org/examples/#range-calendar flatpickr
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/showDateRangePicker.html Flutter Material
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-range-picker Ignite UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/daterange Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/daterangepicker Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/daterangepicker KendoReact
+ * @see https://ng.ant.design/components/date-picker/en NG-ZORRO
+ * @see https://blazor.radzen.com/docs/api/Radzen.Blazor.RadzenDateRangePicker Radzen Blazor
+ * @see https://www.htmlelements.com/docs/daterangeinput-api/ Smart UI
+ * @see https://www.syncfusion.com/blazor-components/blazor-daterangepicker Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-daterangepicker Syncfusion EJ2
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://www.telerik.com/blazor-ui/daterange-picker Telerik UI for Blazor
+ * @see https://www.telerik.com/products/wpf/daterangepicker.aspx Telerik UI for WPF
+ * @see https://docs.webix.com/desktop__daterange.html Webix
+ * @see https://docs.webix.com/desktop__daterangepicker.html Webix
  */
 const meta = {
   title: 'Molecules/Forms/DateRangePicker',

@@ -9,6 +9,16 @@ import { Placeholder } from '../Placeholder';
  * @see https://www.assistant-ui.com/elements/composer-voice assistant-ui
  * @see https://www.assistant-ui.com/elements/read-aloud assistant-ui
  * @see https://www.assistant-ui.com/elements/voice-conversation assistant-ui
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxSpeechToText/ DevExtreme
+ * @see https://www.telerik.com/kendo-angular-ui/speech-to-text-button Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/speechtotext-button Kendo UI for jQuery
+ * @see https://www.telerik.com/kendo-react-ui/speech-to-text-button KendoReact
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenSpeechToTextButton.razor Radzen Blazor
+ * @see https://www.syncfusion.com/blazor-components/blazor-speech-to-text Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-speech-to-text Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/speech-to-text-button Telerik UI for Blazor
+ * @see https://www.telerik.com/maui-ui/speech-to-text-button Telerik UI for .NET MAUI
+ * @see https://www.telerik.com/products/wpf/wpf-speech-to-text-button.aspx Telerik UI for WPF
  */
 const meta = {
   title: 'Organisms/Assistant/VoiceInput',

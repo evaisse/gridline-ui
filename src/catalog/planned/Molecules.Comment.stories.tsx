@@ -7,6 +7,8 @@ import { Placeholder } from '../Placeholder';
  * An author, a time and a body, with replies nested under it.
  *
  * @see https://atlassian.design/components/comment Atlassian Design System
+ * @see https://ng.ant.design/components/comment/en NG-ZORRO
+ * @see https://docs.webix.com/desktop__comments.html Webix
  */
 const meta = {
   title: 'Molecules/Data display/Comment',

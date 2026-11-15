@@ -8,6 +8,11 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://ark-ui.com/docs/components/angle-slider Ark UI
  * @see https://mantine.dev/core/angle-slider/ Mantine
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/knob PrimeFaces
+ * @see https://v18.primeng.org/knob PrimeNG 18
+ * @see https://v10.primereact.org/knob/ PrimeReact 10
+ * @see https://v4.primevue.org/knob/ PrimeVue 4
+ * @see https://quasar.dev/vue-components/knob Quasar
  */
 const meta = {
   title: 'Molecules/Forms/AngleSlider',

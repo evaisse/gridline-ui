@@ -17,6 +17,7 @@
     "catalog": "node scripts/sync-catalog.mjs",
     "catalog:check": "node scripts/sync-catalog.mjs --check",
     "catalog:harvest": "node scripts/harvest-refs.mjs && node scripts/sync-catalog.mjs",
+    "catalog:import": "node scripts/import-repertoire.mjs && node scripts/sync-catalog.mjs",
     "check": "npm run typecheck && npm run lint && npm run lint:boundaries && npm run catalog:check"
   },
   "dependencies": {

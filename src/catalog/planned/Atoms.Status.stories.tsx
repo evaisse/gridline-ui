@@ -9,6 +9,8 @@ import { Placeholder } from '../Placeholder';
  * @see https://react-spectrum.adobe.com/StatusLight React Spectrum
  * @see https://chakra-ui.com/docs/components/status Chakra UI
  * @see https://daisyui.com/components/status/ daisyUI
+ * @see https://docs.tabler.io/ui/components/signal Tabler
+ * @see https://docs.tabler.io/ui/components/status Tabler
  */
 const meta = {
   title: 'Atoms/Data display/Status',

@@ -10,6 +10,13 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/charts/matrix-chart/ Mantine
  * @see https://www.assistant-ui.com/elements/activity-graph assistant-ui
  * @see https://www.assistant-ui.com/elements/heat-graph assistant-ui
+ * @see https://www.telerik.com/kendo-angular-ui/heatmap Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-react-ui/heatmap KendoReact
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenHeatmap.razor Radzen Blazor
+ * @see https://www.syncfusion.com/blazor-components/blazor-heatmap-chart Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-heatmap-chart Syncfusion EJ2
+ * @see https://www.telerik.com/blazor-ui/heatmap Telerik UI for Blazor
+ * @see https://www.telerik.com/products/wpf/heatmap.aspx Telerik UI for WPF
  */
 const meta = {
   title: 'Organisms/Charts/Heatmap',

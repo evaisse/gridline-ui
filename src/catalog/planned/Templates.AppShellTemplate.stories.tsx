@@ -7,11 +7,23 @@ import { Placeholder } from '../Placeholder';
  * Header, sidebar, main and aside regions that every working screen shares.
  *
  * @see https://ant.design/components/layout Ant Design
+ * @see https://procomponents.ant.design/components/layout Ant Design
  * @see https://mantine.dev/core/app-shell/ Mantine
  * @see https://shopify.dev/docs/api/app-home/latest/web-components/layout-and-structure/page Polaris
  * @see https://primer.style/product/components/page-layout/ Primer
  * @see https://atlassian.design/components/page Atlassian Design System
  * @see https://atlassian.design/components/page-layout Atlassian Design System
+ * @see https://docs.dhtmlx.com/suite/layout/ DHTMLX Suite
+ * @see https://element-plus.org/en-US/component/layout Element Plus
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/Scaffold-class.html Flutter Material
+ * @see https://ng.ant.design/components/layout/en NG-ZORRO
+ * @see https://quasar.dev/layout/layout/ Quasar
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenLayout.razor Radzen Blazor
+ * @see https://www.htmlelements.com/docs/layout/ Smart UI
+ * @see https://docs.tabler.io/ui/layout/page-layouts Tabler
+ * @see https://www.telerik.com/products/wpf/layoutcontrol.aspx Telerik UI for WPF
+ * @see https://webawesome.com/docs/components/page/ Web Awesome
+ * @see https://docs.webix.com/desktop__layout.html Webix
  */
 const meta = {
   title: 'Templates/Application/AppShellTemplate',

@@ -16,7 +16,7 @@ export function UnclassifiedReferences() {
         return (
           <section key={id} className="gl-catalogue__group">
             <Label tone="ink">{libraryName(id)} · {refs.length}</Label>
-            <div className="gl-catalogue__refs">{refs.map((ref) => <Link key={ref.url} variant="plain" external href={ref.url}>{ref.slug.split('/').pop()}</Link>)}</div>
+            <div className="gl-catalogue__refs">{refs.map((ref) => <Link key={ref.url + ref.slug} variant="plain" external href={ref.url} title={ref.category}>{ref.slug.split('/').pop()}</Link>)}</div>
           </section>
         );
       })}

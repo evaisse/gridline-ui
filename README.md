@@ -56,16 +56,19 @@ its tags and the names other libraries use for the same thing. Everything else f
 | References to other libraries | `src/catalog/catalog.generated.json` | entries matched by alias against the harvested pages |
 | Placeholders for planned components | `src/catalog/planned/*.stories.tsx` | one per `plan(` entry, with `@see` links in a comment |
 | Harvested documentation pages | `src/catalog/sources.generated.json` | `npm run catalog:harvest` reads 19 documentation sites |
+| Imported UI component directory | `src/catalog/import/repertoire-ui.sqlite` and `.json` | `npm run catalog:import` converts the SQLite export (33 libraries, 3,018 components) |
 
 In Storybook, open **Catalogue** to search and filter all components by status, layer, category,
 tag or library; each name links to its story, each reference to the other library's page.
-**Catalogue / Unclassified** lists harvested pages that no entry claims yet.
+**Catalogue / Unclassified** lists documentation pages that no entry claims yet, and
+**Catalogue / Libraries** lists the 50 libraries with their stack, platform and licence.
 Placeholders carry the `planned` tag, which is switched off in the sidebar filter by default.
 
 ```bash
 npm run catalog            # apply catalog.ts: titles, tags, placeholders, references
 npm run catalog:check      # the same, read-only; part of `npm run check`
 npm run catalog:harvest    # re-read the documentation sites (needs network), then apply
+npm run catalog:import     # re-read src/catalog/import/repertoire-ui.sqlite, then apply
 ```
 
 To add a component, add an entry to `catalog.ts` and run `npm run catalog`.
@@ -75,6 +78,14 @@ The harvested libraries are shadcn/ui, Radix Primitives, Base UI, Ark UI, Headle
 React Spectrum, Material UI, Ant Design, Chakra UI, Mantine, Carbon, Polaris, Primer,
 Atlassian Design System, Fluent 2, HeroUI, daisyUI and assistant-ui. A reference is listed only
 because the library's own site links to that page; nothing is guessed.
+
+The imported directory adds 31 more libraries, mostly enterprise suites on other stacks: Telerik
+(Blazor, WPF, MAUI), Kendo (React, Angular, jQuery), Syncfusion (EJ2, Blazor, Flutter), DevExtreme,
+PrimeReact, PrimeVue, PrimeNG, PrimeFaces, Sencha Ext JS, Radzen, Webix, DHTMLX, Ionic, Quasar,
+Element Plus, NG-ZORRO, Ignite UI, Smart UI, Web Awesome, Tabler, Flowbite Svelte, Flutter Material,
+flatpickr, Tabulator and Skeletonizer. To update it, replace the `.sqlite` file and run
+`npm run catalog:import`. Names are matched after removing vendor prefixes (`RadzenButton`,
+`Ext.Button`), versions, bracketed notes, plurals and suffixes such as `Control` or `View`.
 
 ## Component inventory
 

@@ -14,6 +14,8 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/dates/week-picker-input/ Mantine
  * @see https://mantine.dev/dates/year-picker/ Mantine
  * @see https://mantine.dev/dates/year-picker-input/ Mantine
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/month-picker Ignite UI for Angular
+ * @see https://docs.sencha.com/extjs/8.0.0/modern/Ext.panel.YearPicker.html Sencha Ext JS
  */
 const meta = {
   title: 'Molecules/Forms/MonthPicker',

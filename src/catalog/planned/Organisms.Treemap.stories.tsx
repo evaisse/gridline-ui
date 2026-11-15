@@ -8,6 +8,13 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://mantine.dev/charts/sunburst-chart/ Mantine
  * @see https://mantine.dev/charts/treemap/ Mantine
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxTreeMap/ DevExtreme
+ * @see https://github.com/radzenhq/radzen-blazor/blob/master/Radzen.Blazor/RadzenTreemap.razor Radzen Blazor
+ * @see https://www.syncfusion.com/blazor-components/blazor-sunburst-chart Syncfusion Blazor
+ * @see https://www.syncfusion.com/blazor-components/blazor-treemap Syncfusion Blazor
+ * @see https://www.syncfusion.com/javascript-ui-controls/js-treemap Syncfusion EJ2
+ * @see https://help.syncfusion.com/flutter/introduction/widgets-catalog Syncfusion Flutter
+ * @see https://docs.webix.com/desktop__treemap.html Webix
  */
 const meta = {
   title: 'Organisms/Charts/Treemap',

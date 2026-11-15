@@ -11,6 +11,15 @@ import { Placeholder } from '../Placeholder';
  * @see https://ant.design/components/masonry Ant Design
  * @see https://daisyui.com/components/hover-gallery/ daisyUI
  * @see https://www.assistant-ui.com/elements/image-gallery assistant-ui
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxGallery/ DevExtreme
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/gallery Flowbite Svelte
+ * @see https://github.com/themesberg/flowbite-svelte/tree/main/src/lib/virtual-masonry Flowbite Svelte
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/galleria PrimeFaces
+ * @see https://v18.primeng.org/galleria PrimeNG 18
+ * @see https://v10.primereact.org/galleria/ PrimeReact 10
+ * @see https://v4.primevue.org/galleria/ PrimeVue 4
+ * @see https://docs.tabler.io/ui/components/hover-gallery Tabler
+ * @see https://docs.tabler.io/ui/plugins/lightbox Tabler
  */
 const meta = {
   title: 'Molecules/Media/ImageGallery',

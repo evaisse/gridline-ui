@@ -11,6 +11,14 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/core/overlay/ Mantine
  * @see https://primer.style/product/components/overlay/ Primer
  * @see https://atlassian.design/components/blanket Atlassian Design System
+ * @see https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxLoadPanel/ DevExtreme
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/overlay Ignite UI for Angular
+ * @see https://ionicframework.com/docs/api/backdrop Ionic
+ * @see https://github.com/primefaces/primefaces/tree/master/primefaces/src/main/java/org/primefaces/component/blockui PrimeFaces
+ * @see https://v18.primeng.org/blockui PrimeNG 18
+ * @see https://v10.primereact.org/blockui/ PrimeReact 10
+ * @see https://v4.primevue.org/blockui/ PrimeVue 4
+ * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.LoadMask.html Sencha Ext JS
  */
 const meta = {
   title: 'Atoms/Overlays/Backdrop',

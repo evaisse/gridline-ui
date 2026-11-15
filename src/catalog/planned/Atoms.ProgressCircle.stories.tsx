@@ -13,6 +13,13 @@ import { Placeholder } from '../Placeholder';
  * @see https://mantine.dev/core/semi-circle-progress/ Mantine
  * @see https://www.heroui.com/docs/react/components/progress-circle HeroUI
  * @see https://daisyui.com/components/radial-progress/ daisyUI
+ * @see https://pub.dev/documentation/material_ui/latest/material_ui/CircularProgressIndicator-class.html Flutter Material
+ * @see https://www.infragistics.com/products/ignite-ui-angular/angular/components/circular-progress Ignite UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/circularprogressbar Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-jquery-ui/circularprogressbar Kendo UI for jQuery
+ * @see https://quasar.dev/vue-components/circular-progress Quasar
+ * @see https://www.telerik.com/products/wpf/circularprogressbar.aspx Telerik UI for WPF
+ * @see https://webawesome.com/docs/components/progress-ring/ Web Awesome
  */
 const meta = {
   title: 'Atoms/Feedback/ProgressCircle',

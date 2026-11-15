@@ -8,6 +8,10 @@ import { Placeholder } from '../Placeholder';
  *
  * @see https://mantine.dev/charts/composite-chart/ Mantine
  * @see https://mantine.dev/charts/waffle-chart/ Mantine
+ * @see https://www.telerik.com/kendo-angular-ui/box-plot Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-angular-ui/waterfall-chart Kendo UI for Angular
+ * @see https://www.telerik.com/kendo-react-ui/box-plot KendoReact
+ * @see https://www.telerik.com/blazor-ui/waterfall-chart Telerik UI for Blazor
  */
 const meta = {
   title: 'Organisms/Charts/CompositeChart',
