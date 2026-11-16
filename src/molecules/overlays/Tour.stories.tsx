@@ -11,8 +11,8 @@ const steps = [
 
 function Page() {
   return (
-    <div style={{ display: 'flex', gap: 16, padding: 24, alignItems: 'center' }}>
-      <div id="tour-search" style={{ width: 220 }}><Input aria-label="Search packages" placeholder="Search packages" /></div>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, padding: 24, alignItems: 'center' }}>
+      <div id="tour-search" style={{ width: 220, maxWidth: '100%' }}><Input aria-label="Search packages" placeholder="Search packages" /></div>
       <Button id="tour-publish" variant="solid">Publish</Button>
     </div>
   );

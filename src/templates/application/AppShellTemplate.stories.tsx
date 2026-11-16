@@ -13,5 +13,5 @@ const meta = {
 } satisfies Meta<typeof AppShellTemplate>;
 export default meta;
 
-/** The skeleton with its slots. */
+/** The skeleton with its slots. See Pages/Workspace for it filled in. */
 export const Slots: StoryObj<typeof meta> = {};

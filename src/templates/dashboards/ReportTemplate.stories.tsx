@@ -13,5 +13,5 @@ const meta = {
 } satisfies Meta<typeof ReportTemplate>;
 export default meta;
 
-/** The skeleton with its slots. */
+/** The skeleton with its slots. See Pages/Report for it filled in. */
 export const Slots: StoryObj<typeof meta> = {};

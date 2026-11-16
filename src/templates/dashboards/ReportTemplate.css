@@ -3,7 +3,7 @@
 .gl-report__page { width: 100%; max-width: 960px; min-width: 0; margin: 0 auto; border-left: 1px solid var(--gl-rule-strong); border-right: 1px solid var(--gl-rule-strong); }
 .gl-report__header { padding: var(--gl-space-6) var(--gl-space-5); border-bottom: 1px solid var(--gl-rule-strong); }
 .gl-report__summary { min-width: 0; border-bottom: 1px solid var(--gl-rule-strong); }
-.gl-report__body { display: grid; gap: var(--gl-space-5); min-width: 0; padding: var(--gl-space-5); }
+.gl-report__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gl-space-5); min-width: 0; padding: var(--gl-space-5); }
 .gl-report__body > * { min-width: 0; }
 .gl-report__footer { padding: var(--gl-space-3) var(--gl-space-5); border-top: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
 @media (max-width: 760px) {

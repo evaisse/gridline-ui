@@ -6,6 +6,6 @@
 .gl-top-bar__link:hover { background: var(--gl-surface-2); color: var(--gl-ink); }
 .gl-top-bar__link[aria-current='page'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
 .gl-top-bar__fill { flex: 1; min-width: 0; display: flex; align-items: center; }
-.gl-top-bar__fill > * { flex: 1; }
+.gl-top-bar__fill > * { flex: 1; min-width: 0; }
 .gl-top-bar__actions { display: flex; align-items: center; gap: var(--gl-space-2); padding: 0 var(--gl-space-3); border-left: 1px solid var(--gl-rule-strong); }
 @media (max-width: 760px) { .gl-top-bar { flex-wrap: wrap; } .gl-top-bar__nav { order: 3; width: 100%; border-top: 1px solid var(--gl-rule-strong); min-height: var(--gl-row); } }

@@ -66,17 +66,17 @@ export function DashboardLayout({ tiles, onTilesChange, columns = 4, rowHeight =
   };
 
   return (
-    <div ref={root} className={cx('gl-dashboard', className)} style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gridAutoRows: rowHeight }} data-dragging={drag ? '' : undefined}>
+    <div ref={root} className={cx('gl-dashboard-layout', className)} style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`, gridAutoRows: rowHeight }} data-dragging={drag ? '' : undefined}>
       {tiles.map((tile) => (
         <section
-          key={tile.id} data-tile={tile.id} className="gl-dashboard__tile" aria-label={typeof tile.title === 'string' ? tile.title : undefined}
+          key={tile.id} data-tile={tile.id} className="gl-dashboard-layout__tile" aria-label={typeof tile.title === 'string' ? tile.title : undefined}
           data-dragging={drag?.id === tile.id || undefined} data-over={(drag != null && drag.over === tile.id && drag.id !== tile.id) || undefined}
           style={{ ['--gl-cols' as string]: clamp(tile.colSpan ?? 1, columns), ['--gl-rows' as string]: clamp(tile.rowSpan ?? 1, 6) }}
         >
-          <header className="gl-dashboard__head">
+          <header className="gl-dashboard-layout__head">
             {editable && (
               <button
-                type="button" className="gl-dashboard__grip" aria-label={`Move ${typeof tile.title === 'string' ? tile.title : 'tile'}. Arrow keys reorder.`}
+                type="button" className="gl-dashboard-layout__grip" aria-label={`Move ${typeof tile.title === 'string' ? tile.title : 'tile'}. Arrow keys reorder.`}
                 onPointerDown={(event) => { if (event.button === 0) { event.currentTarget.setPointerCapture(event.pointerId); setDrag({ id: tile.id, over: null }); } }}
                 onPointerMove={(event) => { if (drag?.id === tile.id) setDrag({ id: tile.id, over: overId(event) }); }}
                 onPointerUp={finish} onPointerCancel={() => setDrag(null)}
@@ -85,19 +85,19 @@ export function DashboardLayout({ tiles, onTilesChange, columns = 4, rowHeight =
                 <GripIcon aria-hidden="true" />
               </button>
             )}
-            <Label tone="ink" className="gl-dashboard__title">{tile.title}</Label>
+            <Label tone="ink" className="gl-dashboard-layout__title">{tile.title}</Label>
             {tile.actions}
             {editable && (
               <Popover>
                 <PopoverTrigger asChild>
                   <IconButton label="Resize tile" icon={<ExpandIcon />} variant="ghost" size="sm" />
                 </PopoverTrigger>
-                <PopoverContent className="gl-dashboard__resize" align="end">
+                <PopoverContent className="gl-dashboard-layout__resize" align="end">
                   {([['Columns', tile.colSpan ?? 1, 1, 0], ['Rows', tile.rowSpan ?? 1, 0, 1]] as const).map(([name, value, dc, dr]) => (
-                    <div key={name} className="gl-dashboard__resize-row" role="group" aria-label={name}>
+                    <div key={name} className="gl-dashboard-layout__resize-row" role="group" aria-label={name}>
                       <Label>{name}</Label>
                       <IconButton label={`Fewer ${name.toLowerCase()}`} icon={<MinusIcon />} size="sm" disabled={value <= 1} onClick={() => resize(tile.id, -dc, -dr)} />
-                      <output className="gl-dashboard__span" aria-label={`${name} spanned`}>{value}</output>
+                      <output className="gl-dashboard-layout__span" aria-label={`${name} spanned`}>{value}</output>
                       <IconButton label={`More ${name.toLowerCase()}`} icon={<PlusIcon />} size="sm" disabled={name === 'Columns' ? value >= columns : value >= 6} onClick={() => resize(tile.id, dc, dr)} />
                     </div>
                   ))}
@@ -105,7 +105,7 @@ export function DashboardLayout({ tiles, onTilesChange, columns = 4, rowHeight =
               </Popover>
             )}
           </header>
-          <div className="gl-dashboard__body">{tile.content}</div>
+          <div className="gl-dashboard-layout__body">{tile.content}</div>
         </section>
       ))}
     </div>

@@ -119,6 +119,18 @@ for (const item of catalog) {
   if (item.status === 'available' && item.story !== null && !storyIds.has(item.name)) problems.push(`${item.name}: marked available but no story titled "${item.story ?? item.name}" in ${item.layer}`);
 }
 
+/* 2b. One CSS block per component: two stylesheets must not open with the same `gl-` block */
+
+const blocks = new Map();
+for (const layer of Object.keys(LAYERS)) {
+  for (const file of readdirSync(`${root}src/${layer}`, { recursive: true }).map((name) => name.replaceAll('\\', '/')).filter((name) => name.endsWith('.css')).sort()) {
+    const block = readFileSync(`${root}src/${layer}/${file}`, 'utf8').match(/\.(gl-[a-z0-9]+(?:-[a-z0-9]+)*)/)?.[1];
+    if (!block) continue;
+    if (blocks.has(block)) problems.push(`CSS block ".${block}" is opened by both ${blocks.get(block)} and src/${layer}/${file}: their styles would mix`);
+    else blocks.set(block, `src/${layer}/${file}`);
+  }
+}
+
 /* 3. Placeholders for planned components */
 
 const plannedDir = 'src/catalog/planned/';

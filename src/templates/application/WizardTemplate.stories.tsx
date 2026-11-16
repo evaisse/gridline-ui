@@ -13,5 +13,5 @@ const meta = {
 } satisfies Meta<typeof WizardTemplate>;
 export default meta;
 
-/** The skeleton with its slots. */
+/** The skeleton with its slots. See Pages/Publish wizard for it filled in. */
 export const Slots: StoryObj<typeof meta> = {};

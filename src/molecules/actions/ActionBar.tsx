@@ -21,10 +21,10 @@ export interface ActionBarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'ch
 export function ActionBar({ count, onClear, noun = 'item', children, sticky = false, className, ...rest }: ActionBarProps) {
   if (count <= 0) return null;
   return (
-    <div role="toolbar" aria-label="Bulk actions" className={cx('gl-action-bar', sticky && 'gl-action-bar--sticky', className)} {...rest}>
-      <span className="gl-action-bar__count" aria-live="polite">{count} {noun}{count === 1 ? '' : 's'} selected</span>
-      <div className="gl-action-bar__actions">{children}</div>
-      {onClear && <IconButton variant="ghost" size="sm" label="Clear selection" icon={<XIcon />} onClick={onClear} className="gl-action-bar__clear" />}
+    <div role="toolbar" aria-label="Bulk actions" className={cx('gl-selection-bar', sticky && 'gl-selection-bar--sticky', className)} {...rest}>
+      <span className="gl-selection-bar__count" aria-live="polite">{count} {noun}{count === 1 ? '' : 's'} selected</span>
+      <div className="gl-selection-bar__actions">{children}</div>
+      {onClear && <IconButton variant="ghost" size="sm" label="Clear selection" icon={<XIcon />} onClick={onClear} className="gl-selection-bar__clear" />}
     </div>
   );
 }

@@ -193,3 +193,13 @@ export const searchResults: SearchResult[] = [
 
 export const searchCategories = ['Parsing', 'Formatting', 'Testing', 'Tooling', 'Input / output'];
 export const searchLicences = ['MIT', 'Apache-2.0', 'ISC', 'GPL-3.0'];
+
+/* Pictures */
+
+/** A flat placeholder picture as an SVG data URI, so stories load nothing from the network. */
+export function plate(label: string, shade: number): string {
+  const paper = `rgb(${shade} ${shade + 6} ${shade + 14})`;
+  const ink = `rgb(${shade - 70} ${shade - 62} ${shade - 50})`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="${paper}"/><path d="M0 300 L0 210 L110 130 L190 190 L290 90 L400 180 L400 300 Z" fill="${ink}" fill-opacity="0.35"/><rect x="24" y="24" width="352" height="252" fill="none" stroke="${ink}" stroke-opacity="0.5"/><text x="40" y="60" font-family="monospace" font-size="18" fill="${ink}">${label}</text></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}

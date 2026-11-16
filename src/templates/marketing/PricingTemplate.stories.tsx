@@ -13,5 +13,5 @@ const meta = {
 } satisfies Meta<typeof PricingTemplate>;
 export default meta;
 
-/** The skeleton with its slots. */
+/** The skeleton with its slots. See Pages/Pricing for it filled in. */
 export const Slots: StoryObj<typeof meta> = {};
