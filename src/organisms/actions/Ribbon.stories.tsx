@@ -38,7 +38,7 @@ function Demo({ collapsed }: { collapsed?: boolean }) {
   const [bold, setBold] = useState(false);
   const shown = tabs.map((tab) => ({ ...tab, groups: tab.groups.map((g) => ({ ...g, commands: g.commands.map((c) => (c.id === 'bold' ? { ...c, pressed: bold } : c)) })) }));
   return (
-    <div style={{ display: 'grid', gap: 12 }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 12 }}>
       <Ribbon tabs={shown} defaultCollapsed={collapsed} onCommand={(id) => { setLast(id); if (id === 'bold') setBold(!bold); }} aria-label="Package commands" />
       <Label>Last command: {last}</Label>
     </div>

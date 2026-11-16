@@ -23,9 +23,9 @@ export const Flat: Story = { args: { properties: properties.slice(0, 4), default
 function Live() {
   const [current, setCurrent] = useState(values);
   return (
-    <div style={{ display: 'grid', gap: 12 }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 12 }}>
       <PropertyGrid properties={properties} value={current} onChange={setCurrent} aria-label="Package properties" />
-      <pre style={{ margin: 0, fontFamily: 'var(--gl-font-mono)', fontSize: 11, color: 'var(--gl-ink-2)' }}>{JSON.stringify(current)}</pre>
+      <pre style={{ margin: 0, whiteSpace: 'pre-wrap', overflowWrap: 'anywhere', fontFamily: 'var(--gl-font-mono)', fontSize: 11, color: 'var(--gl-ink-2)' }}>{JSON.stringify(current)}</pre>
     </div>
   );
 }

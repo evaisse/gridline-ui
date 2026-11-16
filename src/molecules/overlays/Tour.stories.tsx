@@ -30,7 +30,7 @@ function Demo() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   return (
-    <div style={{ padding: 24, display: 'grid', gap: 24 }}>
+    <div style={{ padding: 24, display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', justifyItems: 'start', gap: 24 }}>
       <Button onClick={() => { setStep(0); setOpen(true); }}>Start tour</Button>
       <Page />
       <Tour steps={steps} open={open} onOpenChange={setOpen} step={step} onStepChange={setStep} />

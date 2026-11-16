@@ -5,3 +5,4 @@
 .gl-voice-input--on { background: var(--gl-surface-1); }
 @keyframes gl-voice-pulse { 50% { opacity: 0.2; } }
 @media (prefers-reduced-motion: reduce) { .gl-voice-input__dot { animation: none; } }
+.gl-voice-input__status .gl-label { white-space: normal; }

@@ -33,10 +33,10 @@ npm run check      # typecheck + lint + boundary self-test
 src/
   tokens/      CSS variables, tones, data palette, icons, overlay styles   (foundation)
   utils/       cx(), styled(), useControlled(), the mock assistant runtime (foundation)
-  atoms/       40 single-purpose elements
-  molecules/   45 small compositions
-  organisms/   37 self-contained blocks, including charts and the assistant
-  templates/   13 page layouts with named slots
+  atoms/       49 single-purpose elements
+  molecules/   84 small compositions
+  organisms/   70 self-contained blocks, including charts and the assistant
+  templates/   25 page layouts with named slots
   pages/       stories that fill a template with invented fixtures
   catalog/     the component catalogue, its browser and the placeholders for planned components
 ```

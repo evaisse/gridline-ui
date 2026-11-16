@@ -1,4 +1,4 @@
-.gl-ribbon { position: relative; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-ribbon { position: relative; min-width: 0; max-width: 100%; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
 .gl-ribbon__tabs { display: flex; border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); overflow-x: auto; }
 .gl-ribbon__tab { flex: none; height: var(--gl-row-sm); padding: 0 var(--gl-space-4); border: 0; border-right: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink-2); cursor: pointer; }
 .gl-ribbon__tab:hover { background: var(--gl-surface-2); color: var(--gl-ink); }
