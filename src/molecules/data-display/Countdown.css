@@ -1,0 +1,7 @@
+.gl-countdown { display: inline-flex; max-width: 100%; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-countdown__cell { display: grid; justify-items: center; gap: 2px; min-width: 64px; padding: var(--gl-space-2) var(--gl-space-3); border-right: 1px solid var(--gl-rule); }
+.gl-countdown__cell:last-child { border-right: 0; }
+.gl-countdown__value { color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-xl); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.gl-countdown__label { color: var(--gl-ink-3); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.08em; text-transform: uppercase; }
+.gl-countdown--done { align-items: center; height: var(--gl-row); padding: 0 var(--gl-space-3); background: var(--gl-surface-1); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-md); }
+@media (max-width: 420px) { .gl-countdown__cell { min-width: 0; flex: 1; padding: var(--gl-space-2); } .gl-countdown__value { font-size: var(--gl-text-lg); } }

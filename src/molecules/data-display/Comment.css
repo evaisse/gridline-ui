@@ -1,0 +1,7 @@
+.gl-comment { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--gl-space-3); }
+.gl-comment__main { display: grid; gap: var(--gl-space-1); min-width: 0; }
+.gl-comment__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--gl-space-2); min-height: 24px; }
+.gl-comment__author { font-size: var(--gl-text-md); font-weight: 600; }
+.gl-comment__body { font-size: var(--gl-text-md); line-height: 1.5; overflow-wrap: anywhere; }
+.gl-comment__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-2); margin-top: var(--gl-space-1); }
+.gl-comment__replies { display: grid; gap: var(--gl-space-4); margin-top: var(--gl-space-3); padding-left: var(--gl-space-3); border-left: 1px solid var(--gl-rule-strong); }

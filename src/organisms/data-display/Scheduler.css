@@ -1,0 +1,22 @@
+.gl-scheduler { min-width: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-scheduler__bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-2); padding: var(--gl-space-2) var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-scheduler__title { flex: 1; min-width: 140px; padding: 0 var(--gl-space-2); }
+.gl-scheduler__scroll { overflow-x: auto; }
+.gl-scheduler__grid { display: grid; min-width: 640px; }
+.gl-scheduler__corner, .gl-scheduler__dow { height: var(--gl-row-sm); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-scheduler__dow { display: flex; align-items: center; padding: 0 var(--gl-space-3); border-left: 1px solid var(--gl-rule); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; }
+.gl-scheduler__dow[data-today] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-scheduler__hour { display: block; height: var(--gl-sched-hour); padding: var(--gl-space-1) var(--gl-space-2); box-sizing: border-box; border-bottom: 1px solid var(--gl-rule); color: var(--gl-ink-3); }
+.gl-scheduler__day { position: relative; border-left: 1px solid var(--gl-rule); }
+.gl-scheduler__line { position: absolute; left: 0; right: 0; height: 1px; background: var(--gl-rule); }
+.gl-scheduler__day[data-today] { background-color: var(--gl-surface-1); }
+.gl-scheduler__event { display: block; box-sizing: border-box; padding: 2px var(--gl-space-2); overflow: hidden; border: 1px solid rgb(var(--gl-tone)); border-left-width: 3px; border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); font-size: var(--gl-text-sm); text-align: left; white-space: nowrap; text-overflow: ellipsis; cursor: pointer; }
+.gl-scheduler__event:hover { background: rgb(var(--gl-tone) / 0.14); }
+.gl-scheduler__day .gl-scheduler__event { position: absolute; }
+.gl-scheduler__event-time { font-family: var(--gl-font-mono); color: var(--gl-ink-2); }
+.gl-scheduler__month { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); min-width: 560px; }
+.gl-scheduler__cell { display: flex; flex-direction: column; gap: 2px; min-height: 96px; padding: var(--gl-space-1); border-left: 1px solid var(--gl-rule); border-bottom: 1px solid var(--gl-rule); }
+.gl-scheduler__cell[data-outside] { background: var(--gl-surface-1); color: var(--gl-ink-3); }
+.gl-scheduler__daynum { align-self: flex-start; padding: 0 var(--gl-space-1); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
+.gl-scheduler__cell[data-today] .gl-scheduler__daynum { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-scheduler__more { color: var(--gl-ink-2); padding: 0 var(--gl-space-1); }

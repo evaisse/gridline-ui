@@ -1,0 +1,13 @@
+.gl-sortable__list { margin: 0; padding: 0; list-style: none; border: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-sortable__item { display: flex; align-items: stretch; min-height: var(--gl-row); border-bottom: 1px solid var(--gl-rule); background: var(--gl-paper); }
+.gl-sortable__item:last-child { border-bottom: 0; }
+.gl-sortable__handle { display: grid; place-items: center; flex: none; width: var(--gl-row); padding: 0; border: 0; border-right: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink-2); cursor: grab; touch-action: none; }
+.gl-sortable__handle:hover { background: var(--gl-surface-2); }
+.gl-sortable__handle:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -2px; }
+.gl-sortable__content { display: flex; align-items: center; flex: 1; min-width: 0; padding: var(--gl-space-2) var(--gl-space-3); font-size: var(--gl-text-md); }
+.gl-sortable__item[data-dragging] { background: var(--gl-surface-3); }
+.gl-sortable__item[data-dragging] .gl-sortable__handle { cursor: grabbing; }
+.gl-sortable__item[data-lifted] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-sortable__item[data-lifted] .gl-sortable__handle { color: var(--gl-invert-fg); border-right-color: var(--gl-invert-fg); }
+.gl-sortable__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.gl-sortable { position: relative; }

@@ -1,0 +1,5 @@
+.gl-wizard { width: 100%; max-width: 720px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-wizard__head { overflow-x: auto; border-bottom: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-wizard__body { display: grid; gap: var(--gl-space-4); padding: var(--gl-space-5); min-height: 160px; align-content: start; }
+.gl-wizard__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-2); padding: var(--gl-space-3) var(--gl-space-5); border-top: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-wizard__count { font-family: var(--gl-font-mono); font-size: 11px; color: var(--gl-ink-2); }

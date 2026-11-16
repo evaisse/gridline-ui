@@ -1,0 +1,8 @@
+.gl-action-bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-3); min-height: var(--gl-row); padding: var(--gl-space-1) var(--gl-space-3); border: 1px solid var(--gl-invert-bg); border-radius: var(--gl-radius); background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-action-bar--sticky { position: sticky; bottom: var(--gl-space-3); z-index: 20; }
+.gl-action-bar__count { font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-action-bar__actions { display: flex; flex-wrap: wrap; flex: 1; gap: var(--gl-space-2); }
+.gl-action-bar .gl-button { background: transparent; border-color: var(--gl-invert-fg); color: var(--gl-invert-fg); }
+.gl-action-bar .gl-button:hover { background: var(--gl-invert-fg); color: var(--gl-invert-bg); }
+.gl-action-bar__clear { color: var(--gl-invert-fg); }
+.gl-action-bar__clear:hover { background: var(--gl-invert-fg); color: var(--gl-invert-bg); }

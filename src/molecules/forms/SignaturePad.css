@@ -1,0 +1,9 @@
+.gl-signature-pad { display: block; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-signature-pad__canvas { display: block; width: 100%; touch-action: none; cursor: crosshair; border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-signature-pad__foot { display: flex; align-items: center; justify-content: space-between; min-height: var(--gl-row-sm); background: var(--gl-surface-1); }
+.gl-signature-pad__hint { padding: 0 var(--gl-space-3); color: var(--gl-ink-3); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.08em; text-transform: uppercase; }
+.gl-signature-pad__clear { display: inline-flex; align-items: center; gap: var(--gl-space-1); height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border: 0; border-left: 1px solid var(--gl-rule-strong); background: transparent; color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+.gl-signature-pad__clear:hover:not(:disabled) { background: var(--gl-surface-3); }
+.gl-signature-pad__clear:disabled { color: var(--gl-ink-3); cursor: not-allowed; }
+.gl-signature-pad:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-signature-pad--disabled .gl-signature-pad__canvas { cursor: not-allowed; background-color: var(--gl-surface-1); }

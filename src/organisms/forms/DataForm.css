@@ -1,0 +1,7 @@
+.gl-data-form { width: 100%; max-width: 640px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-data-form__fields { display: grid; grid-template-columns: 1fr; gap: var(--gl-space-4); padding: var(--gl-space-5); }
+.gl-data-form__field--wide { grid-column: 1 / -1; }
+.gl-data-form__actions { display: flex; justify-content: flex-end; gap: var(--gl-space-2); padding: var(--gl-space-3) var(--gl-space-5); border-top: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+@media (min-width: 600px) {
+  .gl-data-form--cols-2 .gl-data-form__fields { grid-template-columns: 1fr 1fr; }
+}

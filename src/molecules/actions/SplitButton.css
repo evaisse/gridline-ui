@@ -1,0 +1,5 @@
+.gl-split-button { display: inline-flex; align-items: stretch; }
+.gl-split-button .gl-split-button__main { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.gl-split-button .gl-split-button__toggle { padding: 0; width: var(--gl-row-sm); justify-content: center; margin-left: -1px; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.gl-split-button--solid .gl-split-button__toggle { border-left-color: var(--gl-invert-fg); }
+.gl-split-button .gl-button:focus-visible { position: relative; outline: 1px solid var(--gl-ink); outline-offset: 1px; }

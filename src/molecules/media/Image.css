@@ -1,0 +1,8 @@
+.gl-image { position: relative; display: block; min-height: var(--gl-row); overflow: hidden; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-surface-1); }
+.gl-image__img { display: block; width: 100%; height: 100%; }
+.gl-image--cover .gl-image__img { object-fit: cover; }
+.gl-image--contain .gl-image__img { object-fit: contain; }
+.gl-image__img[data-status='loading'] { opacity: 0; }
+.gl-image__skeleton { position: absolute; inset: 0; border: 0; }
+.gl-image__fallback { position: absolute; inset: 0; display: grid; place-items: center; color: var(--gl-ink-3); }
+.gl-image:not([style*='aspect-ratio']) .gl-image__fallback { position: static; min-height: 120px; }
