@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Placeholder } from '../Placeholder';
 
 /**
- * RelativeTime — planned atom, not built yet.
+ * RelativeTime — planned molecule, not built yet.
  * A date written as "3 hours ago", updated as time passes.
  *
  * @see https://mantine.dev/dates/time-value/ Mantine
@@ -13,7 +13,7 @@ import { Placeholder } from '../Placeholder';
  * @see https://webawesome.com/docs/components/relative-time/ Web Awesome
  */
 const meta = {
-  title: 'Atoms/Data display/RelativeTime',
+  title: 'Molecules/Data display/RelativeTime',
   component: Placeholder,
   tags: ['planned', 'date', 'text'],
   args: { name: 'RelativeTime' },

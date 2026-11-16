@@ -3,14 +3,14 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Placeholder } from '../Placeholder';
 
 /**
- * Countdown — planned atom, not built yet.
+ * Countdown — planned molecule, not built yet.
  * Time left until a moment.
  *
  * @see https://ark-ui.com/docs/components/timer Ark UI
  * @see https://daisyui.com/components/countdown/ daisyUI
  */
 const meta = {
-  title: 'Atoms/Data display/Countdown',
+  title: 'Molecules/Data display/Countdown',
   component: Placeholder,
   tags: ['planned', 'date', 'number'],
   args: { name: 'Countdown' },

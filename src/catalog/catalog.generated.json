@@ -6935,7 +6935,7 @@
   },
   {
    "name": "Image",
-   "layer": "atoms",
+   "layer": "molecules",
    "category": "media",
    "tags": [
     "media"
@@ -6948,8 +6948,8 @@
     "thumbnail",
     "img"
    ],
-   "title": "Atoms/Media/Image",
-   "storyId": "atoms-media-image--planned",
+   "title": "Molecules/Media/Image",
+   "storyId": "molecules-media-image--planned",
    "refs": [
     {
      "library": "spectrum",
@@ -7288,7 +7288,7 @@
   },
   {
    "name": "RelativeTime",
-   "layer": "atoms",
+   "layer": "molecules",
    "category": "data-display",
    "tags": [
     "date",
@@ -7302,8 +7302,8 @@
     "timevalue",
     "formatdate"
    ],
-   "title": "Atoms/Data display/RelativeTime",
-   "storyId": "atoms-data-display-relativetime--planned",
+   "title": "Molecules/Data display/RelativeTime",
+   "storyId": "molecules-data-display-relativetime--planned",
    "refs": [
     {
      "library": "mantine",
@@ -7336,7 +7336,7 @@
   },
   {
    "name": "Countdown",
-   "layer": "atoms",
+   "layer": "molecules",
    "category": "data-display",
    "tags": [
     "date",
@@ -7348,8 +7348,8 @@
     "countdown",
     "timer"
    ],
-   "title": "Atoms/Data display/Countdown",
-   "storyId": "atoms-data-display-countdown--planned",
+   "title": "Molecules/Data display/Countdown",
+   "storyId": "molecules-data-display-countdown--planned",
    "refs": [
     {
      "library": "ark",

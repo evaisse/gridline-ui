@@ -21,7 +21,7 @@ Expected in any general-purpose library.
 | 6 | QRCode | Atoms / Media | 19 | 25 | Barcode Generator, BarCode, Barcode | Encodes a string as a QR code. |
 | 7 | SplitButton | Molecules / Actions | 18 | 28 | menu-buttons, DropDownButton, DropdownButton, Menu Button | A button with a default action and a menu of alternatives. |
 | 8 | Icon | Atoms / Media | 17 | 21 | theme-icon, SVGIcon, Icon list, Social icons | A glyph from the icon set at a named size and tone. Today icons are bare SVG components in tokens/icons. |
-| 9 | Image | Atoms / Media | 17 | 20 | background-image, thumbnail, Img, Thumbnail | A picture with a fallback and a loading state. |
+| 9 | Image | Molecules / Media | 17 | 20 | background-image, thumbnail, Img, Thumbnail | A picture with a fallback and a loading state. |
 | 10 | Map | Organisms / Charts | 16 | 19 | geo-map, VectorMap, Gmap, GoogleMap | Markers, regions and values on a map. |
 | 11 | AppShellTemplate | Templates / Application | 16 | 18 | layout, ProLayout, app-shell, page | Header, sidebar, main and aside regions that every working screen shares. |
 | 12 | Gauge | Organisms / Charts | 15 | 43 | bullet-chart, BarGauge, Bullet, CircularGauge | One value on a linear, arc or radial scale with thresholds. |
@@ -80,7 +80,7 @@ Specialised.
 | # | Component | Folder | Libraries | Pages | Also called | What it is |
 |---:|---|---|---:|---:|---|---|
 | 53 | CompositeChart | Organisms / Charts | 4 | 6 | waffle-chart, Box Plot, Waterfall Chart | Bars, lines and areas on shared axes. |
-| 54 | RelativeTime | Atoms / Data display | 4 | 5 | time-value, date-label, Format Date | A date written as "3 hours ago", updated as time passes. |
+| 54 | RelativeTime | Molecules / Data display | 4 | 5 | time-value, date-label, Format Date | A date written as "3 hours ago", updated as time passes. |
 | 55 | Status | Atoms / Data display | 4 | 5 | StatusLight, Signal | A coloured mark with a label: online, degraded, down. |
 | 56 | Footer | Organisms / Marketing | 4 | 4 | — | Link columns and legal line at the bottom of a public page. |
 | 57 | ImageCompare | Molecules / Media | 4 | 4 | Comparison | Two pictures under a divider you slide. |
@@ -97,7 +97,7 @@ Specialised.
 | 68 | Center | Atoms / Layout | 2 | 5 | absolute-center, bleed, float | Centres its child on both axes. |
 | 69 | Diff | Molecules / Data display | 2 | 3 | code-diff, reviewable-diff | Two versions of a text side by side or unified. |
 | 70 | Captcha | Molecules / Forms | 2 | 2 | — | A challenge that tells people from scripts. |
-| 71 | Countdown | Atoms / Data display | 2 | 2 | timer | Time left until a moment. |
+| 71 | Countdown | Molecules / Data display | 2 | 2 | timer | Time left until a moment. |
 | 72 | VirtualKeyboard | Molecules / Forms | 2 | 2 | — | An on-screen keyboard for kiosks and touch. |
 | 73 | Sources | Organisms / Assistant | 1 | 4 | document-reference, inline-citation, retrieval-chunks | The documents an answer drew on, with inline citations. |
 | 74 | ModelSelector | Organisms / Assistant | 1 | 3 | composer-model-picker, reasoning-effort | Chooses the model and its settings for the next message. |

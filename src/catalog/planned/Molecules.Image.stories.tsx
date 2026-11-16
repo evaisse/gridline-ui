@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Placeholder } from '../Placeholder';
 
 /**
- * Image — planned atom, not built yet.
+ * Image — planned molecule, not built yet.
  * A picture with a fallback and a loading state.
  *
  * @see https://react-spectrum.adobe.com/Image React Spectrum
@@ -28,7 +28,7 @@ import { Placeholder } from '../Placeholder';
  * @see https://docs.sencha.com/extjs/8.0.0/classic/Ext.Img.html Sencha Ext JS
  */
 const meta = {
-  title: 'Atoms/Media/Image',
+  title: 'Molecules/Media/Image',
   component: Placeholder,
   tags: ['planned', 'media'],
   args: { name: 'Image' },
