@@ -14,6 +14,9 @@ import tseslint from 'typescript-eslint';
  * to its right. Set STRICT_CHAIN to true to also forbid skipping a level
  * (an organism could then import molecules only, not atoms).
  * `tokens` and `utils` are foundations and stay importable from everywhere.
+ *
+ * Inside a layer, components sit in one folder per category (src/molecules/forms/…).
+ * The barrel stays at the layer root: other layers import `../../atoms`, never a file inside it.
  */
 const STRICT_CHAIN = false;
 
@@ -67,14 +70,23 @@ function importRules(layer, { story, barrel = false }) {
         group: ['./*', '!./*.css'],
         message: 'Atoms are leaves: an atom cannot import another atom. Compose them in a molecule.',
       });
+      patterns.push({
+        regex: '^\\.\\./[a-z-]+/',
+        message: 'Atoms are leaves: an atom cannot import an atom from another category folder either.',
+      });
     }
   }
 
+  // Components live in src/<layer>/<category>/, so `../../<layer>` is the way to another layer.
   patterns.push({
-    group: ['../../**'],
-    message: 'Do not reach more than one directory up. Layers are flat siblings under src/.',
+    regex: `^\\.\\./\\.\\./(?!(${[...CHAIN, ...FOUNDATIONS].join('|')})(/|$))`,
+    message: 'Two levels up must land on a layer or a foundation: ../../atoms, ../../tokens/…',
   });
-  for (const name of ['..', '../index', '../index.ts']) {
+  patterns.push({
+    regex: '^(\\.\\./){3,}',
+    message: 'Do not reach more than two directories up: that leaves src/.',
+  });
+  for (const name of ['..', '../index', '../index.ts', '../..', '../../index', '../../index.ts']) {
     paths.push({ name, message: 'Do not import the root barrel from inside the library: it creates cycles.' });
   }
 

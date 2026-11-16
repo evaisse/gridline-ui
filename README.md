@@ -44,6 +44,11 @@ src/
 The import chain is `tokens → atoms → molecules → organisms → templates → pages`.
 A layer imports from the layers to its left and never from those to its right.
 
+Inside a layer, each component sits in a category folder: `src/molecules/forms/Rating.tsx`.
+The folder, the catalogue category and the Storybook folder are the same word.
+[`src/catalog/ORGANISATION.md`](src/catalog/ORGANISATION.md) gives the naming and grouping rules;
+[`src/catalog/BACKLOG.md`](src/catalog/BACKLOG.md) lists what is not built yet, most widely documented first.
+
 ## Catalogue, folders and tags
 
 `src/catalog/catalog.ts` lists every component, built or planned, with its layer, its category,
@@ -221,12 +226,12 @@ All of these are errors (`eslint.config.js`):
 
 | Rule | Example of what is rejected |
 |---|---|
-| No upward import | an atom importing `../molecules` |
+| No upward import | an atom importing `../../molecules` |
 | Foundations import no components | `tokens/` importing `../atoms` |
-| Barrel only across layers | `../atoms/Label` instead of `../atoms` |
-| Atoms are leaves | an atom importing a sibling atom |
-| No root barrel from inside | `import … from '..'` |
-| One level up at most | `../../anything` |
+| Barrel only across layers | `../../atoms/typography/Label` instead of `../../atoms` |
+| Atoms are leaves | an atom importing another atom, in its folder or another |
+| No root barrel from inside | `import … from '../..'` |
+| Two levels up lands on a layer | `../../anything-else`, `../../../x` |
 | Library is Storybook-free | a component importing `@storybook/*` or a `.stories` file |
 | No `react-dom` in components | `createPortal` in an organism |
 | Atoms and templates are stateless | `useState` in an atom |
@@ -238,7 +243,7 @@ Set `STRICT_CHAIN = true` at the top of `eslint.config.js` to also forbid skippi
 each layer may then import only from the layer directly below it. It is off by default because
 organisms and templates legitimately use atoms such as `Label` and `Frame`.
 
-`npm run lint:boundaries` runs `scripts/check-boundaries.mjs`, which lints 34 small snippets and
+`npm run lint:boundaries` runs `scripts/check-boundaries.mjs`, which lints 38 small snippets and
 asserts that each rule fires, or stays quiet, as specified. Run it after editing the ESLint config.
 
 ## Fonts

@@ -97,7 +97,9 @@ const tagList = (tags) => `[${tags.map((tag) => `'${tag}'`).join(', ')}]`;
 const storyIds = new Map();
 
 for (const layer of Object.keys(LAYERS)) {
-  for (const file of readdirSync(`${root}src/${layer}`).filter((name) => name.endsWith('.stories.tsx')).sort()) {
+  // Components live in src/<layer>/<category>/. The folder must be the entry's category.
+  const files = readdirSync(`${root}src/${layer}`, { recursive: true }).map((name) => name.replaceAll('\\', '/')).filter((name) => name.endsWith('.stories.tsx')).sort();
+  for (const file of files) {
     const path = `src/${layer}/${file}`;
     const source = readFileSync(root + path, 'utf8');
     const match = source.match(/title: '((?:Atoms|Molecules|Organisms|Templates)\/[^']*)'(?:, tags: \[[^\]]*\])?/);
@@ -106,6 +108,7 @@ for (const layer of Object.keys(LAYERS)) {
     const owners = catalog.filter((item) => item.layer === layer && item.status === 'available' && item.story !== null && (item.story ?? item.name) === storyName);
     if (owners.length === 0) { problems.push(`${path}: no catalogue entry for story "${storyName}" in ${layer}`); continue; }
     const title = titleOf(owners[0]);
+    if (file.split('/')[0] !== owners[0].category) problems.push(`${path}: ${owners[0].name} is in category "${owners[0].category}", so it belongs in src/${layer}/${owners[0].category}/`);
     const tags = [...new Set(owners.flatMap((item) => item.tags))];
     write(path, source.replace(match[0], `title: '${title}', tags: ${tagList(tags)}`));
     const first = source.match(/^export const (\w+)/m);
