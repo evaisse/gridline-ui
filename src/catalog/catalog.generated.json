@@ -6797,7 +6797,7 @@
     "media"
    ],
    "summary": "A glyph from the icon set at a named size and tone. Today icons are bare SVG components in tokens/icons.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "icon",
     "themeicon",
@@ -6807,7 +6807,7 @@
     "socialicons"
    ],
    "title": "Atoms/Media/Icon",
-   "storyId": "atoms-media-icon--planned",
+   "storyId": "atoms-media-icon--default",
    "refs": [
     {
      "library": "antd",
@@ -6941,7 +6941,7 @@
     "media"
    ],
    "summary": "A picture with a fallback and a loading state.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "image",
     "backgroundimage",
@@ -6949,7 +6949,7 @@
     "img"
    ],
    "title": "Molecules/Media/Image",
-   "storyId": "molecules-media-image--planned",
+   "storyId": "molecules-media-image--default",
    "refs": [
     {
      "library": "spectrum",
@@ -7076,7 +7076,7 @@
     "data"
    ],
    "summary": "Progress drawn on a ring.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "progresscircle",
     "progresscircular",
@@ -7089,7 +7089,7 @@
     "progressring"
    ],
    "title": "Atoms/Feedback/ProgressCircle",
-   "storyId": "atoms-feedback-progresscircle--planned",
+   "storyId": "atoms-feedback-progresscircle--default",
    "refs": [
     {
      "library": "ark",
@@ -7180,14 +7180,14 @@
     "status"
    ],
    "summary": "A coloured mark with a label: online, degraded, down.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "status",
     "statuslight",
     "signal"
    ],
    "title": "Atoms/Data display/Status",
-   "storyId": "atoms-data-display-status--planned",
+   "storyId": "atoms-data-display-status--default",
    "refs": [
     {
      "library": "spectrum",
@@ -7226,7 +7226,7 @@
     "spacing"
    ],
    "summary": "Centres its child on both axes.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "center",
     "absolutecenter",
@@ -7234,7 +7234,7 @@
     "bleed"
    ],
    "title": "Atoms/Layout/Center",
-   "storyId": "atoms-layout-center--planned",
+   "storyId": "atoms-layout-center--default",
    "refs": [
     {
      "library": "chakra",
@@ -7272,12 +7272,12 @@
     "text"
    ],
    "summary": "Cuts text to a number of lines with an ellipsis.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "truncate"
    ],
    "title": "Atoms/Typography/Truncate",
-   "storyId": "atoms-typography-truncate--planned",
+   "storyId": "atoms-typography-truncate--single-line",
    "refs": [
     {
      "library": "primer",
@@ -7295,15 +7295,18 @@
     "text"
    ],
    "summary": "A date written as \"3 hours ago\", updated as time passes.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "relativetime",
     "datelabel",
     "timevalue",
     "formatdate"
    ],
+   "exports": [
+    "formatRelative"
+   ],
    "title": "Molecules/Data display/RelativeTime",
-   "storyId": "molecules-data-display-relativetime--planned",
+   "storyId": "molecules-data-display-relativetime--default",
    "refs": [
     {
      "library": "mantine",
@@ -7343,13 +7346,13 @@
     "number"
    ],
    "summary": "Time left until a moment.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "countdown",
     "timer"
    ],
    "title": "Molecules/Data display/Countdown",
-   "storyId": "molecules-data-display-countdown--planned",
+   "storyId": "molecules-data-display-countdown--default",
    "refs": [
     {
      "library": "ark",
@@ -7371,7 +7374,7 @@
     "modal"
    ],
    "summary": "The dimmed layer behind a modal or over a loading region.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "backdrop",
     "overlay",
@@ -7382,7 +7385,7 @@
     "loadmask"
    ],
    "title": "Atoms/Overlays/Backdrop",
-   "storyId": "atoms-overlays-backdrop--planned",
+   "storyId": "atoms-overlays-backdrop--over-region",
    "refs": [
     {
      "library": "mui",
@@ -7469,12 +7472,12 @@
     "container"
    ],
    "summary": "Renders children elsewhere in the document.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "portal"
    ],
    "title": "Atoms/Layout/Portal",
-   "storyId": "atoms-layout-portal--planned",
+   "storyId": "atoms-layout-portal--to-body",
    "refs": [
     {
      "library": "mui",
@@ -7503,15 +7506,18 @@
     "data"
    ],
    "summary": "Encodes a string as a QR code.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "qrcode",
     "barcode",
     "barcodegenerator",
     "qrcodegenerator"
    ],
+   "exports": [
+    "encodeQR"
+   ],
    "title": "Atoms/Media/QRCode",
-   "storyId": "atoms-media-qrcode--planned",
+   "storyId": "atoms-media-qrcode--default",
    "refs": [
     {
      "library": "ark",
@@ -7671,12 +7677,12 @@
     "media"
    ],
    "summary": "Repeats a faint mark behind content.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "watermark"
    ],
    "title": "Atoms/Media/Watermark",
-   "storyId": "atoms-media-watermark--planned",
+   "storyId": "atoms-media-watermark--default",
    "refs": [
     {
      "library": "antd",
@@ -15159,12 +15165,12 @@
     "selection"
    ],
    "summary": "A bar that appears when rows are selected, with bulk actions.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "actionbar"
    ],
    "title": "Molecules/Actions/ActionBar",
-   "storyId": "molecules-actions-actionbar--planned",
+   "storyId": "molecules-actions-actionbar--default",
    "refs": [
     {
      "library": "spectrum",
@@ -15202,7 +15208,7 @@
     "action"
    ],
    "summary": "A button pinned to a corner of the viewport, optionally opening more.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "affix",
     "floatbutton",
@@ -15217,7 +15223,7 @@
     "fabmenu"
    ],
    "title": "Molecules/Actions/FloatButton",
-   "storyId": "molecules-actions-floatbutton--planned",
+   "storyId": "molecules-actions-floatbutton--back-to-top",
    "refs": [
     {
      "library": "mui",
@@ -15426,13 +15432,13 @@
     "tree"
    ],
    "summary": "Picks a value in a hierarchy, one column per level.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "cascader",
     "cascadeselect"
    ],
    "title": "Molecules/Forms/Cascader",
-   "storyId": "molecules-forms-cascader--planned",
+   "storyId": "molecules-forms-cascader--default",
    "refs": [
     {
      "library": "antd",
@@ -15494,14 +15500,14 @@
     "tree"
    ],
    "summary": "A select whose options form a tree.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "treeselect",
     "dropdowntree",
     "multiselecttree"
    ],
    "title": "Molecules/Forms/TreeSelect",
-   "storyId": "molecules-forms-treeselect--planned",
+   "storyId": "molecules-forms-treeselect--default",
    "refs": [
     {
      "library": "antd",
@@ -15605,7 +15611,7 @@
     "form"
    ],
    "summary": "Several checkboxes under one legend, with a shared value.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "checkboxgroup",
     "choicelist",
@@ -15613,7 +15619,7 @@
     "checklist"
    ],
    "title": "Molecules/Forms/CheckboxGroup",
-   "storyId": "molecules-forms-checkboxgroup--planned",
+   "storyId": "molecules-forms-checkboxgroup--default",
    "refs": [
     {
      "library": "baseui",
@@ -15692,7 +15698,7 @@
     "selection"
    ],
    "summary": "A checkbox or radio drawn as a whole card.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "checkboxcard",
     "radiocard",
@@ -15701,7 +15707,7 @@
     "colorcheck"
    ],
    "title": "Molecules/Forms/ChoiceCard",
-   "storyId": "molecules-forms-choicecard--planned",
+   "storyId": "molecules-forms-choicecard--radio",
    "refs": [
     {
      "library": "spectrum",
@@ -15741,7 +15747,7 @@
     "color"
    ],
    "summary": "Picks a colour by area, sliders, swatches or text.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "colorpicker",
     "colorinput",
@@ -15762,8 +15768,11 @@
     "colorboard",
     "colorpickerpanel"
    ],
+   "exports": [
+    "colorFromRgb"
+   ],
    "title": "Molecules/Forms/ColorPicker",
-   "storyId": "molecules-forms-colorpicker--planned",
+   "storyId": "molecules-forms-colorpicker--default",
    "refs": [
     {
      "library": "ark",
@@ -16134,7 +16143,7 @@
     "date"
    ],
    "summary": "Picks a time of day.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "timepicker",
     "timefield",
@@ -16146,7 +16155,7 @@
     "timedurationpicker"
    ],
    "title": "Molecules/Forms/TimePicker",
-   "storyId": "molecules-forms-timepicker--planned",
+   "storyId": "molecules-forms-timepicker--default",
    "refs": [
     {
      "library": "aria",
@@ -16321,7 +16330,7 @@
     "date"
    ],
    "summary": "Picks a start and an end date in one control.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "daterangepicker",
     "rangepicker",
@@ -16331,7 +16340,7 @@
     "showdaterangepicker"
    ],
    "title": "Molecules/Forms/DateRangePicker",
-   "storyId": "molecules-forms-daterangepicker--planned",
+   "storyId": "molecules-forms-daterangepicker--default",
    "refs": [
     {
      "library": "aria",
@@ -16467,7 +16476,7 @@
     "date"
    ],
    "summary": "Picks a month, a quarter, a week or a year.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "monthpicker",
     "monthpickerinput",
@@ -16479,7 +16488,7 @@
     "weekpickerinput"
    ],
    "title": "Molecules/Forms/MonthPicker",
-   "storyId": "molecules-forms-monthpicker--planned",
+   "storyId": "molecules-forms-monthpicker--default",
    "refs": [
     {
      "library": "mantine",
@@ -16545,14 +16554,14 @@
     "selection"
    ],
    "summary": "A text field that suggests people or things after a trigger character.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "mentions",
     "composermentions",
     "mention"
    ],
    "title": "Molecules/Forms/Mentions",
-   "storyId": "molecules-forms-mentions--planned",
+   "storyId": "molecules-forms-mentions--default",
    "refs": [
     {
      "library": "antd",
@@ -16618,7 +16627,7 @@
     "text"
    ],
    "summary": "A field that constrains typing to a pattern: phone, date, card.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "maskinput",
     "maskeddateinput",
@@ -16630,8 +16639,11 @@
     "maskedentry",
     "inputphone"
    ],
+   "exports": [
+    "applyMask"
+   ],
    "title": "Molecules/Forms/MaskedInput",
-   "storyId": "molecules-forms-maskedinput--planned",
+   "storyId": "molecules-forms-maskedinput--phone",
    "refs": [
     {
      "library": "mantine",
@@ -16775,7 +16787,7 @@
     "text"
    ],
    "summary": "Text that turns into a field when clicked.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "editable",
     "inlineedit",
@@ -16783,7 +16795,7 @@
     "inplaceeditor"
    ],
    "title": "Molecules/Forms/Editable",
-   "storyId": "molecules-forms-editable--planned",
+   "storyId": "molecules-forms-editable--default",
    "refs": [
     {
      "library": "ark",
@@ -16847,7 +16859,7 @@
     "list"
    ],
    "summary": "Moves items between two lists.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "transfer",
     "transferlist",
@@ -16855,7 +16867,7 @@
     "doublelist"
    ],
    "title": "Molecules/Forms/Transfer",
-   "storyId": "molecules-forms-transfer--planned",
+   "storyId": "molecules-forms-transfer--default",
    "refs": [
     {
      "library": "mui",
@@ -16927,7 +16939,7 @@
     "text"
    ],
    "summary": "Formatted text editing with a toolbar.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "richtexteditor",
     "editor",
@@ -16939,7 +16951,7 @@
     "smartrichtexteditor"
    ],
    "title": "Molecules/Forms/RichTextEditor",
-   "storyId": "molecules-forms-richtexteditor--planned",
+   "storyId": "molecules-forms-richtexteditor--empty",
    "refs": [
     {
      "library": "chakra",
@@ -17113,12 +17125,12 @@
     "code"
    ],
    "summary": "A text area that validates and formats JSON.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "jsoninput"
    ],
    "title": "Molecules/Forms/JsonInput",
-   "storyId": "molecules-forms-jsoninput--planned",
+   "storyId": "molecules-forms-jsoninput--empty",
    "refs": [
     {
      "library": "mantine",
@@ -17137,13 +17149,13 @@
     "media"
    ],
    "summary": "Captures a hand-drawn signature.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "signaturepad",
     "signature"
    ],
    "title": "Molecules/Forms/SignaturePad",
-   "storyId": "molecules-forms-signaturepad--planned",
+   "storyId": "molecules-forms-signaturepad--default",
    "refs": [
     {
      "library": "ark",
@@ -17233,13 +17245,13 @@
     "number"
    ],
    "summary": "Sets an angle on a dial.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "angleslider",
     "knob"
    ],
    "title": "Molecules/Forms/AngleSlider",
-   "storyId": "molecules-forms-angleslider--planned",
+   "storyId": "molecules-forms-angleslider--default",
    "refs": [
     {
      "library": "ark",
@@ -17293,13 +17305,13 @@
     "input"
    ],
    "summary": "Selects a region of a picture.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "imagecropper",
     "imageeditor"
    ],
    "title": "Molecules/Media/ImageCropper",
-   "storyId": "molecules-media-imagecropper--planned",
+   "storyId": "molecules-media-imagecropper--default",
    "refs": [
     {
      "library": "ark",
@@ -17353,7 +17365,7 @@
     "list"
    ],
    "summary": "Pictures in a grid or masonry, opening larger.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "imagelist",
     "masonry",
@@ -17365,7 +17377,7 @@
     "virtualmasonry"
    ],
    "title": "Molecules/Media/ImageGallery",
-   "storyId": "molecules-media-imagegallery--planned",
+   "storyId": "molecules-media-imagegallery--grid",
    "refs": [
     {
      "library": "mui",
@@ -17459,12 +17471,12 @@
     "history"
    ],
    "summary": "An author, a time and a body, with replies nested under it.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "comment"
    ],
    "title": "Molecules/Data display/Comment",
-   "storyId": "molecules-data-display-comment--planned",
+   "storyId": "molecules-data-display-comment--default",
    "refs": [
     {
      "library": "atlassian",
@@ -17493,14 +17505,17 @@
     "code"
    ],
    "summary": "Two versions of a text side by side or unified.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "diff",
     "codediff",
     "reviewablediff"
    ],
+   "exports": [
+    "diffLines"
+   ],
    "title": "Molecules/Data display/Diff",
-   "storyId": "molecules-data-display-diff--planned",
+   "storyId": "molecules-data-display-diff--unified",
    "refs": [
     {
      "library": "daisy",
@@ -17528,7 +17543,7 @@
     "kpi"
    ],
    "summary": "A tiny line without axes, for a table cell or a stat.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "sparkline",
     "sparklinecharts",
@@ -17538,7 +17553,7 @@
     "sparkwinlosschart"
    ],
    "title": "Molecules/Charts/Sparkline",
-   "storyId": "molecules-charts-sparkline--planned",
+   "storyId": "molecules-charts-sparkline--line",
    "refs": [
     {
      "library": "mantine",
@@ -17635,12 +17650,12 @@
     "page"
    ],
    "summary": "The outcome of an operation: success, failure, forbidden.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "result"
    ],
    "title": "Molecules/Feedback/Result",
-   "storyId": "molecules-feedback-result--planned",
+   "storyId": "molecules-feedback-result--success",
    "refs": [
     {
      "library": "antd",
@@ -17671,13 +17686,13 @@
     "action"
    ],
    "summary": "A small confirmation anchored to the button that asked.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "popconfirm",
     "confirmpopup"
    ],
    "title": "Molecules/Overlays/Popconfirm",
-   "storyId": "molecules-overlays-popconfirm--planned",
+   "storyId": "molecules-overlays-popconfirm--default",
    "refs": [
     {
      "library": "antd",
@@ -17732,13 +17747,13 @@
     "steps"
    ],
    "summary": "Steps that point at parts of the interface in turn.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "tour",
     "onboarding"
    ],
    "title": "Molecules/Overlays/Tour",
-   "storyId": "molecules-overlays-tour--planned",
+   "storyId": "molecules-overlays-tour--first-step",
    "refs": [
     {
      "library": "ark",
@@ -17789,13 +17804,13 @@
     "container"
    ],
    "summary": "A window that can be dragged and resized over the page.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "floatingpanel",
     "floatingwindow"
    ],
    "title": "Molecules/Overlays/FloatingPanel",
-   "storyId": "molecules-overlays-floatingpanel--planned",
+   "storyId": "molecules-overlays-floatingpanel--default",
    "refs": [
     {
      "library": "ark",
@@ -17823,7 +17838,7 @@
     "wayfinding"
    ],
    "summary": "Links to the headings of the page, tracking the scroll position.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "anchor",
     "tableofcontents",
@@ -17831,7 +17846,7 @@
     "scrollspy"
    ],
    "title": "Molecules/Navigation/TableOfContents",
-   "storyId": "molecules-navigation-tableofcontents--planned",
+   "storyId": "molecules-navigation-tableofcontents--default",
    "refs": [
     {
      "library": "ark",
@@ -17891,7 +17906,7 @@
     "shell"
    ],
    "summary": "A bar of destinations pinned to the bottom on small screens.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "dock",
     "bottomnavigation",
@@ -17899,7 +17914,7 @@
     "navigationbar"
    ],
    "title": "Molecules/Navigation/Dock",
-   "storyId": "molecules-navigation-dock--planned",
+   "storyId": "molecules-navigation-dock--default",
    "refs": [
     {
      "library": "mui",
@@ -17987,12 +18002,12 @@
     "media"
    ],
    "summary": "Content that scrolls sideways in a loop.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "marquee"
    ],
    "title": "Molecules/Media/Marquee",
-   "storyId": "molecules-media-marquee--planned",
+   "storyId": "molecules-media-marquee--default",
    "refs": [
     {
      "library": "ark",
@@ -21862,12 +21877,12 @@
     "wayfinding"
    ],
    "summary": "Link columns and legal line at the bottom of a public page.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "footer"
    ],
    "title": "Organisms/Marketing/Footer",
-   "storyId": "organisms-marketing-footer--planned",
+   "storyId": "organisms-marketing-footer--default",
    "refs": [
     {
      "library": "daisy",
@@ -21903,10 +21918,10 @@
     "text"
    ],
    "summary": "Benefits in ruled cells, each with a number, a title and a line.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Marketing/FeatureGrid",
-   "storyId": "organisms-marketing-featuregrid--planned",
+   "storyId": "organisms-marketing-featuregrid--three",
    "refs": []
   },
   {
@@ -21918,10 +21933,10 @@
     "identity"
    ],
    "summary": "A quote with its author.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Marketing/Testimonial",
-   "storyId": "organisms-marketing-testimonial--planned",
+   "storyId": "organisms-marketing-testimonial--stacked",
    "refs": []
   },
   {
@@ -21933,10 +21948,10 @@
     "number"
    ],
    "summary": "Chosen products with quantities and a total.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Commerce/Cart",
-   "storyId": "organisms-commerce-cart--planned",
+   "storyId": "organisms-commerce-cart--filled",
    "refs": []
   },
   {
@@ -21949,10 +21964,10 @@
     "input"
    ],
    "summary": "A discussion with replies and a field to add one.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Data display/CommentThread",
-   "storyId": "organisms-data-display-commentthread--planned",
+   "storyId": "organisms-data-display-commentthread--default",
    "refs": []
   },
   {
@@ -21964,10 +21979,10 @@
     "list"
    ],
    "summary": "Who did what, newest first, grouped by day.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Data display/ActivityFeed",
-   "storyId": "organisms-data-display-activityfeed--planned",
+   "storyId": "organisms-data-display-activityfeed--default",
    "refs": []
   },
   {
@@ -21980,10 +21995,10 @@
     "popup"
    ],
    "summary": "Unread and past notifications behind a bell.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
    "title": "Organisms/Feedback/NotificationCenter",
-   "storyId": "organisms-feedback-notificationcenter--planned",
+   "storyId": "organisms-feedback-notificationcenter--default",
    "refs": []
   },
   {
@@ -21995,7 +22010,7 @@
     "board"
    ],
    "summary": "Events placed on a day, week or month grid.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "scheduler",
     "eventcalendar",
@@ -22005,7 +22020,7 @@
     "dayview"
    ],
    "title": "Organisms/Data display/Scheduler",
-   "storyId": "organisms-data-display-scheduler--planned",
+   "storyId": "organisms-data-display-scheduler--week",
    "refs": [
     {
      "library": "devextreme",
@@ -22120,12 +22135,12 @@
     "form"
    ],
    "summary": "A form split into steps with back and next.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "wizard"
    ],
    "title": "Organisms/Forms/Wizard",
-   "storyId": "organisms-forms-wizard--planned",
+   "storyId": "organisms-forms-wizard--default",
    "refs": [
     {
      "library": "kendo-jquery",
@@ -22161,7 +22176,7 @@
     "data"
    ],
    "summary": "Values as tints on a grid, such as activity by day.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "heatmap",
     "heatgraph",
@@ -22170,7 +22185,7 @@
     "heatmapchart"
    ],
    "title": "Organisms/Charts/Heatmap",
-   "storyId": "organisms-charts-heatmap--planned",
+   "storyId": "organisms-charts-heatmap--default",
    "refs": [
     {
      "library": "mantine",
@@ -22244,14 +22259,14 @@
     "data"
    ],
    "summary": "How many remain at each stage.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "funnelchart",
     "pyramidchart",
     "funnel"
    ],
    "title": "Organisms/Charts/FunnelChart",
-   "storyId": "organisms-charts-funnelchart--planned",
+   "storyId": "organisms-charts-funnelchart--default",
    "refs": [
     {
      "library": "mantine",
@@ -22316,7 +22331,7 @@
     "data"
    ],
    "summary": "Flows between stages, sized by quantity.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "sankeychart",
     "flowgraph",
@@ -22324,7 +22339,7 @@
     "sankey"
    ],
    "title": "Organisms/Charts/SankeyChart",
-   "storyId": "organisms-charts-sankeychart--planned",
+   "storyId": "organisms-charts-sankeychart--default",
    "refs": [
     {
      "library": "mantine",
@@ -22389,13 +22404,13 @@
     "tree"
    ],
    "summary": "Nested rectangles sized by value.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "treemap",
     "sunburstchart"
    ],
    "title": "Organisms/Charts/Treemap",
-   "storyId": "organisms-charts-treemap--planned",
+   "storyId": "organisms-charts-treemap--default",
    "refs": [
     {
      "library": "mantine",
@@ -22459,7 +22474,7 @@
     "data"
    ],
    "summary": "Open, high, low and close per period.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "candlestickchart",
     "stockchart",
@@ -22467,7 +22482,7 @@
     "financialchart"
    ],
    "title": "Organisms/Charts/CandlestickChart",
-   "storyId": "organisms-charts-candlestickchart--planned",
+   "storyId": "organisms-charts-candlestickchart--default",
    "refs": [
     {
      "library": "mantine",
@@ -22532,7 +22547,7 @@
     "data"
    ],
    "summary": "Bars, lines and areas on shared axes.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "compositechart",
     "wafflechart",
@@ -22540,7 +22555,7 @@
     "boxplot"
    ],
    "title": "Organisms/Charts/CompositeChart",
-   "storyId": "organisms-charts-compositechart--planned",
+   "storyId": "organisms-charts-compositechart--bars-and-line",
    "refs": [
     {
      "library": "mantine",
@@ -22587,14 +22602,14 @@
     "selection"
    ],
    "summary": "Chooses the model and its settings for the next message.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "modelselector",
     "composermodelpicker",
     "reasoningeffort"
    ],
    "title": "Organisms/Assistant/ModelSelector",
-   "storyId": "organisms-assistant-modelselector--planned",
+   "storyId": "organisms-assistant-modelselector--default",
    "refs": [
     {
      "library": "assistant",
@@ -22622,15 +22637,18 @@
     "list"
    ],
    "summary": "The documents an answer drew on, with inline citations.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "sources",
     "inlinecitation",
     "documentreference",
     "retrievalchunks"
    ],
+   "exports": [
+    "Citation"
+   ],
    "title": "Organisms/Assistant/Sources",
-   "storyId": "organisms-assistant-sources--planned",
+   "storyId": "organisms-assistant-sources--default",
    "refs": [
     {
      "library": "assistant",
@@ -22664,7 +22682,7 @@
     "media"
    ],
    "summary": "Dictation and spoken conversation.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "composervoice",
     "voiceconversation",
@@ -22673,7 +22691,7 @@
     "speechtotext"
    ],
    "title": "Organisms/Assistant/VoiceInput",
-   "storyId": "organisms-assistant-voiceinput--planned",
+   "storyId": "organisms-assistant-voiceinput--idle",
    "refs": [
     {
      "library": "assistant",
@@ -22985,7 +23003,7 @@
     "shell"
    ],
    "summary": "Header, sidebar, main and aside regions that every working screen shares.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "appshell",
     "pagelayout",
@@ -22995,8 +23013,9 @@
     "qlayout",
     "prolayout"
    ],
-   "title": "Templates/Application/AppShellTemplate",
-   "storyId": "templates-application-appshelltemplate--planned",
+   "story": "AppShell",
+   "title": "Templates/Application/AppShell",
+   "storyId": "templates-application-appshell--slots",
    "refs": [
     {
      "library": "antd",
@@ -23113,10 +23132,11 @@
     "board"
    ],
    "summary": "A header with filters above a full-width board.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Application/BoardTemplate",
-   "storyId": "templates-application-boardtemplate--planned",
+   "story": "Board",
+   "title": "Templates/Application/Board",
+   "storyId": "templates-application-board--slots",
    "refs": []
   },
   {
@@ -23129,10 +23149,11 @@
     "message"
    ],
    "summary": "Folders, message list and reading pane.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Application/InboxTemplate",
-   "storyId": "templates-application-inboxtemplate--planned",
+   "story": "Inbox",
+   "title": "Templates/Application/Inbox",
+   "storyId": "templates-application-inbox--slots",
    "refs": []
   },
   {
@@ -23144,10 +23165,11 @@
     "date"
    ],
    "summary": "A mini calendar and calendars list beside a scheduler.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Application/CalendarTemplate",
-   "storyId": "templates-application-calendartemplate--planned",
+   "story": "Calendar",
+   "title": "Templates/Application/Calendar",
+   "storyId": "templates-application-calendar--slots",
    "refs": []
   },
   {
@@ -23160,10 +23182,11 @@
     "form"
    ],
    "summary": "Steps on top or on the side, one form step at a time.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Application/WizardTemplate",
-   "storyId": "templates-application-wizardtemplate--planned",
+   "story": "Wizard",
+   "title": "Templates/Application/Wizard",
+   "storyId": "templates-application-wizard--slots",
    "refs": []
   },
   {
@@ -23175,10 +23198,11 @@
     "identity"
    ],
    "summary": "A person or organisation: header, facts, tabs of activity.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Application/ProfileTemplate",
-   "storyId": "templates-application-profiletemplate--planned",
+   "story": "Profile",
+   "title": "Templates/Application/Profile",
+   "storyId": "templates-application-profile--slots",
    "refs": []
   },
   {
@@ -23191,10 +23215,11 @@
     "text"
    ],
    "summary": "A printable page mixing commentary, figures and charts.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Dashboards/ReportTemplate",
-   "storyId": "templates-dashboards-reporttemplate--planned",
+   "story": "Report",
+   "title": "Templates/Dashboards/Report",
+   "storyId": "templates-dashboards-report--slots",
    "refs": []
   },
   {
@@ -23207,10 +23232,11 @@
     "number"
    ],
    "summary": "Steps of an order on the left, its summary on the right.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Listings/CheckoutTemplate",
-   "storyId": "templates-listings-checkouttemplate--planned",
+   "story": "Checkout",
+   "title": "Templates/Listings/Checkout",
+   "storyId": "templates-listings-checkout--slots",
    "refs": []
   },
   {
@@ -23222,10 +23248,11 @@
     "media"
    ],
    "summary": "One product: gallery, options, description, related items.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Listings/ProductTemplate",
-   "storyId": "templates-listings-producttemplate--planned",
+   "story": "Product",
+   "title": "Templates/Listings/Product",
+   "storyId": "templates-listings-product--slots",
    "refs": []
   },
   {
@@ -23237,10 +23264,11 @@
     "data"
    ],
    "summary": "Plans, a comparison table and questions.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Marketing/PricingTemplate",
-   "storyId": "templates-marketing-pricingtemplate--planned",
+   "story": "Pricing",
+   "title": "Templates/Marketing/Pricing",
+   "storyId": "templates-marketing-pricing--slots",
    "refs": []
   },
   {
@@ -23252,10 +23280,11 @@
     "text"
    ],
    "summary": "A long read with a title block, body and related links.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Marketing/ArticleTemplate",
-   "storyId": "templates-marketing-articletemplate--planned",
+   "story": "Article",
+   "title": "Templates/Marketing/Article",
+   "storyId": "templates-marketing-article--slots",
    "refs": []
   },
   {
@@ -23267,10 +23296,11 @@
     "steps"
    ],
    "summary": "First-run questions that set up an account.",
-   "status": "planned",
+   "status": "available",
    "aliases": [],
-   "title": "Templates/Utility/OnboardingTemplate",
-   "storyId": "templates-utility-onboardingtemplate--planned",
+   "story": "Onboarding",
+   "title": "Templates/Utility/Onboarding",
+   "storyId": "templates-utility-onboarding--slots",
    "refs": []
   },
   {
@@ -23282,7 +23312,7 @@
     "menu"
    ],
    "summary": "A button with a default action and a menu of alternatives.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "splitbutton",
     "dropdownbutton",
@@ -23293,7 +23323,7 @@
     "cycle"
    ],
    "title": "Molecules/Actions/SplitButton",
-   "storyId": "molecules-actions-splitbutton--planned",
+   "storyId": "molecules-actions-splitbutton--default",
    "refs": [
     {
      "library": "carbon",
@@ -23473,7 +23503,7 @@
     "selection"
    ],
    "summary": "A list whose items are reordered by dragging.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "sortable",
     "orderlist",
@@ -23484,7 +23514,7 @@
     "draggable"
    ],
    "title": "Molecules/Data display/Sortable",
-   "storyId": "molecules-data-display-sortable--planned",
+   "storyId": "molecules-data-display-sortable--default",
    "refs": [
     {
      "library": "devextreme",
@@ -23604,13 +23634,13 @@
     "media"
    ],
    "summary": "Two pictures under a divider you slide.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "imagecompare",
     "comparison"
    ],
    "title": "Molecules/Media/ImageCompare",
-   "storyId": "molecules-media-imagecompare--planned",
+   "storyId": "molecules-media-imagecompare--default",
    "refs": [
     {
      "library": "primefaces",
@@ -23646,7 +23676,7 @@
     "media"
    ],
    "summary": "Plays audio or video with ruled controls.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "video",
     "audio",
@@ -23654,7 +23684,7 @@
     "videoplayer"
    ],
    "title": "Molecules/Media/MediaPlayer",
-   "storyId": "molecules-media-mediaplayer--planned",
+   "storyId": "molecules-media-mediaplayer--no-source",
    "refs": [
     {
      "library": "assistant",
@@ -23732,12 +23762,12 @@
     "input"
    ],
    "summary": "A challenge that tells people from scripts.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "captcha"
    ],
    "title": "Molecules/Forms/Captcha",
-   "storyId": "molecules-forms-captcha--planned",
+   "storyId": "molecules-forms-captcha--arithmetic",
    "refs": [
     {
      "library": "kendo-jquery",
@@ -23761,12 +23791,12 @@
     "input"
    ],
    "summary": "An on-screen keyboard for kiosks and touch.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "virtualkeyboard"
    ],
    "title": "Molecules/Forms/VirtualKeyboard",
-   "storyId": "molecules-forms-virtualkeyboard--planned",
+   "storyId": "molecules-forms-virtualkeyboard--qwerty",
    "refs": [
     {
      "library": "radzen",
@@ -23792,7 +23822,7 @@
     "status"
    ],
    "summary": "One value on a linear, arc or radial scale with thresholds.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "gauge",
     "lineargauge",
@@ -23807,7 +23837,7 @@
     "tank"
    ],
    "title": "Organisms/Charts/Gauge",
-   "storyId": "organisms-charts-gauge--planned",
+   "storyId": "organisms-charts-gauge--linear",
    "refs": [
     {
      "library": "mantine",
@@ -24069,7 +24099,7 @@
    ]
   },
   {
-   "name": "Map",
+   "name": "GeoMap",
    "layer": "organisms",
    "category": "charts",
    "tags": [
@@ -24077,7 +24107,7 @@
     "media"
    ],
    "summary": "Markers, regions and values on a map.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "map",
     "maps",
@@ -24087,8 +24117,8 @@
     "geochart",
     "gmap"
    ],
-   "title": "Organisms/Charts/Map",
-   "storyId": "organisms-charts-map--planned",
+   "title": "Organisms/Charts/GeoMap",
+   "storyId": "organisms-charts-geomap--markers",
    "refs": [
     {
      "library": "assistant",
@@ -24214,7 +24244,7 @@
     "tree"
    ],
    "summary": "Nodes and connectors: flowcharts and organisation charts.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "diagram",
     "orgchart",
@@ -24224,7 +24254,7 @@
     "organigram"
    ],
    "title": "Organisms/Charts/Diagram",
-   "storyId": "organisms-charts-diagram--planned",
+   "storyId": "organisms-charts-diagram--org-chart",
    "refs": [
     {
      "library": "assistant",
@@ -24332,13 +24362,13 @@
     "table"
    ],
    "summary": "Tasks as bars on a timeline, with dependencies.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "gantt",
     "ganttchart"
    ],
    "title": "Organisms/Data display/Gantt",
-   "storyId": "organisms-data-display-gantt--planned",
+   "storyId": "organisms-data-display-gantt--day-scale",
    "refs": [
     {
      "library": "devextreme",
@@ -24417,7 +24447,7 @@
     "tree"
    ],
    "summary": "A table whose rows nest and collapse.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "treelist",
     "treetable",
@@ -24425,7 +24455,7 @@
     "treedatagrid"
    ],
    "title": "Organisms/Data display/TreeTable",
-   "storyId": "organisms-data-display-treetable--planned",
+   "storyId": "organisms-data-display-treetable--collapsed",
    "refs": [
     {
      "library": "devextreme",
@@ -24522,7 +24552,7 @@
     "data"
    ],
    "summary": "Cross-tabulates records by rows, columns and measures.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "pivotgrid",
     "pivottable",
@@ -24530,7 +24560,7 @@
     "pivot"
    ],
    "title": "Organisms/Data display/PivotGrid",
-   "storyId": "organisms-data-display-pivotgrid--planned",
+   "storyId": "organisms-data-display-pivotgrid--sum",
    "refs": [
     {
      "library": "devextreme",
@@ -24604,13 +24634,13 @@
     "number"
    ],
    "summary": "Editable cells with formulas.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "spreadsheet",
     "excelviewer"
    ],
    "title": "Organisms/Data display/Spreadsheet",
-   "storyId": "organisms-data-display-spreadsheet--planned",
+   "storyId": "organisms-data-display-spreadsheet--formulas",
    "refs": [
     {
      "library": "kendo-angular",
@@ -24671,13 +24701,13 @@
     "table"
    ],
    "summary": "Edits the properties of one object as a two-column table.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "propertygrid",
     "propertysheet"
    ],
    "title": "Organisms/Forms/PropertyGrid",
-   "storyId": "organisms-forms-propertygrid--planned",
+   "storyId": "organisms-forms-propertygrid--default",
    "refs": [
     {
      "library": "kendo-jquery",
@@ -24707,7 +24737,7 @@
     "form"
    ],
    "summary": "A form generated from the fields of a record.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "dataform",
     "formbuilder",
@@ -24716,7 +24746,7 @@
     "htmlform"
    ],
    "title": "Organisms/Forms/DataForm",
-   "storyId": "organisms-forms-dataform--planned",
+   "storyId": "organisms-forms-dataform--default",
    "refs": [
     {
      "library": "antd",
@@ -24771,7 +24801,7 @@
     "form"
    ],
    "summary": "Builds a filter from nested conditions.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "querybuilder",
     "datafilter",
@@ -24781,7 +24811,7 @@
     "expressioneditor"
    ],
    "title": "Organisms/Forms/QueryBuilder",
-   "storyId": "organisms-forms-querybuilder--planned",
+   "storyId": "organisms-forms-querybuilder--empty",
    "refs": [
     {
      "library": "devextreme",
@@ -24843,14 +24873,14 @@
     "list"
    ],
    "summary": "Folders, files, breadcrumbs and file actions.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "filemanager",
     "fileexplorer",
     "documentmanager"
    ],
    "title": "Organisms/Data display/FileManager",
-   "storyId": "organisms-data-display-filemanager--planned",
+   "storyId": "organisms-data-display-filemanager--list",
    "refs": [
     {
      "library": "devextreme",
@@ -24905,12 +24935,12 @@
     "media"
    ],
    "summary": "Shows a PDF with paging, zoom and search.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "pdfviewer"
    ],
    "title": "Organisms/Media/PdfViewer",
-   "storyId": "organisms-media-pdfviewer--planned",
+   "storyId": "organisms-media-pdfviewer--empty",
    "refs": [
     {
      "library": "kendo-angular",
@@ -24972,12 +25002,12 @@
     "menu"
    ],
    "summary": "Tabbed groups of commands, as in an office suite.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "ribbon"
    ],
    "title": "Organisms/Actions/Ribbon",
-   "storyId": "organisms-actions-ribbon--planned",
+   "storyId": "organisms-actions-ribbon--default",
    "refs": [
     {
      "library": "dhtmlx",
@@ -25026,7 +25056,7 @@
     "board"
    ],
    "summary": "Tiles that are moved, resized and docked.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "tilelayout",
     "dashboard",
@@ -25036,7 +25066,7 @@
     "docklayout"
    ],
    "title": "Organisms/Layout/DashboardLayout",
-   "storyId": "organisms-layout-dashboardlayout--planned",
+   "storyId": "organisms-layout-dashboardlayout--editable",
    "refs": [
     {
      "library": "kendo-angular",
@@ -25134,14 +25164,14 @@
     "action"
    ],
    "summary": "Fills a form from whatever is on the clipboard.",
-   "status": "planned",
+   "status": "available",
    "aliases": [
     "smartpastebutton",
     "smartpaste",
     "smarttextarea"
    ],
    "title": "Organisms/Assistant/SmartPaste",
-   "storyId": "organisms-assistant-smartpaste--planned",
+   "storyId": "organisms-assistant-smartpaste--default",
    "refs": [
     {
      "library": "kendo-angular",

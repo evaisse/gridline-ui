@@ -1,0 +1,5 @@
+.gl-result { display: grid; justify-items: center; gap: var(--gl-space-3); padding: var(--gl-space-6) var(--gl-space-4); text-align: center; }
+.gl-result__icon { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgb(var(--gl-tone)); border-radius: var(--gl-radius); background: rgb(var(--gl-tone) / 0.1); color: rgb(var(--gl-tone)); }
+.gl-result__description { max-width: 420px; margin: 0; }
+.gl-result__extra { width: 100%; max-width: 480px; padding: var(--gl-space-3); border: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); text-align: left; font-size: var(--gl-text-md); }
+.gl-result__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gl-space-2); }

@@ -1,0 +1,2 @@
+/* Candlesticks are drawn by recharts; colours come from the pos / neg tokens in the component. */
+.recharts-wrapper .recharts-bar-rectangle { outline: 0; }

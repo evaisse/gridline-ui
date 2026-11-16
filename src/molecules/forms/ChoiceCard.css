@@ -1,0 +1,16 @@
+.gl-choice-card { display: grid; grid-template-columns: repeat(var(--gl-choice-cols, 2), minmax(0, 1fr)); gap: var(--gl-space-2); }
+.gl-choice-card--cols-1 { --gl-choice-cols: 1; }
+.gl-choice-card--cols-2 { --gl-choice-cols: 2; }
+.gl-choice-card--cols-3 { --gl-choice-cols: 3; }
+@media (max-width: 520px) { .gl-choice-card { --gl-choice-cols: 1; } }
+.gl-choice-card__card { display: flex; align-items: flex-start; gap: var(--gl-space-3); padding: var(--gl-space-3); border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); cursor: pointer; }
+.gl-choice-card__card:hover { background: var(--gl-surface-1); }
+.gl-choice-card__card:focus-within { outline: 1px solid var(--gl-ink); outline-offset: 1px; }
+.gl-choice-card__card--checked, .gl-choice-card__card--checked:hover { background: var(--gl-invert-bg); color: var(--gl-invert-fg); border-color: var(--gl-invert-bg); }
+.gl-choice-card__card--disabled { opacity: 0.5; cursor: not-allowed; }
+.gl-choice-card__card--checked .gl-checkbox[data-state='checked'] { background: var(--gl-invert-fg); border-color: var(--gl-invert-fg); color: var(--gl-invert-bg); }
+.gl-choice-card__card .gl-checkbox, .gl-choice-card__card .gl-radio { margin-top: 2px; }
+.gl-choice-card__body { display: grid; gap: 2px; min-width: 0; }
+.gl-choice-card__title { font-size: var(--gl-text-md); font-weight: 500; }
+.gl-choice-card__description { font-size: var(--gl-text-sm); opacity: 0.7; }
+.gl-choice-card__meta { margin-top: var(--gl-space-1); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); opacity: 0.7; }

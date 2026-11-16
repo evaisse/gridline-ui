@@ -1,0 +1,19 @@
+.gl-spreadsheet { border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); min-width: 0; }
+.gl-spreadsheet__bar { display: flex; align-items: center; height: var(--gl-row-sm); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-spreadsheet__name { display: grid; place-items: center; align-self: stretch; width: 56px; flex: none; border-right: 1px solid var(--gl-rule); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
+.gl-spreadsheet__fx { display: grid; place-items: center; align-self: stretch; width: 32px; flex: none; border-right: 1px solid var(--gl-rule); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
+.gl-spreadsheet__formula { flex: 1; min-width: 0; height: 100%; padding: 0 var(--gl-space-3); border: 0; background: transparent; color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-md); }
+.gl-spreadsheet__formula:focus { outline: 2px solid var(--gl-ink); outline-offset: -2px; }
+.gl-spreadsheet__scroll { overflow: auto; }
+.gl-spreadsheet__grid { display: grid; width: max-content; min-width: 100%; outline: none; }
+.gl-spreadsheet__grid:focus-visible { outline: 2px solid var(--gl-ink); outline-offset: -2px; }
+.gl-spreadsheet__row { display: grid; grid-template-columns: 40px repeat(var(--gl-ss-cols, 8), minmax(96px, 1fr)); }
+.gl-spreadsheet__row > * { height: var(--gl-row-sm); border-right: 1px solid var(--gl-rule); border-bottom: 1px solid var(--gl-rule); }
+.gl-spreadsheet__corner, .gl-spreadsheet__head { background: var(--gl-surface-1); }
+.gl-spreadsheet__head { display: grid; place-items: center; color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); }
+.gl-spreadsheet__head[data-active] { background: var(--gl-surface-3); color: var(--gl-ink); }
+.gl-spreadsheet__cell { display: flex; align-items: center; min-width: 0; padding: 0 var(--gl-space-2); overflow: hidden; white-space: nowrap; font-size: var(--gl-text-md); cursor: cell; }
+.gl-spreadsheet__cell[data-number] { justify-content: flex-end; font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; }
+.gl-spreadsheet__cell[data-error] { justify-content: center; color: rgb(var(--gl-neg)); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
+.gl-spreadsheet__cell[data-selected] { outline: 2px solid var(--gl-ink); outline-offset: -2px; background: var(--gl-surface-2); }
+.gl-spreadsheet__editor { width: 100%; height: 100%; margin: 0 calc(-1 * var(--gl-space-2)); padding: 0 var(--gl-space-2); border: 0; background: var(--gl-paper); color: var(--gl-ink); font: inherit; font-family: var(--gl-font-mono); outline: none; }

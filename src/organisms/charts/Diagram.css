@@ -1,0 +1,12 @@
+.gl-diagram { max-width: 100%; max-height: 100%; overflow: auto; }
+.gl-diagram__canvas { position: relative; min-width: 100%; }
+.gl-diagram__edges { position: absolute; inset: 0; pointer-events: none; }
+.gl-diagram__edges path { fill: none; stroke: var(--gl-rule-strong); stroke-width: 1; }
+.gl-diagram__edges path[data-on] { stroke: var(--gl-ink); }
+.gl-diagram__node { position: absolute; display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 0; padding: 0 var(--gl-space-3); border: 1px solid var(--gl-rule-strong); border-left: 3px solid rgb(var(--gl-tone)); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); font: inherit; font-size: var(--gl-text-md); text-align: left; cursor: default; }
+.gl-diagram__node[aria-pressed] { cursor: pointer; }
+.gl-diagram__node[aria-pressed]:hover { background: var(--gl-surface-2); }
+.gl-diagram__node[data-selected] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); border-color: var(--gl-invert-bg); }
+.gl-diagram__label, .gl-diagram__meta { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-diagram__label { font-weight: 500; }
+.gl-diagram__meta { opacity: 0.7; }

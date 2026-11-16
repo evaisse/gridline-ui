@@ -1,0 +1,15 @@
+.gl-virtual-keyboard { display: block; max-width: 520px; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-virtual-keyboard--numeric { max-width: 240px; }
+.gl-virtual-keyboard__value { display: flex; align-items: center; min-height: var(--gl-row); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); font-family: var(--gl-font-mono); font-size: var(--gl-text-lg); color: var(--gl-ink); white-space: pre; overflow: hidden; }
+.gl-virtual-keyboard__caret { width: 1px; height: 1em; margin-left: 1px; background: var(--gl-ink); }
+.gl-virtual-keyboard__row { display: flex; }
+.gl-virtual-keyboard__row + .gl-virtual-keyboard__row { border-top: 1px solid var(--gl-rule); }
+.gl-virtual-keyboard__key { flex: 1; min-width: 0; height: var(--gl-row); padding: 0; border: 0; border-right: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-md); cursor: pointer; display: grid; place-items: center; }
+.gl-virtual-keyboard__key:last-child { border-right: 0; }
+.gl-virtual-keyboard__key:hover:not(:disabled) { background: var(--gl-surface-3); }
+.gl-virtual-keyboard__key:active:not(:disabled), .gl-virtual-keyboard__key[aria-pressed='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-virtual-keyboard__key:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-virtual-keyboard__key:disabled { color: var(--gl-ink-3); cursor: not-allowed; }
+.gl-virtual-keyboard__key--wide { flex: 1.5; background: var(--gl-surface-1); }
+.gl-virtual-keyboard__key--space { flex: 6; }
+.gl-virtual-keyboard__key--enter { flex: 2; background: var(--gl-surface-1); text-transform: uppercase; font-size: var(--gl-text-xs); letter-spacing: 0.08em; }

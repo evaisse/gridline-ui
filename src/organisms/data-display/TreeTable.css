@@ -1,0 +1,6 @@
+.gl-tree-table { min-width: 0; overflow-x: auto; }
+.gl-tree-table .gl-table__row:focus-visible { outline: 2px solid var(--gl-ink); outline-offset: -2px; }
+.gl-tree-table__first { display: inline-flex; align-items: center; gap: var(--gl-space-2); }
+.gl-tree-table__toggle { display: grid; place-items: center; width: 20px; height: 20px; flex: none; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.gl-tree-table__toggle[data-open] > svg { transform: rotate(90deg); }
+button.gl-tree-table__toggle:hover { background: var(--gl-surface-3); }

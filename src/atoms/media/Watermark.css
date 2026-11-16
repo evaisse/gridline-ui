@@ -1,0 +1,11 @@
+.gl-watermark { position: relative; }
+.gl-watermark__mark {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  color: var(--gl-ink);
+  opacity: 0.08;
+  font-family: var(--gl-font-mono);
+  pointer-events: none;
+  user-select: none;
+}

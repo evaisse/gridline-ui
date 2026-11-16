@@ -1,0 +1,4 @@
+.gl-date-range-picker { font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; }
+.gl-date-range-picker--empty { color: var(--gl-ink-3); }
+.gl-popover.gl-date-range-picker__panel { display: flex; flex-direction: column; gap: var(--gl-space-3); width: auto; max-width: calc(100vw - 16px); overflow-x: auto; }
+.gl-date-range-picker__footer { display: flex; justify-content: flex-end; padding-top: var(--gl-space-2); border-top: 1px solid var(--gl-rule); }

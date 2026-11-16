@@ -1,0 +1,8 @@
+.gl-toc { border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); max-width: 100%; }
+.gl-toc__title { margin: 0; padding: 0 var(--gl-space-3); display: flex; align-items: center; height: var(--gl-row-sm); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); text-transform: uppercase; letter-spacing: 0.04em; color: var(--gl-ink-2); }
+.gl-toc__list { margin: 0; padding: 0; list-style: none; }
+.gl-toc__list > li + li { border-top: 1px solid var(--gl-rule); }
+.gl-toc__link { display: flex; align-items: center; min-height: var(--gl-row-sm); padding-right: var(--gl-space-3); color: var(--gl-ink-2); font-size: var(--gl-text-md); text-decoration: none; }
+.gl-toc__link:hover { background: var(--gl-surface-2); color: var(--gl-ink); }
+.gl-toc__link:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-toc__link[aria-current='location'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

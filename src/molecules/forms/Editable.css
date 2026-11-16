@@ -1,0 +1,12 @@
+.gl-editable { display: flex; align-items: center; gap: var(--gl-space-2); max-width: 100%; }
+.gl-editable--display { min-height: var(--gl-row-sm); padding: 0 var(--gl-space-2); border: 1px dashed transparent; border-radius: var(--gl-radius); background: transparent; color: var(--gl-ink); font: inherit; font-size: var(--gl-text-md); text-align: left; cursor: text; }
+.gl-editable--display:hover:not(:disabled) { border-color: var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-editable--display:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-editable--display:disabled { cursor: not-allowed; opacity: 0.6; }
+.gl-editable--empty .gl-editable__text { color: var(--gl-ink-3); }
+.gl-editable__text { min-width: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+.gl-editable__hint { flex: none; color: var(--gl-ink-3); opacity: 0; }
+.gl-editable--display:hover .gl-editable__hint, .gl-editable--display:focus-visible .gl-editable__hint { opacity: 1; }
+.gl-editable--editing { align-items: flex-start; }
+.gl-editable--editing > .gl-input, .gl-editable--editing > .gl-textarea { flex: 1; min-width: 0; }
+.gl-editable__controls { display: inline-flex; gap: var(--gl-space-1); }

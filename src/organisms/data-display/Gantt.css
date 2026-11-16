@@ -1,0 +1,26 @@
+.gl-gantt { min-width: 0; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-gantt__bar { display: flex; align-items: center; gap: var(--gl-space-3); padding: var(--gl-space-2) var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-gantt__body { display: flex; min-width: 0; }
+.gl-gantt__tasks { flex: none; width: min(46%, 360px); border-right: 1px solid var(--gl-rule-strong); overflow: hidden; }
+.gl-gantt__tasks .gl-table { border: 0; }
+.gl-gantt__tasks .gl-table :is(th, td) { padding: 0 var(--gl-space-3); white-space: nowrap; }
+.gl-gantt__tasks .gl-table td { height: var(--gl-gantt-row); box-sizing: border-box; }
+.gl-gantt__tasks .gl-table th { height: var(--gl-gantt-head); box-sizing: border-box; }
+.gl-gantt__date { width: 64px; }
+.gl-gantt__name--summary { font-weight: 600; }
+.gl-gantt__scroll { flex: 1; min-width: 0; overflow-x: auto; }
+.gl-gantt__timeline { position: relative; }
+.gl-gantt__head { display: flex; height: var(--gl-gantt-head); box-sizing: border-box; border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-gantt__tick { flex: none; box-sizing: border-box; overflow: hidden; padding: 0 var(--gl-space-1); border-left: 1px solid var(--gl-rule); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); line-height: var(--gl-gantt-head); white-space: nowrap; }
+.gl-gantt__canvas { position: relative; }
+.gl-gantt__line { position: absolute; left: 0; right: 0; height: 1px; background: var(--gl-rule); }
+.gl-gantt__today { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1px solid rgb(var(--gl-neg)); }
+.gl-gantt__links { position: absolute; inset: 0; pointer-events: none; }
+.gl-gantt__link { fill: none; stroke: var(--gl-ink-2); stroke-width: 1; }
+.gl-gantt__arrow { fill: var(--gl-ink-2); }
+.gl-gantt__bar-item { position: absolute; height: 20px; box-sizing: border-box; padding: 0; overflow: hidden; border: 1px solid var(--gl-ink); border-radius: var(--gl-radius); background: var(--gl-surface-3); cursor: pointer; }
+.gl-gantt__bar-item:hover { background: var(--gl-surface-2); }
+.gl-gantt__bar-item--summary { height: 12px; margin-top: 4px; background: var(--gl-ink); }
+.gl-gantt__fill { display: block; height: 100%; background: var(--gl-invert-bg); }
+.gl-gantt__bar-item:focus-visible { outline: 2px solid var(--gl-ink); outline-offset: 2px; }
+@media (max-width: 480px) { .gl-gantt__tasks { width: 40%; } .gl-gantt__date { display: none; } }

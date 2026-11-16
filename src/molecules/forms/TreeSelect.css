@@ -1,0 +1,15 @@
+.gl-tree-select { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-2); width: 100%; min-height: var(--gl-row); padding: var(--gl-space-1) var(--gl-space-3); border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); font: inherit; font-size: var(--gl-text-md); text-align: left; cursor: pointer; }
+.gl-tree-select:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-tree-select:disabled { opacity: 0.5; cursor: not-allowed; }
+.gl-tree-select__value { display: flex; flex-wrap: wrap; align-items: center; gap: var(--gl-space-1); min-width: 0; }
+.gl-tree-select__placeholder { color: var(--gl-ink-3); }
+.gl-tree-select__panel.gl-popover { width: var(--radix-popover-trigger-width); min-width: 220px; max-height: 320px; overflow: auto; padding: 0; }
+.gl-tree-select__row { display: flex; align-items: center; gap: var(--gl-space-2); min-height: var(--gl-row-sm); padding-inline-end: var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); cursor: pointer; outline: 0; user-select: none; }
+.gl-tree-select__row:last-child { border-bottom: 0; }
+.gl-tree-select__row:hover { background: var(--gl-surface-1); }
+.gl-tree-select__row:focus-visible, .gl-tree-select__row--selected { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-tree-select__row[aria-disabled='true'] { opacity: 0.5; cursor: not-allowed; }
+.gl-tree-select__twist { display: inline-grid; place-items: center; flex: none; width: 16px; height: 16px; }
+.gl-tree-select__twist svg { transition: transform 120ms; }
+.gl-tree-select__twist--open { transform: rotate(90deg); }
+.gl-tree-select__label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

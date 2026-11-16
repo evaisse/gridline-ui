@@ -1,0 +1,9 @@
+.gl-floating-panel { position: fixed; z-index: 45; display: flex; flex-direction: column; box-sizing: border-box; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); outline: 4px solid var(--gl-surface-2); overflow: hidden; }
+.gl-floating-panel--contained { position: absolute; }
+.gl-floating-panel__header { display: flex; align-items: center; gap: var(--gl-space-2); flex: none; height: var(--gl-row-sm); padding: 0 var(--gl-space-2); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-2); cursor: grab; touch-action: none; user-select: none; }
+.gl-floating-panel__header:active { cursor: grabbing; }
+.gl-floating-panel__header:focus-visible, .gl-floating-panel__resize:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-floating-panel__grip { color: var(--gl-ink-3); }
+.gl-floating-panel__title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-floating-panel__body { flex: 1; min-height: 0; padding: var(--gl-space-3); overflow: auto; font-size: var(--gl-text-md); }
+.gl-floating-panel__resize { position: absolute; right: 0; bottom: 0; width: 16px; height: 16px; cursor: nwse-resize; touch-action: none; border-top: 1px solid var(--gl-rule-strong); border-left: 1px solid var(--gl-rule-strong); background: var(--gl-surface-2); }

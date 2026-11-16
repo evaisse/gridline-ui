@@ -1,0 +1,11 @@
+.gl-checkbox-group { min-width: 0; margin: 0; padding: 0; border: 0; }
+.gl-checkbox-group:disabled { opacity: 0.6; }
+.gl-checkbox-group__legend { padding: 0; margin-bottom: var(--gl-space-2); }
+.gl-checkbox-group__items { display: grid; gap: var(--gl-space-2); }
+.gl-checkbox-group__items--horizontal { display: flex; flex-wrap: wrap; gap: var(--gl-space-2) var(--gl-space-5); }
+.gl-checkbox-group__item { display: flex; align-items: flex-start; gap: var(--gl-space-2); }
+.gl-checkbox-group__item .gl-checkbox { margin-top: 2px; }
+.gl-checkbox-group__text { display: grid; min-width: 0; }
+.gl-checkbox-group__label { color: var(--gl-ink); font-size: var(--gl-text-md); cursor: pointer; }
+.gl-checkbox-group__description { color: var(--gl-ink-2); font-size: var(--gl-text-sm); }
+.gl-checkbox-group__hint { margin: var(--gl-space-2) 0 0; color: var(--gl-ink-2); font-size: var(--gl-text-sm); }

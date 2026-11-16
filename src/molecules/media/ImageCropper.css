@@ -1,0 +1,12 @@
+.gl-image-cropper { display: grid; gap: var(--gl-space-2); min-width: 0; }
+.gl-image-cropper__frame { position: relative; overflow: hidden; width: 100%; user-select: none; touch-action: none; }
+.gl-image-cropper .gl-image-cropper__image { position: absolute; inset: 0; width: 100%; height: 100%; }
+.gl-image-cropper__mask { position: absolute; inset: 0; pointer-events: none; background: var(--gl-surface-3); clip-path: polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, var(--gl-cx) var(--gl-cy), var(--gl-cx) calc(var(--gl-cy) + var(--gl-ch)), calc(var(--gl-cx) + var(--gl-cw)) calc(var(--gl-cy) + var(--gl-ch)), calc(var(--gl-cx) + var(--gl-cw)) var(--gl-cy), var(--gl-cx) var(--gl-cy)); }
+.gl-image-cropper__box { position: absolute; border: 1px solid var(--gl-paper); outline: 1px solid var(--gl-ink); outline-offset: 0; cursor: move; }
+.gl-image-cropper__box:focus-visible { outline: 2px solid var(--gl-ink); }
+.gl-image-cropper__handle { position: absolute; width: 12px; height: 12px; border: 1px solid var(--gl-ink); background: var(--gl-paper); touch-action: none; }
+.gl-image-cropper__handle--nw { top: -6px; left: -6px; cursor: nwse-resize; }
+.gl-image-cropper__handle--ne { top: -6px; right: -6px; cursor: nesw-resize; }
+.gl-image-cropper__handle--sw { bottom: -6px; left: -6px; cursor: nesw-resize; }
+.gl-image-cropper__handle--se { bottom: -6px; right: -6px; cursor: nwse-resize; }
+.gl-image-cropper__readout { color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); font-variant-numeric: tabular-nums; }

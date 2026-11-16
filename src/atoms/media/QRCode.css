@@ -1,0 +1,9 @@
+.gl-qrcode {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  color: var(--gl-ink);
+  background: var(--gl-paper);
+  border: 1px solid var(--gl-rule-strong);
+}
+.gl-qrcode--empty { background: var(--gl-surface-1); }

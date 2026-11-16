@@ -1,0 +1,21 @@
+.gl-query-builder { min-width: 0; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-query-builder__head { display: flex; align-items: center; flex-wrap: wrap; gap: var(--gl-space-1); min-height: var(--gl-row); padding: 0 var(--gl-space-2); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-query-builder__spacer { flex: 1; }
+.gl-query-builder__combinator { display: inline-flex; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); }
+.gl-query-builder__combinator button { height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border: 0; background: var(--gl-paper); color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
+.gl-query-builder__combinator button + button { border-left: 1px solid var(--gl-rule-strong); }
+.gl-query-builder__combinator button[aria-pressed='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-query-builder__rules { margin: 0; padding: 0; list-style: none; }
+.gl-query-builder__rules > li + li { border-top: 1px solid var(--gl-rule); }
+.gl-query-builder__rule { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.4fr) var(--gl-row); align-items: stretch; }
+.gl-query-builder__rule > * + * { border-left: 1px solid var(--gl-rule); }
+.gl-query-builder__rule .gl-query-builder__remove { width: auto; height: auto; border-radius: 0; }
+.gl-query-builder__value { min-width: 0; }
+.gl-query-builder__empty { margin: 0; padding: var(--gl-space-3) var(--gl-space-4); color: var(--gl-ink-3); font-size: var(--gl-text-md); }
+.gl-query-builder__item { margin-left: var(--gl-space-4); border-left: 1px solid var(--gl-rule-strong); }
+.gl-query-builder__group--nested { border-top: 0; }
+@media (max-width: 520px) {
+  .gl-query-builder__rule { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) var(--gl-row); }
+  .gl-query-builder__rule > .gl-query-builder__value { grid-column: 1 / 3; grid-row: 2; border-left: 0; border-top: 1px solid var(--gl-rule); }
+  .gl-query-builder__rule > .gl-query-builder__remove { grid-row: 1 / 3; grid-column: 3; }
+}

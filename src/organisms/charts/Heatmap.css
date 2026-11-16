@@ -1,0 +1,7 @@
+.gl-heatmap { display: grid; height: 100%; min-width: 0; padding: var(--gl-space-3); gap: 2px; color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); }
+.gl-heatmap__row { display: contents; }
+.gl-heatmap__col { text-align: center; color: var(--gl-ink-2); text-transform: uppercase; letter-spacing: 0.03em; }
+.gl-heatmap__rowlabel { display: flex; align-items: center; padding-right: var(--gl-space-2); color: var(--gl-ink-2); text-transform: uppercase; letter-spacing: 0.03em; }
+.gl-heatmap__cell { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 8px; font-variant-numeric: tabular-nums; }
+.gl-heatmap__cell--empty { border: 1px dashed var(--gl-rule-strong); }
+.gl-heatmap__cell:hover { outline: 1px solid var(--gl-ink); }

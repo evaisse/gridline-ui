@@ -1,0 +1,15 @@
+.gl-inbox { display: flex; flex-direction: column; min-width: 0; min-height: 100dvh; background: var(--gl-paper); }
+.gl-inbox__header { border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-inbox__body { flex: 1; display: grid; grid-template-columns: 220px minmax(280px, 340px) minmax(0, 1fr); }
+.gl-inbox__folders { min-width: 0; border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-inbox__list { min-width: 0; border-right: 1px solid var(--gl-rule-strong); }
+.gl-inbox__pane { min-width: 0; }
+@media (max-width: 1080px) {
+  .gl-inbox__body { grid-template-columns: minmax(220px, 280px) minmax(0, 1fr); }
+  .gl-inbox__folders { grid-column: 1 / -1; border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+  .gl-inbox__list { border-right: 1px solid var(--gl-rule-strong); }
+}
+@media (max-width: 760px) {
+  .gl-inbox__body { grid-template-columns: minmax(0, 1fr); }
+  .gl-inbox__list { border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); max-height: 320px; overflow: auto; }
+}

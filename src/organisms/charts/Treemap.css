@@ -1,0 +1,4 @@
+.gl-treemap__name, .gl-treemap__value, .gl-treemap__group { font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); pointer-events: none; }
+.gl-treemap__name { fill: var(--gl-ink); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-treemap__value { fill: var(--gl-ink-2); font-variant-numeric: tabular-nums; }
+.gl-treemap__group { text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }

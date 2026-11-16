@@ -1,0 +1,13 @@
+.gl-checkout { min-width: 0; }
+.gl-checkout__header { display: flex; align-items: center; min-height: 48px; padding: var(--gl-space-2) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-checkout__body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-checkout__steps { display: grid; align-content: start; gap: var(--gl-space-5); min-width: 0; padding: var(--gl-space-5) var(--gl-space-5); }
+.gl-checkout__summary { min-width: 0; border-left: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-checkout__sticky { position: sticky; top: 0; padding: var(--gl-space-5) var(--gl-space-4); }
+.gl-checkout__footer { padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+@media (max-width: 860px) {
+  .gl-checkout__body { grid-template-columns: minmax(0, 1fr); }
+  .gl-checkout__summary { order: -1; border-left: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+  .gl-checkout__sticky { position: static; }
+  .gl-checkout__steps { padding: var(--gl-space-5) var(--gl-space-4); }
+}

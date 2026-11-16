@@ -1,0 +1,11 @@
+.gl-angle-slider { display: inline-flex; align-items: center; gap: var(--gl-space-3); }
+.gl-angle-slider__dial { flex: none; width: 96px; height: 96px; color: var(--gl-ink); cursor: pointer; touch-action: none; user-select: none; border-radius: var(--gl-radius); }
+.gl-angle-slider__dial:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: 2px; }
+.gl-angle-slider__ring { fill: var(--gl-paper); stroke: var(--gl-rule-strong); stroke-width: 1; }
+.gl-angle-slider__tick { stroke: var(--gl-ink-3); stroke-width: 1; }
+.gl-angle-slider__hand { stroke: var(--gl-ink); stroke-width: 1; }
+.gl-angle-slider__pivot { fill: var(--gl-ink); }
+.gl-angle-slider__knob { fill: var(--gl-invert-bg); stroke: var(--gl-ink); stroke-width: 1; }
+.gl-angle-slider__field { width: 96px; font-family: var(--gl-font-mono); }
+.gl-angle-slider--disabled { opacity: 0.5; }
+.gl-angle-slider--disabled .gl-angle-slider__dial { cursor: not-allowed; }

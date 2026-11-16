@@ -1,0 +1,16 @@
+.gl-app-shell { display: flex; flex-direction: column; min-width: 0; min-height: 100dvh; background: var(--gl-paper); }
+.gl-app-shell__header { position: sticky; top: 0; z-index: 2; border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-app-shell__body { flex: 1; display: grid; grid-template-columns: 240px minmax(0, 1fr); }
+.gl-app-shell__body--aside { grid-template-columns: 240px minmax(0, 1fr) 300px; }
+.gl-app-shell__nav { min-width: 0; border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-app-shell__main { min-width: 0; }
+.gl-app-shell__aside { min-width: 0; border-left: 1px solid var(--gl-rule-strong); }
+.gl-app-shell__footer { border-top: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+@media (max-width: 1080px) {
+  .gl-app-shell__body--aside { grid-template-columns: 240px minmax(0, 1fr); }
+  .gl-app-shell__aside { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--gl-rule-strong); }
+}
+@media (max-width: 760px) {
+  .gl-app-shell__body, .gl-app-shell__body--aside { grid-template-columns: minmax(0, 1fr); }
+  .gl-app-shell__nav { border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); max-height: 240px; overflow: auto; }
+}

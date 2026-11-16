@@ -3,7 +3,7 @@ import { Countdown } from './Countdown';
 
 const NOW = '2026-11-16T12:00:00Z';
 
-const meta = { title: 'Molecules/Data display/Countdown', tags: ['date', 'number'], component: Countdown, args: { now: NOW, target: '2026-11-19T15:42:09Z', 'aria-label': undefined } } satisfies Meta<typeof Countdown>;
+const meta = { title: 'Molecules/Data display/Countdown', tags: ['date', 'number'], component: Countdown, args: { now: NOW, target: '2026-11-19T15:42:09Z' } } satisfies Meta<typeof Countdown>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 

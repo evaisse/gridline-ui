@@ -1,0 +1,17 @@
+.gl-gauge { height: 100%; min-width: 0; color: var(--gl-ink); font-family: var(--gl-font-mono); }
+.gl-gauge--linear { display: flex; flex-direction: column; justify-content: center; gap: var(--gl-space-2); padding: var(--gl-space-4); }
+.gl-gauge__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--gl-space-3); }
+.gl-gauge__label { font-size: var(--gl-text-xs); letter-spacing: 0.03em; text-transform: uppercase; color: var(--gl-ink-2); }
+.gl-gauge__value { font-size: var(--gl-text-xl); line-height: 1; font-variant-numeric: tabular-nums; }
+.gl-gauge__track { position: relative; height: 24px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-gauge__band { position: absolute; top: 0; bottom: 0; opacity: 0.22; }
+.gl-gauge__bar { position: absolute; top: 8px; bottom: 8px; left: 0; }
+.gl-gauge__target { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--gl-ink); }
+.gl-gauge__scale { display: flex; justify-content: space-between; font-size: var(--gl-text-xs); color: var(--gl-ink-2); font-variant-numeric: tabular-nums; }
+.gl-gauge--arc, .gl-gauge--radial { display: grid; place-items: center; padding: var(--gl-space-2); }
+.gl-gauge__svg { width: 100%; height: 100%; max-height: 100%; overflow: visible; }
+.gl-gauge__svg path { fill: none; stroke-width: 14; }
+.gl-gauge__arc-track { stroke: var(--gl-surface-3); }
+.gl-gauge__arc-band { opacity: 0.28; stroke-width: 14; }
+.gl-gauge__svg-value { fill: var(--gl-ink); font-family: var(--gl-font-mono); font-size: 28px; font-variant-numeric: tabular-nums; }
+.gl-gauge__svg-label { fill: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: 9px; letter-spacing: 0.04em; }

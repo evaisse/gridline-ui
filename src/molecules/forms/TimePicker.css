@@ -1,0 +1,11 @@
+.gl-time-picker { font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; }
+.gl-time-picker--empty { color: var(--gl-ink-3); }
+.gl-popover.gl-time-picker__panel { display: flex; flex-direction: column; width: auto; padding: 0; }
+.gl-time-picker__columns { display: flex; }
+.gl-time-picker__column { display: flex; flex-direction: column; width: 64px; max-height: 200px; overflow-y: auto; border-right: 1px solid var(--gl-rule); }
+.gl-time-picker__column:last-child { border-right: 0; }
+.gl-time-picker__option { flex: none; height: var(--gl-row-sm); border: 0; border-bottom: 1px solid var(--gl-rule); background: transparent; color: var(--gl-ink); font: inherit; font-family: var(--gl-font-mono); font-size: var(--gl-text-md); font-variant-numeric: tabular-nums; cursor: pointer; }
+.gl-time-picker__option:hover { background: var(--gl-surface-3); }
+.gl-time-picker__option[aria-selected='true'] { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }
+.gl-time-picker__option:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -2px; }
+.gl-time-picker__footer { display: flex; justify-content: space-between; gap: var(--gl-space-2); padding: var(--gl-space-2); border-top: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }

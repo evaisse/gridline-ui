@@ -1,0 +1,8 @@
+.gl-image-compare { position: relative; overflow: hidden; width: 100%; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); user-select: none; touch-action: pan-y; }
+.gl-image-compare .gl-image-compare__layer { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+.gl-image-compare__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--gl-compare)) 0 0); }
+.gl-image-compare__handle { position: absolute; top: 0; bottom: 0; left: var(--gl-compare); width: var(--gl-row); transform: translateX(-50%); display: grid; place-items: center; cursor: ew-resize; touch-action: none; }
+.gl-image-compare__handle::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--gl-ink); }
+.gl-image-compare__grip { position: relative; display: grid; place-items: center; width: var(--gl-row-sm); height: var(--gl-row-sm); border: 1px solid var(--gl-ink); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); font-family: var(--gl-font-mono); }
+.gl-image-compare__handle:focus-visible { outline: 0; }
+.gl-image-compare__handle:focus-visible .gl-image-compare__grip { background: var(--gl-invert-bg); color: var(--gl-invert-fg); }

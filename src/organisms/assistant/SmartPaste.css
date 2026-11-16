@@ -1,0 +1,8 @@
+.gl-smart-paste { display: grid; gap: var(--gl-space-3); width: 100%; max-width: 480px; }
+.gl-smart-paste__bar { display: flex; align-items: center; gap: var(--gl-space-3); flex-wrap: wrap; }
+.gl-smart-paste__proposal { border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-smart-paste__list { margin: 0; }
+.gl-smart-paste__row { display: grid; grid-template-columns: minmax(80px, 140px) 1fr; align-items: center; min-height: var(--gl-row); border-bottom: 1px solid var(--gl-rule); }
+.gl-smart-paste__row dt { padding: 0 var(--gl-space-3); align-self: stretch; display: flex; align-items: center; border-right: 1px solid var(--gl-rule); background: var(--gl-surface-1); }
+.gl-smart-paste__row dd { margin: 0; padding: var(--gl-space-2) var(--gl-space-3); font-size: 13px; overflow-wrap: anywhere; }
+.gl-smart-paste__actions { display: flex; justify-content: flex-end; gap: var(--gl-space-2); padding: var(--gl-space-2); background: var(--gl-surface-1); }

@@ -1,0 +1,14 @@
+.gl-icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+}
+.gl-icon--sm { width: 12px; height: 12px; }
+.gl-icon--lg { width: 20px; height: 20px; }
+.gl-icon--xl { width: 24px; height: 24px; }
+.gl-icon--toned { color: rgb(var(--gl-tone)); }
+.gl-icon > svg { width: 100%; height: 100%; }

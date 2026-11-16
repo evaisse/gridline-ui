@@ -1,0 +1,2 @@
+/* Bars, lines and areas are drawn by recharts with tokens set in the component. */
+.recharts-wrapper .recharts-bar-rectangle { outline: 0; }

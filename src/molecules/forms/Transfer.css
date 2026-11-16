@@ -1,0 +1,12 @@
+.gl-transfer { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: var(--gl-space-3); align-items: center; }
+@media (max-width: 520px) { .gl-transfer { grid-template-columns: minmax(0, 1fr); } .gl-transfer__actions { flex-direction: row; justify-content: center; } .gl-transfer__actions svg { transform: rotate(90deg); } }
+.gl-transfer__list { display: grid; grid-template-rows: auto 1fr; align-self: stretch; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); min-width: 0; }
+.gl-transfer__head { display: flex; align-items: center; gap: var(--gl-space-2); height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-transfer__count { margin-inline-start: auto; }
+.gl-transfer__items { margin: 0; padding: 0; list-style: none; min-height: 160px; max-height: 260px; overflow-y: auto; }
+.gl-transfer__item { display: flex; align-items: center; gap: var(--gl-space-2); min-height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); }
+.gl-transfer__item:last-child { border-bottom: 0; }
+.gl-transfer__item--checked { background: var(--gl-surface-2); }
+.gl-transfer__label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--gl-text-md); color: var(--gl-ink); cursor: pointer; }
+.gl-transfer__empty { padding: var(--gl-space-4) var(--gl-space-3); color: var(--gl-ink-3); font-size: var(--gl-text-md); text-align: center; }
+.gl-transfer__actions { display: flex; flex-direction: column; gap: var(--gl-space-2); }

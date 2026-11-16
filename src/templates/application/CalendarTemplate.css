@@ -1,0 +1,11 @@
+.gl-calendar-page { display: flex; flex-direction: column; min-width: 0; min-height: 100dvh; background: var(--gl-paper); }
+.gl-calendar-page__header { border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-calendar-page__body { flex: 1; display: grid; grid-template-columns: 280px minmax(0, 1fr); }
+.gl-calendar-page__side { display: flex; flex-direction: column; min-width: 0; border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-calendar-page__mini { min-width: 0; padding: var(--gl-space-3); border-bottom: 1px solid var(--gl-rule-strong); overflow-x: auto; }
+.gl-calendar-page__calendars { min-width: 0; padding: var(--gl-space-3); }
+.gl-calendar-page__main { min-width: 0; overflow-x: auto; }
+@media (max-width: 860px) {
+  .gl-calendar-page__body { grid-template-columns: minmax(0, 1fr); }
+  .gl-calendar-page__side { border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+}

@@ -1,0 +1,10 @@
+.gl-property-grid { width: 100%; border-collapse: collapse; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); font-size: var(--gl-text-md); table-layout: fixed; }
+.gl-property-grid tr + tr > * { border-top: 1px solid var(--gl-rule); }
+.gl-property-grid tbody + tbody > tr:first-child > * { border-top: 1px solid var(--gl-rule-strong); }
+.gl-property-grid__group { height: var(--gl-row-sm); padding: 0 var(--gl-space-3); background: var(--gl-surface-2); color: var(--gl-ink-2); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); font-weight: 500; letter-spacing: 0.08em; text-align: left; text-transform: uppercase; }
+.gl-property-grid__name { width: 40%; height: var(--gl-row); padding: 0 var(--gl-space-3); background: var(--gl-surface-1); border-right: 1px solid var(--gl-rule); color: var(--gl-ink); font-weight: 400; text-align: left; vertical-align: middle; overflow: hidden; text-overflow: ellipsis; }
+.gl-property-grid__hint { margin-left: var(--gl-space-2); color: var(--gl-ink-3); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.04em; text-transform: uppercase; }
+.gl-property-grid__value { height: var(--gl-row); padding: 0; vertical-align: middle; }
+.gl-property-grid__value .gl-input, .gl-property-grid__value .gl-select { width: 100%; }
+.gl-property-grid__check { display: flex; align-items: center; height: var(--gl-row); padding: 0 var(--gl-space-3); }
+.gl-property-grid__readonly { display: flex; align-items: center; height: var(--gl-row); padding: 0 var(--gl-space-3); color: var(--gl-ink-2); font-family: var(--gl-font-mono); }

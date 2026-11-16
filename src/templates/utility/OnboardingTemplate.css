@@ -1,0 +1,7 @@
+.gl-onboarding { display: flex; flex-direction: column; min-width: 0; min-height: 100dvh; background: var(--gl-paper); }
+.gl-onboarding__brand { display: flex; align-items: center; min-height: 48px; padding: 0 var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-onboarding__steps { min-width: 0; padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); overflow-x: auto; }
+.gl-onboarding__main { flex: 1; display: grid; place-items: center; min-width: 0; padding: var(--gl-space-6) var(--gl-space-4); }
+.gl-onboarding__question { display: grid; gap: var(--gl-space-4); width: 100%; max-width: 480px; min-width: 0; }
+.gl-onboarding__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--gl-space-2); padding: var(--gl-space-3) var(--gl-space-4); border-top: 1px solid var(--gl-rule-strong); }
+@media (max-width: 760px) { .gl-onboarding__main { padding: var(--gl-space-5) var(--gl-space-4); } }

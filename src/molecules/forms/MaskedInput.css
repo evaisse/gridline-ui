@@ -1,0 +1,2 @@
+.gl-masked-input .gl-input__control { font-family: var(--gl-font-mono); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.gl-masked-input .gl-input__control::placeholder { letter-spacing: 0.04em; }

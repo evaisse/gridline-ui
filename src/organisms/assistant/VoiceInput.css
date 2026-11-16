@@ -1,0 +1,7 @@
+.gl-voice-input { display: flex; align-items: center; gap: var(--gl-space-3); flex-wrap: wrap; width: 100%; max-width: 520px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); padding: var(--gl-space-2); }
+.gl-voice-input__status { display: flex; align-items: center; gap: var(--gl-space-2); min-height: var(--gl-row-sm); min-width: 0; flex: 1 1 160px; }
+.gl-voice-input__text { font-size: 13px; color: var(--gl-ink-2); overflow-wrap: anywhere; }
+.gl-voice-input__dot { flex: none; width: 8px; height: 8px; background: rgb(var(--gl-neg)); animation: gl-voice-pulse 1.2s steps(2, jump-none) infinite; }
+.gl-voice-input--on { background: var(--gl-surface-1); }
+@keyframes gl-voice-pulse { 50% { opacity: 0.2; } }
+@media (prefers-reduced-motion: reduce) { .gl-voice-input__dot { animation: none; } }

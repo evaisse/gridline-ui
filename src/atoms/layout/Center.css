@@ -1,0 +1,7 @@
+.gl-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+.gl-center--inline { display: inline-flex; }

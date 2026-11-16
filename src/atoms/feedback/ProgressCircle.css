@@ -1,0 +1,19 @@
+.gl-progress-circle {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--gl-ink);
+}
+.gl-progress-circle > svg { position: absolute; inset: 0; }
+.gl-progress-circle__track { stroke: var(--gl-rule); }
+.gl-progress-circle__bar { stroke: rgb(var(--gl-tone)); transition: stroke-dasharray 0.2s steps(8); }
+.gl-progress-circle__value {
+  font-family: var(--gl-font-mono);
+  font-size: var(--gl-text-xs);
+  font-variant-numeric: tabular-nums;
+}
+.gl-progress-circle--indeterminate > svg { animation: gl-progress-circle-spin 1s linear infinite; }
+@keyframes gl-progress-circle-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .gl-progress-circle--indeterminate > svg { animation-duration: 3s; } }

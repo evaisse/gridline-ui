@@ -1,0 +1,2 @@
+.gl-sankey__label { fill: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); text-transform: uppercase; letter-spacing: 0.02em; }
+.gl-sankey__link:hover { stroke-opacity: 0.8; }

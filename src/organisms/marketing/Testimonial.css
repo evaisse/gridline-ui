@@ -1,0 +1,12 @@
+.gl-testimonial { display: grid; gap: var(--gl-space-4); margin: 0; padding: var(--gl-space-6) var(--gl-space-5); border-top: 1px solid var(--gl-rule-strong); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-testimonial--stacked > * { max-width: 720px; }
+.gl-testimonial--split { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 0; padding: 0; }
+.gl-testimonial--split .gl-testimonial__quote { margin: 0; padding: var(--gl-space-6) var(--gl-space-5); }
+.gl-testimonial--split .gl-testimonial__author { align-content: center; padding: var(--gl-space-5); border-left: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-testimonial__author { display: flex; align-items: center; gap: var(--gl-space-3); }
+.gl-testimonial__who { display: grid; gap: var(--gl-space-1); min-width: 0; }
+@media (max-width: 640px) {
+  .gl-testimonial--split { grid-template-columns: minmax(0, 1fr); }
+  .gl-testimonial--split .gl-testimonial__author { border-left: 0; border-top: 1px solid var(--gl-rule-strong); }
+  .gl-testimonial { padding: var(--gl-space-5) var(--gl-space-4); }
+}

@@ -1,0 +1,8 @@
+.gl-json-input { display: block; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); }
+.gl-json-input:focus-within { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-json-input--invalid { border-color: rgb(var(--gl-neg)); }
+.gl-json-input .gl-json-input__control { min-height: 120px; border: 0; border-radius: 0; background: transparent; font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); line-height: 1.6; white-space: pre; overflow: auto; }
+.gl-json-input__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--gl-space-2); min-height: var(--gl-row-sm); border-top: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
+.gl-json-input__status { min-width: 0; padding: 0 var(--gl-space-3); color: var(--gl-ink-3); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.04em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-json-input--invalid .gl-json-input__status { color: rgb(var(--gl-neg)); }
+.gl-json-input__format { flex: none; border-left: 1px solid var(--gl-rule-strong); border-radius: 0; }

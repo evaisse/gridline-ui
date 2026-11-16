@@ -1,0 +1,12 @@
+.gl-marquee { overflow: hidden; min-width: 0; border-block: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
+.gl-marquee:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: -1px; }
+.gl-marquee__track { display: flex; width: max-content; animation: gl-marquee var(--gl-marquee-duration) linear infinite; }
+.gl-marquee__set { display: flex; flex-shrink: 0; align-items: center; gap: var(--gl-marquee-gap); min-height: var(--gl-row); padding-right: var(--gl-marquee-gap); white-space: nowrap; }
+.gl-marquee--reverse .gl-marquee__track { animation-direction: reverse; }
+.gl-marquee--pausable:hover .gl-marquee__track, .gl-marquee--pausable:focus-within .gl-marquee__track { animation-play-state: paused; }
+@keyframes gl-marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .gl-marquee { overflow-x: auto; }
+  .gl-marquee__track { width: auto; animation: none; }
+  .gl-marquee__set[aria-hidden='true'] { display: none; }
+}

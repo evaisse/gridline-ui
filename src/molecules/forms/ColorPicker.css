@@ -1,0 +1,11 @@
+.gl-color-picker { font-family: var(--gl-font-mono); text-transform: uppercase; }
+.gl-popover.gl-color-picker__panel { display: flex; flex-direction: column; gap: var(--gl-space-3); width: 240px; }
+.gl-color-picker__area { position: relative; height: 140px; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); cursor: crosshair; touch-action: none; }
+.gl-color-picker__area:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: 2px; }
+.gl-color-picker__thumb { position: absolute; width: 12px; height: 12px; margin: -6px 0 0 -6px; border: 1px solid var(--gl-ink); border-radius: var(--gl-radius); outline: 1px solid var(--gl-paper); pointer-events: none; }
+.gl-color-picker__hex .gl-input__control { font-family: var(--gl-font-mono); text-transform: uppercase; }
+.gl-color-picker__swatches { display: flex; flex-wrap: wrap; gap: var(--gl-space-1); }
+.gl-color-picker__swatch { display: grid; place-items: center; padding: var(--gl-space-1); border: 1px solid transparent; border-radius: var(--gl-radius); background: transparent; cursor: pointer; }
+.gl-color-picker__swatch:hover { background: var(--gl-surface-3); }
+.gl-color-picker__swatch[aria-pressed='true'] { border-color: var(--gl-invert-bg); background: var(--gl-surface-1); }
+.gl-color-picker__swatch:focus-visible { outline: 1px solid var(--gl-ink); outline-offset: 1px; }

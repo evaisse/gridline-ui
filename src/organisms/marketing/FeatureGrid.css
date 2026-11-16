@@ -1,0 +1,12 @@
+.gl-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--gl-rule-strong); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-rule); }
+.gl-feature-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gl-feature-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gl-feature-grid__cell { display: grid; align-content: start; gap: var(--gl-space-2); min-width: 0; padding: var(--gl-space-5); background: var(--gl-paper); }
+.gl-feature-grid__icon { display: grid; place-items: center; width: var(--gl-row-sm); height: var(--gl-row-sm); margin-bottom: var(--gl-space-2); border: 1px solid var(--gl-rule-strong); }
+@media (max-width: 960px) {
+  .gl-feature-grid--3, .gl-feature-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .gl-feature-grid, .gl-feature-grid--2, .gl-feature-grid--3, .gl-feature-grid--4 { grid-template-columns: minmax(0, 1fr); }
+  .gl-feature-grid__cell { padding: var(--gl-space-4); }
+}
