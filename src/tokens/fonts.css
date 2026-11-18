@@ -2,3 +2,7 @@
 @import '@fontsource-variable/inter';
 @import '@fontsource-variable/source-serif-4';
 @import '@fontsource-variable/jetbrains-mono';
+/* Soda theme (default): the Google Noto family for all three voices. */
+@import '@fontsource-variable/noto-serif';
+@import '@fontsource-variable/noto-sans';
+@import '@fontsource-variable/noto-sans-mono';

@@ -89,6 +89,21 @@
   color-scheme: dark;
 }
 
+/*
+ * Soda theme — the default. Noto for every voice and a sodaplay blue tint
+ * (RGB 0.154 / 0.585 / 0.987). Set data-brand="gridline" on <html> to opt out.
+ * Kept after the dark block so it also wins in dark mode.
+ */
+:root:not([data-brand='gridline']) {
+  --gl-tint: 39 149 252;
+  --gl-invert-bg: rgb(var(--gl-tint));
+  --gl-invert-fg: #ffffff;
+
+  --gl-font-display: 'Noto Serif Variable', 'Noto Serif', Georgia, serif;
+  --gl-font-body: 'Noto Sans Variable', 'Noto Sans', system-ui, sans-serif;
+  --gl-font-mono: 'Noto Sans Mono Variable', 'Noto Sans Mono', ui-monospace, monospace;
+}
+
 /* Tone scopes: set --gl-tone on any element that carries a data tone. */
 .gl-tone--neutral { --gl-tone: var(--gl-tint); }
 .gl-tone--pos { --gl-tone: var(--gl-pos); }

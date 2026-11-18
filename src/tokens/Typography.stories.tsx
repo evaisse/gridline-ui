@@ -17,15 +17,15 @@ function Typography() {
       <p>Three faces, three jobs. They never swap roles.</p>
       <div className="gl-doc-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
         <div>
-          <span className="cap">Display · Source Serif 4</span>
+          <span className="cap">Display · var(--gl-font-display)</span>
           <p style={{ fontFamily: 'var(--gl-font-display)', fontSize: 28, lineHeight: 1.2 }}>Titles and headline figures</p>
         </div>
         <div>
-          <span className="cap">Body · Inter</span>
+          <span className="cap">Body · var(--gl-font-body)</span>
           <p style={{ fontSize: 16 }}>Everything a person reads as a sentence.</p>
         </div>
         <div>
-          <span className="cap">Mono · JetBrains Mono</span>
+          <span className="cap">Mono · var(--gl-font-mono)</span>
           <p className="mono" style={{ fontSize: 13, textTransform: 'uppercase' }}>Keys · 2026-11-13 · 68.49%</p>
         </div>
       </div>

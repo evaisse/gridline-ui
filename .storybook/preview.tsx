@@ -6,10 +6,22 @@ import '../src/tokens/base.css';
 
 const preview: Preview = {
   globalTypes: {
-    theme: {
-      description: 'Colour theme',
+    brand: {
+      description: 'Theme (fonts and tint)',
       toolbar: {
         title: 'Theme',
+        icon: 'paintbrush',
+        items: [
+          { value: 'soda', title: 'Soda' },
+          { value: 'gridline', title: 'Gridline' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+    theme: {
+      description: 'Colour mode',
+      toolbar: {
+        title: 'Mode',
         icon: 'contrast',
         items: [
           { value: 'light', title: 'Light' },
@@ -19,13 +31,15 @@ const preview: Preview = {
       },
     },
   },
-  initialGlobals: { theme: 'light' },
+  initialGlobals: { brand: 'soda', theme: 'light' },
   decorators: [
     (Story, context) => {
       const theme = context.globals.theme as string;
+      const brand = context.globals.brand as string;
       useEffect(() => {
         document.documentElement.dataset.theme = theme;
-      }, [theme]);
+        document.documentElement.dataset.brand = brand;
+      }, [theme, brand]);
       return <Story />;
     },
   ],

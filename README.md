@@ -248,6 +248,12 @@ asserts that each rule fires, or stays quiet, as specified. Run it after editing
 
 ## Fonts
 
-Storybook loads Source Serif 4, Inter and JetBrains Mono from `@fontsource-variable`. They are
-set through `--gl-font-display`, `--gl-font-body` and `--gl-font-mono`; override the variables to
+Two themes ship in `tokens.css`, picked with `data-brand` on `<html>`:
+
+- **Soda** (default): Noto Serif, Noto Sans and Noto Sans Mono, with a sodaplay blue tint
+  (`rgb(39 149 252)`).
+- **Gridline** (`data-brand="gridline"`): Source Serif 4, Inter and JetBrains Mono, navy tint.
+
+Light/dark stays on `data-theme`. Both are switchable from the Storybook toolbar. Faces are
+loaded from `@fontsource-variable` and set through `--gl-font-display`, `--gl-font-body` and `--gl-font-mono`; override the variables to
 use other faces.
