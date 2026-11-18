@@ -25,7 +25,7 @@ function Sla({ minutes }: { minutes: number }) {
 
 function TicketPanel({ ticket }: { ticket: Ticket }) {
   return (
-    <div style={{ display: 'grid', gap: 16, padding: 16 }}>
+    <>
       <div style={{ display: 'grid', gap: 8 }}>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           <Label tone="ink">{ticket.id}</Label>
@@ -55,7 +55,7 @@ function TicketPanel({ ticket }: { ticket: Ticket }) {
           <Button variant="solid" icon={<ChatIcon />}>Reply</Button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -22,9 +22,9 @@ export function WizardTemplate({ header, steps, children, footer, stepsPosition 
     <div className={cx('gl-wizard-page', `gl-wizard-page--${stepsPosition}`, className)}>
       {header != null && <header className="gl-wizard-page__header">{header}</header>}
       <div className="gl-wizard-page__body">
-        <nav className="gl-wizard-page__steps" aria-label="Steps">{steps}</nav>
+        <nav className="gl-wizard-page__steps gl-region" aria-label="Steps">{steps}</nav>
         <main className="gl-wizard-page__main">
-          <div className="gl-wizard-page__step">{children}</div>
+          <div className="gl-wizard-page__step gl-region">{children}</div>
           {footer != null && <footer className="gl-wizard-page__footer">{footer}</footer>}
         </main>
       </div>

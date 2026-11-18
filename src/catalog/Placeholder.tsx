@@ -15,39 +15,40 @@ export function Placeholder({ name }: PlaceholderProps) {
   const related = entries.filter((other) => other.name !== entry.name && other.category === entry.category && other.status === 'available' && other.storyId && other.tags.some((tag) => entry.tags.includes(tag))).slice(0, 8);
 
   return (
-    <article className="gl-placeholder">
-      <header className="gl-placeholder__head gl-hatch">
-        <div className="gl-placeholder__title">
-          <Label>{LAYERS[entry.layer]} · {categoryTitle(entry.category)}</Label>
-          <Heading level={1} size="xl">{entry.name}</Heading>
-          <Tag tone="warn" dot>Planned</Tag>
-        </div>
-      </header>
-      <div className="gl-placeholder__body">
+    <article className="gl-catalogue-page">
+      <header className="gl-catalogue-page__head">
+        <Label>{LAYERS[entry.layer]} · {categoryTitle(entry.category)}</Label>
+        <Heading level={1} size="xl">{entry.name}</Heading>
+        <span><Tag tone="warn" dot>Planned</Tag></span>
         <Text variant="lead">{entry.summary}</Text>
-        <KeyValue label="Tags">
-          <span className="gl-catalogue__chips">
-            {entry.tags.map((tag) => <a key={tag} className="gl-catalogue__chip" href={storyHref('catalogue--browse', { tag })} target="_top" title={tagDescription(tag)}>{tag}</a>)}
-          </span>
-        </KeyValue>
-        {entry.aliases.length > 0 && <KeyValue label="Also called">{entry.aliases.join(', ')}</KeyValue>}
-        <div className="gl-placeholder__section">
-          <Label tone="ink">References · {entry.refs.length}</Label>
-          {entry.refs.length === 0 && <Text tone="muted">No documentation page was matched in the libraries the catalogue draws on.</Text>}
-          <ul className="gl-placeholder__refs">
+      </header>
+      <KeyValue label="Tags">
+        <span className="gl-catalogue__chips">
+          {entry.tags.map((tag) => <a key={tag} className="gl-catalogue__chip" href={storyHref('catalogue--browse', { tag })} target="_top" title={tagDescription(tag)}>{tag}</a>)}
+        </span>
+      </KeyValue>
+      {entry.aliases.length > 0 && <KeyValue label="Also called">{entry.aliases.join(', ')}</KeyValue>}
+      <div className="gl-catalogue-page__band"><Label tone="ink">References · {entry.refs.length}</Label></div>
+      {entry.refs.length === 0
+        ? <div className="gl-catalogue-page__cell"><Text tone="muted">No documentation page was matched in the libraries the catalogue draws on.</Text></div>
+        : (
+          <ul className="gl-catalogue-page__list">
             {entry.refs.map((ref) => (
               <li key={ref.url + ref.slug}><Label>{libraryName(ref.library)}</Label><Link external href={ref.url}>{ref.slug}</Link></li>
             ))}
           </ul>
-        </div>
-        {related.length > 0 && (
-          <div className="gl-placeholder__section">
-            <Label tone="ink">Built components nearby</Label>
+        )}
+      {related.length > 0 && (
+        <>
+          <div className="gl-catalogue-page__band"><Label tone="ink">Built components nearby</Label></div>
+          <div className="gl-catalogue-page__cell">
             <span className="gl-catalogue__chips">
               {related.map((other) => <a key={other.name} className="gl-catalogue__chip" href={storyHref(other.storyId!)} target="_top">{other.name}</a>)}
             </span>
           </div>
-        )}
+        </>
+      )}
+      <div className="gl-catalogue-page__cell">
         <Text variant="small" tone="muted">To build it: write the component in src/{entry.layer}, change its catalogue entry from plan( to have(, then run npm run catalog.</Text>
       </div>
     </article>

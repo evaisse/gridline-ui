@@ -19,7 +19,7 @@ export function BoardTemplate({ header, filters, children, footer, className }: 
   return (
     <div className={cx('gl-board', className)}>
       <header className="gl-board__header">{header}</header>
-      {filters != null && <div className="gl-board__filters" role="group" aria-label="Filters">{filters}</div>}
+      {filters != null && <div className="gl-board__filters gl-region" role="group" aria-label="Filters">{filters}</div>}
       <main className="gl-board__main">{children}</main>
       {footer != null && <footer className="gl-board__footer">{footer}</footer>}
     </div>

@@ -22,7 +22,7 @@ export function CheckoutTemplate({ header, children, summary, footer, className 
       {header != null && <header className="gl-checkout__header">{header}</header>}
       <div className="gl-checkout__body">
         <main className="gl-checkout__steps">{children}</main>
-        <aside className="gl-checkout__summary" aria-label="Order summary"><div className="gl-checkout__sticky">{summary}</div></aside>
+        <aside className="gl-checkout__summary" aria-label="Order summary"><div className="gl-checkout__sticky gl-region">{summary}</div></aside>
       </div>
       {footer != null && <footer className="gl-checkout__footer">{footer}</footer>}
     </Frame>

@@ -1,6 +1,6 @@
 .gl-dashboard { display: flex; flex-direction: column; min-width: 0; background: var(--gl-paper); }
 .gl-dashboard__header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--gl-space-3); padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
-.gl-dashboard__band { padding: var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); min-width: 0; }
-.gl-dashboard__charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gl-space-4); padding: var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
+.gl-dashboard__band { --gl-cell-y: var(--gl-space-4); --gl-cell-x: var(--gl-space-4); padding: var(--gl-cell-y) var(--gl-cell-x); border-bottom: 1px solid var(--gl-rule-strong); min-width: 0; }
+.gl-dashboard__charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));  border-bottom: 1px solid var(--gl-rule-strong); }
 .gl-dashboard__charts > .gl-chart--wide { grid-column: 1 / -1; }
 @media (max-width: 860px) { .gl-dashboard__charts { grid-template-columns: minmax(0, 1fr); } }

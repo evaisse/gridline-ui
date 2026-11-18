@@ -54,7 +54,23 @@ A component has one category and several tags. The category answers "where do I 
 tags answer "what else is like it" across categories (a `DatePicker` is in `forms` and tagged
 `date`, like `Scheduler` in `data-display`).
 
-## 4. Names
+## 4. No bare ground
+
+Nothing floats in empty space: a framed block (table, chart, card, list, tree, accordion…) never sits
+inside the padding of the area that holds it, with a gap around it. It touches the edges and shares
+the area's rules. Text keeps the padding.
+
+- A template area that holds content is a **region**: add the class `gl-region` and give its padding
+  as `--gl-cell-y` / `--gl-cell-x` (`padding: var(--gl-cell-y) var(--gl-cell-x)`). The `Section` atom is
+  a region already. A framed block placed directly in a region then fills it edge to edge, without
+  side borders; first and last blocks also lose the top or bottom border (rule in `tokens/base.css`).
+- To cap the width of text in a region, set `--gl-measure` on the region rather than a `max-width`:
+  text stays readable and blocks still run to the edges.
+- Blocks side by side go in a `gl-tiles` grid: no gap, one shared hairline.
+- In pages, put blocks directly in the template slot; a wrapper `div` with its own padding brings the gap back.
+- One padding for cells: `--gl-space-5` (24px) across on desktop, `--gl-space-4` (16px) on phones.
+
+## 5. Names
 
 - **PascalCase, a noun, no brand and no library prefix.** `DataTable`, not `GlTable` or `Grid2`.
 - **Use the most widely documented name.** The backlog shows, for each planned component, the
@@ -86,7 +102,7 @@ tags answer "what else is like it" across categories (a `DatePicker` is in `form
 - **CSS**: one block per component, `gl-<kebab-name>`, elements `gl-<name>__<part>`, modifiers
   `gl-<name>--<variant>`. Only `--gl-*` tokens; no hex colours; rows 40px, controls 32px.
 
-## 5. Adding or building a component
+## 6. Adding or building a component
 
 1. Find or add its entry in `catalog.ts`: name, layer, category, tags, one-line summary, aliases.
 2. Create the three files in `src/<layer>/<category>/` and export it from `src/<layer>/index.ts`.

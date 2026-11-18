@@ -11,14 +11,16 @@ const tones = ['--gl-tint', '--gl-pos', '--gl-neg', '--gl-warn', '--gl-info'];
 function Colour() {
   return (
     <div className="gl-doc">
-      <h1>Colour</h1>
-      <p>
-        One ink and one tint. Rules and surfaces are the tint at an opacity, so overriding <code>--gl-tint</code> with an
-        RGB triplet re-themes the system. Switch theme in the toolbar to see the dark values.
-      </p>
+      <header className="gl-doc-head">
+        <h1>Colour</h1>
+        <p>
+          One ink and one tint. Rules and surfaces are the tint at an opacity, so overriding <code>--gl-tint</code> with an
+          RGB triplet re-themes the system. Switch theme in the toolbar to see the dark values.
+        </p>
+      </header>
       {groups.map(([title, swatches]) => (
-        <section key={title} className="gl-doc">
-          <span className="cap">{title}</span>
+        <section key={title} className="gl-doc-group">
+          <span className="gl-doc-band gl-doc-band--label cap">{title}</span>
           <div className="gl-doc-grid gl-doc-grid--4">
             {swatches.map(([token, use]) => (
               <div key={token} className="gl-doc-swatch">
@@ -30,9 +32,9 @@ function Colour() {
           </div>
         </section>
       ))}
-      <section className="gl-doc">
-        <span className="cap">Data tones · solid for marks, 8% for the cell behind them</span>
-        <div className="gl-doc-grid" style={{ gridTemplateColumns: `repeat(${tones.length}, minmax(0, 1fr))` }}>
+      <section className="gl-doc-group">
+        <span className="gl-doc-band gl-doc-band--label cap">Data tones · solid for marks, 8% for the cell behind them</span>
+        <div className="gl-doc-grid gl-doc-grid--5">
           {tones.map((token) => (
             <div key={token} className="gl-doc-swatch">
               <i style={{ background: `rgb(var(${token}))` }} />
@@ -46,7 +48,7 @@ function Colour() {
   );
 }
 
-const meta = { title: 'Tokens/Colour', component: Colour } satisfies Meta<typeof Colour>;
+const meta = { title: 'Tokens/Colour', component: Colour, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof Colour>;
 export default meta;
 
 export const Palette: StoryObj<typeof meta> = {};

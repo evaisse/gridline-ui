@@ -24,13 +24,13 @@ export function MonitoringTemplate({ header, banner, stats, panels, children, as
     <div className={cx('gl-monitor', className)}>
       <header className="gl-monitor__header">{header}</header>
       {banner != null && <div className="gl-monitor__banner">{banner}</div>}
-      {stats != null && <section className="gl-monitor__band">{stats}</section>}
+      {stats != null && <section className="gl-monitor__band gl-region">{stats}</section>}
       <div className={cx('gl-monitor__body', aside != null && 'gl-monitor__body--split')}>
         <div className="gl-monitor__main">
-          <section className="gl-monitor__panels">{panels}</section>
-          {children != null && <section className="gl-monitor__band">{children}</section>}
+          <section className="gl-monitor__panels gl-tiles">{panels}</section>
+          {children != null && <section className="gl-monitor__band gl-region">{children}</section>}
         </div>
-        {aside != null && <aside className="gl-monitor__aside">{aside}</aside>}
+        {aside != null && <aside className="gl-monitor__aside gl-region">{aside}</aside>}
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export function OnboardingTemplate({ brand, steps, children, footer, className }
   return (
     <div className={cx('gl-onboarding', className)}>
       {brand != null && <header className="gl-onboarding__brand">{brand}</header>}
-      {steps != null && <nav className="gl-onboarding__steps" aria-label="Progress">{steps}</nav>}
+      {steps != null && <nav className="gl-onboarding__steps gl-region" aria-label="Progress">{steps}</nav>}
       <main className="gl-onboarding__main">
         <div className="gl-onboarding__question">{children}</div>
       </main>

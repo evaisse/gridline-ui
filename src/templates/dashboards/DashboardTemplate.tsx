@@ -19,9 +19,9 @@ export function DashboardTemplate({ header, stats, charts, children, className }
   return (
     <div className={cx('gl-dashboard', className)}>
       <header className="gl-dashboard__header">{header}</header>
-      {stats != null && <section className="gl-dashboard__band">{stats}</section>}
-      <section className="gl-dashboard__charts">{charts}</section>
-      {children != null && <section className="gl-dashboard__band">{children}</section>}
+      {stats != null && <section className="gl-dashboard__band gl-region">{stats}</section>}
+      <section className="gl-dashboard__charts gl-tiles">{charts}</section>
+      {children != null && <section className="gl-dashboard__band gl-region">{children}</section>}
     </div>
   );
 }

@@ -23,14 +23,14 @@ export function QueueTemplate({ header, stats, charts, toolbar, children, aside,
   return (
     <div className={cx('gl-queue', className)}>
       <header className="gl-queue__header">{header}</header>
-      {stats != null && <section className="gl-queue__band">{stats}</section>}
-      {charts != null && <section className="gl-queue__charts">{charts}</section>}
+      {stats != null && <section className="gl-queue__band gl-region">{stats}</section>}
+      {charts != null && <section className="gl-queue__charts gl-tiles">{charts}</section>}
       <div className={cx('gl-queue__body', aside != null && 'gl-queue__body--split')}>
         <section className="gl-queue__list">
           {toolbar}
           {children}
         </section>
-        {aside != null && <aside className="gl-queue__aside">{aside}</aside>}
+        {aside != null && <aside className="gl-queue__aside gl-region">{aside}</aside>}
       </div>
     </div>
   );

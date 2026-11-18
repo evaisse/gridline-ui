@@ -2,10 +2,12 @@
 .gl-pricing-page__nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--gl-space-2) var(--gl-space-4); min-height: 48px; padding: var(--gl-space-2) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule-strong); }
 .gl-pricing-page__header { display: grid; justify-items: center; gap: var(--gl-space-3); padding: var(--gl-space-7) var(--gl-space-5); text-align: center; border-bottom: 1px solid var(--gl-rule-strong); }
 .gl-pricing-page__plans { min-width: 0; border-bottom: 1px solid var(--gl-rule-strong); }
-.gl-pricing-page__comparison { min-width: 0; padding: var(--gl-space-5); border-bottom: 1px solid var(--gl-rule-strong); overflow-x: auto; }
-.gl-pricing-page__faq { min-width: 0; max-width: 760px; padding: var(--gl-space-6) var(--gl-space-5); margin: 0 auto; }
+.gl-pricing-page__comparison { min-width: 0; --gl-cell-y: var(--gl-space-5); --gl-cell-x: var(--gl-space-5); padding: var(--gl-cell-y) var(--gl-cell-x); border-bottom: 1px solid var(--gl-rule-strong); overflow-x: auto; }
+.gl-pricing-page__faq { display: grid; gap: var(--gl-space-4); min-width: 0; --gl-measure: 760px; --gl-cell-y: var(--gl-space-6); --gl-cell-x: var(--gl-space-5); padding: var(--gl-cell-y) var(--gl-cell-x); }
 .gl-pricing-page__footer { padding: var(--gl-space-5); border-top: 1px solid var(--gl-rule-strong); border-bottom: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
 @media (max-width: 760px) {
   .gl-pricing-page__header { padding: var(--gl-space-6) var(--gl-space-4); }
-  .gl-pricing-page__comparison, .gl-pricing-page__faq, .gl-pricing-page__footer { padding: var(--gl-space-5) var(--gl-space-4); }
+  .gl-pricing-page__footer { padding: var(--gl-space-5) var(--gl-space-4); }
+  .gl-pricing-page__faq { --gl-cell-y: var(--gl-space-5); --gl-cell-x: var(--gl-space-4); padding: var(--gl-cell-y) var(--gl-cell-x); }
+  .gl-pricing-page__comparison { --gl-cell-y: var(--gl-space-5); --gl-cell-x: var(--gl-space-4); padding: var(--gl-cell-y) var(--gl-cell-x); }
 }

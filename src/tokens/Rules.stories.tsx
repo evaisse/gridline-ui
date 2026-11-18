@@ -6,9 +6,11 @@ const spaces = ['--gl-space-1', '--gl-space-2', '--gl-space-3', '--gl-space-4', 
 function Rules() {
   return (
     <div className="gl-doc">
-      <h1>Rules, rhythm and texture</h1>
-      <p>The hairline is the system. It comes in two strengths and one width.</p>
-      <div className="gl-doc-box">
+      <header className="gl-doc-head">
+        <h1>Rules, rhythm and texture</h1>
+        <p>The hairline is the system. It comes in two strengths and one width.</p>
+      </header>
+      <div className="gl-doc-rows">
         <div className="gl-doc-row">
           <span className="mono">--gl-rule</span>
           <span style={{ borderTop: '1px solid var(--gl-rule)' }} />
@@ -19,8 +21,8 @@ function Rules() {
         </div>
       </div>
 
-      <span className="cap">Rhythm · rows are 40px, controls 32px</span>
-      <div className="gl-doc-box">
+      <span className="gl-doc-band gl-doc-band--label cap">Rhythm · rows are 40px, controls 32px</span>
+      <div className="gl-doc-rows">
         {spaces.map((token) => (
           <div key={token} className="gl-doc-row">
             <span className="mono">{token}</span>
@@ -29,7 +31,7 @@ function Rules() {
         ))}
       </div>
 
-      <span className="cap">Texture · for empty or decorative cells only</span>
+      <span className="gl-doc-band gl-doc-band--label cap">Texture · for empty or decorative cells only</span>
       <div className="gl-doc-grid gl-doc-grid--2">
         <div className="gl-dots" style={{ height: 120 }}><span className="mono">.gl-dots</span></div>
         <div className="gl-hatch" style={{ height: 120 }}><span className="mono">.gl-hatch</span></div>
@@ -38,7 +40,7 @@ function Rules() {
   );
 }
 
-const meta = { title: 'Tokens/Rules and rhythm', component: Rules } satisfies Meta<typeof Rules>;
+const meta = { title: 'Tokens/Rules and rhythm', component: Rules, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof Rules>;
 export default meta;
 
 export const Overview: StoryObj<typeof meta> = {};

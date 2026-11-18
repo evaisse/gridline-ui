@@ -24,7 +24,7 @@ export function HomeTemplate({ nav, hero, heroAside, children, footer, className
       <div className="gl-home__nav">{nav}</div>
       <header className={cx('gl-home__hero', heroAside != null && 'gl-home__hero--split')}>
         <div className="gl-home__copy">{hero}</div>
-        {heroAside != null && <div className="gl-home__figure">{heroAside}</div>}
+        {heroAside != null && <div className="gl-home__figure gl-region">{heroAside}</div>}
       </header>
       <main>{children}</main>
       {footer != null && <footer className="gl-home__footer">{footer}</footer>}

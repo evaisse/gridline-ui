@@ -20,7 +20,7 @@ export function MasterDetailTemplate({ master, toolbar, children, className }: M
       <aside className="gl-master-detail__master">{master}</aside>
       <main className="gl-master-detail__detail">
         {toolbar}
-        <div className="gl-master-detail__content">{children}</div>
+        <div className="gl-master-detail__content gl-region">{children}</div>
       </main>
     </Frame>
   );

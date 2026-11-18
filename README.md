@@ -16,7 +16,7 @@ npm run build      # static Storybook in storybook-static/
 npm run check      # typecheck + lint + boundary self-test
 ```
 
-## The eight rules
+## The nine rules
 
 1. **One hairline.** 1px, one colour at two opacities. Never 2px.
 2. **Shared borders.** Cells touch; one rule separates two cells.
@@ -26,6 +26,7 @@ npm run check      # typecheck + lint + boundary self-test
 6. **One tint.** Surfaces are the tint at 4–14% opacity. Override `--gl-tint` to re-theme.
 7. **Inversion selects.** The selected row or tab flips to solid tint.
 8. **Colour is data.** Saturated colour appears only where it encodes a value.
+9. **No bare ground.** Every block sits in a cell that touches its frame. Padding belongs to the cell, never a gap around a box.
 
 ## Atomic layers
 

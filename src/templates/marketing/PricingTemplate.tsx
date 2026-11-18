@@ -27,8 +27,8 @@ export function PricingTemplate({ nav, header, plans, comparison, faq, footer, c
       <header className="gl-pricing-page__header">{header}</header>
       <main>
         <section className="gl-pricing-page__plans" aria-label="Plans">{plans}</section>
-        {comparison != null && <section className="gl-pricing-page__comparison" aria-label="Comparison">{comparison}</section>}
-        {faq != null && <section className="gl-pricing-page__faq" aria-label="Questions">{faq}</section>}
+        {comparison != null && <section className="gl-pricing-page__comparison gl-region" aria-label="Comparison">{comparison}</section>}
+        {faq != null && <section className="gl-pricing-page__faq gl-region" aria-label="Questions">{faq}</section>}
       </main>
       {footer != null && <footer className="gl-pricing-page__footer">{footer}</footer>}
     </Frame>

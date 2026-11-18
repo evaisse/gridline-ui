@@ -1,25 +1,50 @@
-/* Styles for the token documentation stories only. */
-.gl-doc { display: grid; gap: var(--gl-space-5); max-width: 960px; }
+/* Styles for the documentation stories only (Introduction, Tokens). Nothing sits on bare ground:
+   every block is a cell that touches the frame and its neighbours. One padding for all cells:
+   var(--gl-space-5) across, var(--gl-space-4) down. */
+.gl-doc { display: flex; flex-direction: column; min-width: 0; background: var(--gl-paper); }
+.gl-doc > *, .gl-doc-group > * { margin: 0; min-width: 0; border-bottom: 1px solid var(--gl-rule-strong); }
+/* A group only names a run of cells; it draws nothing itself. */
+.gl-doc > .gl-doc-group { display: contents; }
+
+.gl-doc-head { display: grid; gap: var(--gl-space-3); padding: var(--gl-space-6) var(--gl-space-5); background: var(--gl-surface-1); }
+.gl-doc-band { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--gl-space-2) var(--gl-space-3); padding: var(--gl-space-4) var(--gl-space-5); }
+.gl-doc-band--label { min-height: var(--gl-row); padding-top: 0; padding-bottom: 0; align-items: center; background: var(--gl-surface-1); }
+.gl-doc-text { display: grid; gap: var(--gl-space-3); padding: var(--gl-space-4) var(--gl-space-5); }
+
 .gl-doc h1, .gl-doc h2 { margin: 0; font-family: var(--gl-font-display); font-weight: 400; letter-spacing: -0.01em; }
 .gl-doc h1 { font-size: var(--gl-text-2xl); line-height: 1.15; }
-.gl-doc h2 { font-size: var(--gl-text-xl); }
+.gl-doc h2 { font-size: var(--gl-text-xl); line-height: 1.2; }
 .gl-doc p { margin: 0; max-width: 64ch; line-height: 1.6; }
 .gl-doc .lead { font-family: var(--gl-font-display); font-size: 18px; }
 .gl-doc code, .gl-doc .mono { font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); }
 .gl-doc .cap { font-family: var(--gl-font-mono); font-size: var(--gl-text-sm); letter-spacing: 0.02em; text-transform: uppercase; color: var(--gl-ink-2); }
-.gl-doc-grid { display: grid; gap: 1px; background: var(--gl-rule); border: 1px solid var(--gl-rule-strong); }
-.gl-doc-grid > * { background: var(--gl-paper); padding: var(--gl-space-4); min-width: 0; }
+
+/* Cells side by side: each draws its right and bottom rule into the 1px seam, so neighbours share one
+   hairline and an unfilled slot stays plain paper. */
+.gl-doc-grid { display: grid; gap: 1px; overflow: hidden; }
+.gl-doc-grid > * { display: grid; align-content: start; gap: var(--gl-space-2); min-width: 0; padding: var(--gl-space-4) var(--gl-space-5); background-color: var(--gl-paper); box-shadow: 1px 0 0 0 var(--gl-rule), 0 1px 0 0 var(--gl-rule), 1px 1px 0 0 var(--gl-rule); }
 .gl-doc-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gl-doc-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .gl-doc-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.gl-doc-swatch { display: grid; gap: var(--gl-space-2); }
+.gl-doc-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .gl-doc-swatch i { display: block; height: 56px; border: 1px solid var(--gl-rule); }
-.gl-doc-row { display: grid; grid-template-columns: 140px 1fr; align-items: baseline; gap: var(--gl-space-4); padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule); }
-.gl-doc-row:last-child { border-bottom: 0; }
-.gl-doc-box { border: 1px solid var(--gl-rule-strong); }
-.gl-doc-chain { display: flex; flex-wrap: wrap; border: 1px solid var(--gl-rule-strong); }
-.gl-doc-chain > * { flex: 1; min-width: 120px; padding: var(--gl-space-3) var(--gl-space-4); border-right: 1px solid var(--gl-rule); }
+
+/* Rows stacked in one cell column. */
+.gl-doc-rows > * + * { border-top: 1px solid var(--gl-rule); }
+.gl-doc-row { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: center; gap: var(--gl-space-4); min-height: var(--gl-row); padding: var(--gl-space-2) var(--gl-space-5); }
+
+.gl-doc-chain { display: flex; flex-wrap: wrap; }
+.gl-doc-chain > * { display: grid; gap: var(--gl-space-2); flex: 1; min-width: 160px; padding: var(--gl-space-4) var(--gl-space-5); border-right: 1px solid var(--gl-rule); }
 .gl-doc-chain > *:last-child { border-right: 0; }
+
+@media (max-width: 860px) {
+  .gl-doc-grid--3, .gl-doc-grid--4, .gl-doc-grid--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 640px) {
-  .gl-doc-grid--2, .gl-doc-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gl-doc-row { grid-template-columns: 1fr; gap: var(--gl-space-1); }
+  .gl-doc-head { padding: var(--gl-space-5) var(--gl-space-4); }
+  .gl-doc-band, .gl-doc-text, .gl-doc-row, .gl-doc-grid > *, .gl-doc-chain > * { padding-left: var(--gl-space-4); padding-right: var(--gl-space-4); }
+  .gl-doc-grid--2, .gl-doc-grid--3, .gl-doc-grid--4, .gl-doc-grid--5 { grid-template-columns: minmax(0, 1fr); }
+  .gl-doc-row { grid-template-columns: minmax(0, 1fr); gap: var(--gl-space-1); }
+  .gl-doc-chain > * { flex-basis: 100%; border-right: 0; border-bottom: 1px solid var(--gl-rule); }
+  .gl-doc-chain > *:last-child { border-bottom: 0; }
 }

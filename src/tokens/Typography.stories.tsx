@@ -13,9 +13,11 @@ const scale: Array<[string, string, string, string]> = [
 function Typography() {
   return (
     <div className="gl-doc">
-      <h1>Typography</h1>
-      <p>Three faces, three jobs. They never swap roles.</p>
-      <div className="gl-doc-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+      <header className="gl-doc-head">
+        <h1>Typography</h1>
+        <p>Three faces, three jobs. They never swap roles.</p>
+      </header>
+      <div className="gl-doc-grid gl-doc-grid--3">
         <div>
           <span className="cap">Display · Source Serif 4</span>
           <p style={{ fontFamily: 'var(--gl-font-display)', fontSize: 28, lineHeight: 1.2 }}>Titles and headline figures</p>
@@ -29,8 +31,8 @@ function Typography() {
           <p className="mono" style={{ fontSize: 13, textTransform: 'uppercase' }}>Keys · 2026-11-13 · 68.49%</p>
         </div>
       </div>
-      <span className="cap">Scale</span>
-      <div className="gl-doc-box">
+      <span className="gl-doc-band gl-doc-band--label cap">Scale</span>
+      <div className="gl-doc-rows">
         {scale.map(([token, size, family, sample]) => (
           <div key={token} className="gl-doc-row">
             <span className="mono">{token} · {size}</span>
@@ -42,7 +44,7 @@ function Typography() {
   );
 }
 
-const meta = { title: 'Tokens/Typography', component: Typography } satisfies Meta<typeof Typography>;
+const meta = { title: 'Tokens/Typography', component: Typography, parameters: { layout: 'fullscreen' } } satisfies Meta<typeof Typography>;
 export default meta;
 
 export const Specimen: StoryObj<typeof meta> = {};

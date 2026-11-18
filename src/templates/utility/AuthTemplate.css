@@ -6,3 +6,8 @@
 .gl-auth__footer { padding: var(--gl-space-3) var(--gl-space-4); border-top: 1px solid var(--gl-rule); }
 .gl-auth__aside { display: grid; align-content: center; min-width: 0; padding: var(--gl-space-6); border-left: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); }
 @media (max-width: 860px) { .gl-auth--split { grid-template-columns: minmax(0, 1fr); } .gl-auth__aside { display: none; } }
+@media (max-width: 480px) {
+  /* On a phone the form fills its cell instead of floating in it. */
+  .gl-auth__form { padding: 0; place-items: start stretch; }
+  .gl-auth__form > .gl-auth-form { max-width: none; border-width: 0 0 1px; }
+}

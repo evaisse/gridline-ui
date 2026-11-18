@@ -159,6 +159,7 @@ ${seeAlso}
 const meta = {
   title: '${title}',
   component: Placeholder,
+  parameters: { layout: 'fullscreen' },
   tags: ${tagList(['planned', ...item.tags])},
   args: { name: '${item.name}' },
 } satisfies Meta<typeof Placeholder>;

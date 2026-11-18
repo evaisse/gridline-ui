@@ -47,14 +47,14 @@ function Pricing() {
         </Table>
       }
       faq={
-        <div style={{ display: 'grid', gap: 16, maxWidth: 720 }}>
+        <>
           <Heading level={2} size="xl">Questions</Heading>
           <Accordion type="single" collapsible defaultValue="a">
             <AccordionItem value="a"><AccordionTrigger>What counts as a seat?</AccordionTrigger><AccordionContent>Anyone who can publish or see private packages. People who only install do not need one.</AccordionContent></AccordionItem>
             <AccordionItem value="b"><AccordionTrigger>Can I change plan during the year?</AccordionTrigger><AccordionContent>Yes. Seats added mid-period are billed for the days that remain.</AccordionContent></AccordionItem>
             <AccordionItem value="c"><AccordionTrigger>Do sources leave my runners?</AccordionTrigger><AccordionContent>No. Runners send back measurements only.</AccordionContent></AccordionItem>
           </Accordion>
-        </div>
+        </>
       }
       footer={<Footer brand="◆ Gridline Registry" note="Measured packages for data-dense teams." columns={columns} legal="© 2026 Gridline · invented company, invented prices" />}
     />

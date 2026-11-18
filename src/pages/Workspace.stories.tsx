@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { Avatar, Button, Label } from '../atoms';
+import { Avatar, Button, Label, Section } from '../atoms';
 import { NavItem, SearchField, Stat, Timeline } from '../molecules';
 import { ActivityFeed, NotificationCenter, PageHeader, StatGroup, TopBar } from '../organisms';
 import { AppShellTemplate } from '../templates';
@@ -36,7 +36,7 @@ function Workspace() {
       footer={<Label size="xs">Tessera Labs · Team plan · 36 seats</Label>}
     >
       <PageHeader title="Overview" breadcrumb={[{ label: 'Tessera Labs', href: '#' }, { label: 'Overview' }]} description="What changed in your organisation this week." actions={<Button variant="solid" icon={<PlusIcon />}>New package</Button>} />
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16, padding: 16 }}>
+      <Section pad="md" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16 }}>
         <StatGroup>
           <Stat label="Packages" value="42" note="+2" />
           <Stat label="Weekly installs" value="728" unit="k" note="+11%" tone="pos" />
@@ -44,7 +44,7 @@ function Workspace() {
           <Stat label="Median score" value="62.5" unit="%" />
         </StatGroup>
         <ActivityFeed entries={activity} now={now} />
-      </div>
+      </Section>
     </AppShellTemplate>
   );
 }

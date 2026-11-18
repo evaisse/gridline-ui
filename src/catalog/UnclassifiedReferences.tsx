@@ -6,8 +6,8 @@ import './catalog.css';
 export function UnclassifiedReferences() {
   const ids = Object.keys(libraries).filter((id) => unclassified.some((ref) => ref.library === id));
   return (
-    <div style={{ maxWidth: 960, border: '1px solid var(--gl-rule-strong)' }}>
-      <div className="gl-catalogue__group" style={{ display: 'grid', gap: 8, background: 'var(--gl-surface-1)' }}>
+    <div className="gl-catalogue-page">
+      <div className="gl-catalogue-page__head">
         <Heading level={1} size="xl">Unclassified references</Heading>
         <Text tone="muted">{unclassified.length} pages were found in other libraries without a matching catalogue entry. To claim one, add its name to the aliases of an entry in src/catalog/catalog.ts, or add a planned entry for it.</Text>
       </div>

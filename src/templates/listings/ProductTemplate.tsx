@@ -24,10 +24,10 @@ export function ProductTemplate({ header, gallery, children, description, relate
       {header != null && <header className="gl-product__header">{header}</header>}
       <div className="gl-product__top">
         <section className="gl-product__gallery" aria-label="Gallery">{gallery}</section>
-        <main className="gl-product__options">{children}</main>
+        <main className="gl-product__options gl-region">{children}</main>
       </div>
-      {description != null && <section className="gl-product__description" aria-label="Description">{description}</section>}
-      {related != null && <aside className="gl-product__related" aria-label="Related items">{related}</aside>}
+      {description != null && <section className="gl-product__description gl-region" aria-label="Description">{description}</section>}
+      {related != null && <aside className="gl-product__related gl-region" aria-label="Related items">{related}</aside>}
     </Frame>
   );
 }

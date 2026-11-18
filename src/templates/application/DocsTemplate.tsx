@@ -25,10 +25,10 @@ export function DocsTemplate({ header, nav, children, toc, footer, className }: 
       <div className={cx('gl-docs__body', toc != null && 'gl-docs__body--toc')}>
         <nav className="gl-docs__nav" aria-label="Documents">{nav}</nav>
         <main className="gl-docs__main">
-          <article className="gl-docs__article">{children}</article>
+          <article className="gl-docs__article gl-region">{children}</article>
           {footer != null && <footer className="gl-docs__footer">{footer}</footer>}
         </main>
-        {toc != null && <aside className="gl-docs__toc" aria-label="On this page">{toc}</aside>}
+        {toc != null && <aside className="gl-docs__toc gl-region" aria-label="On this page">{toc}</aside>}
       </div>
     </Frame>
   );

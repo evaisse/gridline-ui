@@ -27,6 +27,6 @@ export const Browse: Story = {};
 /** What is not built yet, with the libraries that document it. */
 export const Planned: Story = { args: { status: 'planned' } };
 /** Harvested documentation pages that no entry claims yet. */
-export const Unclassified: Story = { render: () => <UnclassifiedReferences />, parameters: { layout: 'padded' } };
+export const Unclassified: Story = { render: () => <UnclassifiedReferences />, parameters: { layout: 'fullscreen' } };
 /** The libraries behind the references: stack, platform, licence and how much of each is matched. */
-export const Libraries: Story = { render: () => <LibrariesTable />, parameters: { layout: 'padded' } };
+export const Libraries: Story = { render: () => <LibrariesTable />, parameters: { layout: 'fullscreen' } };

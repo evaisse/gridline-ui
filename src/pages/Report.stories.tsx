@@ -36,7 +36,7 @@ function Report() {
       }
       footer={<Label size="xs" style={{ whiteSpace: 'normal' }}>Gridline Registry · invented figures · page generated Nov 16, 2026</Label>}
     >
-      <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16 }}>
+      <>
         <Prose>
           <h2>Summary</h2>
           <p>Quality improved for the third month in a row. The median score rose by 2.1 points, mostly because tessera and castor raised their coverage. Build time did not move and remains the weakest figure.</p>
@@ -44,8 +44,8 @@ function Report() {
         <ChartFrame title="Coverage against the target" description="Median across all packages" height={120}>
           <Gauge variant="linear" value={62.5} target={70} bands={bands} label="Median coverage" format={(value) => `${value}%`} />
         </ChartFrame>
-      </section>
-      <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16 }}>
+      </>
+      <>
         <Prose>
           <h2>Installs</h2>
           <p>Edge runtimes grew fastest, from 90k to 118k installs a week. Node remains two thirds of the total.</p>
@@ -53,14 +53,14 @@ function Report() {
         <ChartFrame title="Weekly installs" description="Thousands, by runtime" legend={runtimeSeries} height={240}>
           <AreaChart data={installs} xKey="month" series={runtimeSeries} stacked yFormat={(value) => `${value}k`} />
         </ChartFrame>
-      </section>
-      <section style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16 }}>
+      </>
+      <>
         <Prose>
           <h2>Packages</h2>
           <p>Three packages are below the 50% floor and need a plan before the next review.</p>
         </Prose>
         <DataTable columns={columns} rows={leaderboard} rowKey={(row) => row.name} ranked defaultSort={{ key: 'score', direction: 'desc' }} />
-      </section>
+      </>
     </ReportTemplate>
   );
 }

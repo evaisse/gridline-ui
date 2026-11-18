@@ -85,7 +85,7 @@ function Monitoring() {
             </>
           }
           aside={
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16, padding: 16 }}>
+            <>
               <Trace title="Incidents and events" steps={incidents} />
               <div style={{ display: 'grid', gap: 8 }}>
                 <Label>Node load</Label>
@@ -97,7 +97,7 @@ function Monitoring() {
                   </div>
                 ))}
               </div>
-            </div>
+            </>
           }
         >
           <DataTable columns={columns} rows={services} rowKey={(row) => `${row.name}-${row.region}`} defaultSort={{ key: 'errors', direction: 'desc' }} caption="Services · click a column to sort" />

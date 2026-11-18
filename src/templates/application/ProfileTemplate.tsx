@@ -22,9 +22,9 @@ export function ProfileTemplate({ header, facts, tabs, children, className }: Pr
       <div className={cx('gl-profile__body', facts != null && 'gl-profile__body--facts')}>
         <main className="gl-profile__main">
           {tabs != null && <div className="gl-profile__tabs">{tabs}</div>}
-          <div className="gl-profile__content">{children}</div>
+          <div className="gl-profile__content gl-region">{children}</div>
         </main>
-        {facts != null && <aside className="gl-profile__facts" aria-label="Facts">{facts}</aside>}
+        {facts != null && <aside className="gl-profile__facts gl-region" aria-label="Facts">{facts}</aside>}
       </div>
     </div>
   );

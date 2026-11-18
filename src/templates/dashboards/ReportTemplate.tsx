@@ -24,7 +24,7 @@ export function ReportTemplate({ header, actions, summary, children, footer, cla
       <article className="gl-report__page">
         <header className="gl-report__header">{header}</header>
         {summary != null && <section className="gl-report__summary" aria-label="Summary">{summary}</section>}
-        <main className="gl-report__body">{children}</main>
+        <main className="gl-report__body gl-region">{children}</main>
         {footer != null && <footer className="gl-report__footer">{footer}</footer>}
       </article>
     </div>

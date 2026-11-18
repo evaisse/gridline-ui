@@ -32,3 +32,44 @@ body {
     transparent 1px 6px
   );
 }
+
+/* No bare ground. A region is a cell that declares its padding in --gl-cell-y / --gl-cell-x.
+   A framed block placed directly in a region does not float inside that padding: it fills the
+   region edge to edge and shares the region's rules, so there is never a gap around a box and
+   never a double line. Text keeps the padding; --gl-measure caps how wide its lines run. */
+.gl-region { --gl-cell-y: var(--gl-space-5); --gl-cell-x: var(--gl-space-5); }
+:where(.gl-region) > * { max-width: var(--gl-measure, none); }
+.gl-region > :is(.gl-card, .gl-chart, .gl-table, .gl-data-table, .gl-codeblock, .gl-diff, .gl-accordion, .gl-trace, .gl-tree,
+  .gl-kanban, .gl-activity-feed, .gl-comment-thread, .gl-cart, .gl-scheduler, .gl-gantt, .gl-spreadsheet, .gl-file-manager,
+  .gl-toc, .gl-sources, .gl-steps, .gl-tabs, .gl-item-group, .gl-empty, .gl-property-grid, .gl-query-builder, .gl-pricing,
+  .gl-stat-group, .gl-spec-sheet, .gl-score-board, .gl-tree-table, .gl-pivot-grid, .gl-ribbon, .gl-resizable, .gl-pdf, .gl-grid, .gl-tiles, .gl-toolbar) {
+  max-width: none;
+  margin-inline: calc(-1 * var(--gl-cell-x));
+  border-left-width: 0;
+  border-right-width: 0;
+  border-radius: 0;
+}
+.gl-region > :is(.gl-card, .gl-chart, .gl-table, .gl-data-table, .gl-codeblock, .gl-diff, .gl-accordion, .gl-trace, .gl-tree,
+  .gl-kanban, .gl-activity-feed, .gl-comment-thread, .gl-cart, .gl-scheduler, .gl-gantt, .gl-spreadsheet, .gl-file-manager,
+  .gl-toc, .gl-sources, .gl-steps, .gl-tabs, .gl-item-group, .gl-empty, .gl-property-grid, .gl-query-builder, .gl-pricing,
+  .gl-stat-group, .gl-spec-sheet, .gl-score-board, .gl-tree-table, .gl-pivot-grid, .gl-ribbon, .gl-resizable, .gl-pdf, .gl-grid, .gl-tiles, .gl-toolbar):first-child {
+  margin-top: calc(-1 * var(--gl-cell-y));
+  border-top-width: 0;
+}
+.gl-region > :is(.gl-card, .gl-chart, .gl-table, .gl-data-table, .gl-codeblock, .gl-diff, .gl-accordion, .gl-trace, .gl-tree,
+  .gl-kanban, .gl-activity-feed, .gl-comment-thread, .gl-cart, .gl-scheduler, .gl-gantt, .gl-spreadsheet, .gl-file-manager,
+  .gl-toc, .gl-sources, .gl-steps, .gl-tabs, .gl-item-group, .gl-empty, .gl-property-grid, .gl-query-builder, .gl-pricing,
+  .gl-stat-group, .gl-spec-sheet, .gl-score-board, .gl-tree-table, .gl-pivot-grid, .gl-ribbon, .gl-resizable, .gl-pdf, .gl-grid, .gl-tiles, .gl-toolbar):last-child {
+  margin-bottom: calc(-1 * var(--gl-cell-y));
+  border-bottom-width: 0;
+}
+/* Tables inside a flush block: the outer frame goes, the first and last columns line up with the region's text. */
+.gl-region > :is(.gl-data-table, .gl-tree-table, .gl-pivot-grid) .gl-table { border-left-width: 0; border-right-width: 0; }
+.gl-region > :is(.gl-data-table, .gl-tree-table, .gl-pivot-grid):last-child .gl-table { border-bottom-width: 0; }
+.gl-region > :is(.gl-table, .gl-data-table, .gl-tree-table, .gl-pivot-grid) :is(th, td):first-child { padding-left: var(--gl-cell-x); }
+.gl-region > :is(.gl-table, .gl-data-table, .gl-tree-table, .gl-pivot-grid) :is(th, td):last-child { padding-right: var(--gl-cell-x); }
+.gl-region > .gl-data-table .gl-table__caption { padding-inline: var(--gl-cell-x); }
+
+/* Tiles: blocks side by side with no gap; each draws its right and bottom rule into the 1px seam. */
+.gl-tiles { gap: 1px; overflow: hidden; }
+.gl-tiles > :nth-child(n) { border: 0; border-radius: 0; box-shadow: 1px 0 0 0 var(--gl-rule-strong), 0 1px 0 0 var(--gl-rule-strong), 1px 1px 0 0 var(--gl-rule-strong); }

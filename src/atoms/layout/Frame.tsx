@@ -14,5 +14,5 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
 
 /** A horizontal band inside a Frame. Sections touch: a rule separates them, not space. */
 export function Section({ pad = 'md', tone = 'paper', className, ...rest }: SectionProps) {
-  return <section className={cx('gl-section', `gl-section--pad-${pad}`, `gl-section--${tone}`, className)} {...rest} />;
+  return <section className={cx('gl-section gl-region', `gl-section--pad-${pad}`, `gl-section--${tone}`, className)} {...rest} />;
 }

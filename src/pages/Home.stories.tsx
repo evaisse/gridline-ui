@@ -60,7 +60,7 @@ function Home() {
         </>
       }
       heroAside={
-        <div style={{ display: 'grid', gap: 16 }}>
+        <div className="gl-tiles" style={{ display: 'grid', gridTemplateRows: 'auto 1fr' }}>
           <CodeBlock title="terminal" code={'npm install --global gridline\ngridline measure ./my-package\ngridline compare tessera castor'} />
           <ChartFrame title="Weekly installs" description="Thousands, by runtime" legend={runtimeSeries} height={180}>
             <AreaChart data={installs} xKey="month" series={runtimeSeries} stacked showYAxis={false} />
@@ -143,14 +143,14 @@ function Home() {
       </Section>
 
       <Section pad="md">
-        <div style={{ display: 'grid', gap: 16, maxWidth: 720 }}>
-          <Heading level={2} size="xl">Questions</Heading>
-          <Accordion type="single" collapsible defaultValue="a">
+        <Heading level={2} size="xl">Questions</Heading>
+      </Section>
+      <Section pad="none">
+        <Accordion type="single" collapsible defaultValue="a">
             <AccordionItem value="a"><AccordionTrigger>How is coverage measured?</AccordionTrigger><AccordionContent>Every release runs the full suite on the same machine, three times. The median is reported.</AccordionContent></AccordionItem>
             <AccordionItem value="b"><AccordionTrigger>Can I measure private packages?</AccordionTrigger><AccordionContent>Yes, on the Team plan and above. Sources never leave the runner.</AccordionContent></AccordionItem>
             <AccordionItem value="c"><AccordionTrigger>What counts toward size?</AccordionTrigger><AccordionContent>The minified, compressed entry point and everything it imports.</AccordionContent></AccordionItem>
           </Accordion>
-        </div>
       </Section>
 
       <Section pad="lg" tone="invert">

@@ -1,12 +1,26 @@
-.gl-placeholder { max-width: 760px; border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
-.gl-placeholder__head { padding: var(--gl-space-5); border-bottom: 1px solid var(--gl-rule-strong); }
-.gl-placeholder__title { display: inline-grid; justify-items: start; gap: var(--gl-space-2); padding: var(--gl-space-4); border: 1px solid var(--gl-rule-strong); background: var(--gl-paper); }
-.gl-placeholder__body { display: grid; gap: var(--gl-space-4); padding: var(--gl-space-5); }
-.gl-placeholder__section { display: grid; gap: var(--gl-space-2); }
-.gl-placeholder__refs { margin: 0; padding: 0; list-style: none; border: 1px solid var(--gl-rule-strong); }
-.gl-placeholder__refs:empty { display: none; }
-.gl-placeholder__refs > li { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: center; gap: var(--gl-space-3); min-height: var(--gl-row-sm); padding: 0 var(--gl-space-3); border-bottom: 1px solid var(--gl-rule); }
-.gl-placeholder__refs > li:last-child { border-bottom: 0; }
+/* Catalogue pages. Nothing sits on bare ground: each block is a cell that touches the frame,
+   with one padding for all cells (var(--gl-space-5) across). */
+.gl-catalogue-page { display: flex; flex-direction: column; min-width: 0; background: var(--gl-paper); }
+.gl-catalogue-page > * { min-width: 0; border-bottom: 1px solid var(--gl-rule); }
+.gl-catalogue-page > .gl-catalogue-page__head, .gl-catalogue-page > :last-child { border-bottom-color: var(--gl-rule-strong); }
+.gl-catalogue-page__head { display: grid; gap: var(--gl-space-2); padding: var(--gl-space-6) var(--gl-space-5); background: var(--gl-surface-1); }
+.gl-catalogue-page__head > * { max-width: 72ch; }
+.gl-catalogue-page__cell { display: grid; gap: var(--gl-space-2); padding: var(--gl-space-4) var(--gl-space-5); }
+.gl-catalogue-page__band { display: flex; align-items: center; min-height: var(--gl-row); padding: 0 var(--gl-space-5); background: var(--gl-surface-1); }
+/* A table that fills its cell: the cell draws the frame, the table only its inner rules. */
+.gl-catalogue-page__flush .gl-table { border: 0; }
+.gl-catalogue-page__flush .gl-table :is(th, td):first-child { padding-left: var(--gl-space-5); }
+.gl-catalogue-page__flush .gl-table :is(th, td):last-child { padding-right: var(--gl-space-5); }
+.gl-catalogue-page__list { margin: 0; padding: 0; list-style: none; }
+.gl-catalogue-page__list > li { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: center; gap: var(--gl-space-3); min-height: var(--gl-row-sm); padding: 0 var(--gl-space-5); }
+.gl-catalogue-page__list > li + li { border-top: 1px solid var(--gl-rule); }
+.gl-catalogue-page > .gl-key-value, .gl-catalogue-page > .gl-kv { padding-left: var(--gl-space-5); padding-right: var(--gl-space-5); }
+@media (max-width: 640px) {
+  .gl-catalogue-page__head { padding: var(--gl-space-5) var(--gl-space-4); }
+  .gl-catalogue-page__cell, .gl-catalogue-page__band, .gl-catalogue-page__list > li { padding-left: var(--gl-space-4); padding-right: var(--gl-space-4); }
+  .gl-catalogue-page__list > li { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: var(--gl-space-2); padding-bottom: var(--gl-space-2); }
+}
+
 
 .gl-catalogue__chips { display: inline-flex; flex-wrap: wrap; gap: var(--gl-space-1); }
 .gl-catalogue__chip { display: inline-flex; align-items: center; height: 20px; padding: 0 6px; border: 1px solid var(--gl-rule-strong); border-radius: var(--gl-radius); background: var(--gl-paper); color: var(--gl-ink); font-family: var(--gl-font-mono); font-size: var(--gl-text-xs); letter-spacing: 0.02em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; }
@@ -19,5 +33,5 @@
 .gl-catalogue__name { font-family: var(--gl-font-display); font-size: 19px; line-height: 1.25; color: var(--gl-ink); text-decoration: none; }
 a.gl-catalogue__name:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .gl-catalogue__refs { display: flex; flex-wrap: wrap; gap: var(--gl-space-1) var(--gl-space-3); font-size: 12px; }
-.gl-catalogue__group { padding: var(--gl-space-3) var(--gl-space-4); border-bottom: 1px solid var(--gl-rule); }
+.gl-catalogue__group { padding: var(--gl-space-4) var(--gl-space-5); }
 .gl-catalogue__group > .gl-catalogue__refs { margin-top: var(--gl-space-2); }

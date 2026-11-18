@@ -1,9 +1,9 @@
 .gl-master-detail { display: grid; grid-template-columns: minmax(280px, 3fr) 5fr; min-height: 100vh; border-bottom: 1px solid var(--gl-rule-strong); }
 .gl-master-detail__master { border-right: 1px solid var(--gl-rule-strong); background: var(--gl-surface-1); min-width: 0; }
 .gl-master-detail__detail { min-width: 0; }
-.gl-master-detail__content { display: grid; gap: var(--gl-space-6); padding: var(--gl-space-6); max-width: 800px; }
+.gl-master-detail__content { display: grid; gap: var(--gl-space-6); --gl-cell-y: var(--gl-space-6); --gl-cell-x: var(--gl-space-6); padding: var(--gl-cell-y) var(--gl-cell-x); max-width: 800px; }
 @media (max-width: 760px) {
   .gl-master-detail { grid-template-columns: 1fr; }
   .gl-master-detail__master { border-right: 0; border-bottom: 1px solid var(--gl-rule-strong); max-height: 280px; overflow: auto; }
-  .gl-master-detail__content { padding: var(--gl-space-5) var(--gl-space-4); }
+  .gl-master-detail__content { --gl-cell-y: var(--gl-space-5); --gl-cell-x: var(--gl-space-4); padding: var(--gl-cell-y) var(--gl-cell-x); }
 }

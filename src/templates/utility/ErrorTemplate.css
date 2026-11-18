@@ -4,3 +4,8 @@
 .gl-error__text { display: grid; gap: var(--gl-space-2); padding: var(--gl-space-5); }
 .gl-error__actions { display: flex; flex-wrap: wrap; gap: var(--gl-space-2); padding: 0 var(--gl-space-5) var(--gl-space-5); }
 .gl-error__detail { padding: var(--gl-space-3) var(--gl-space-5); border-top: 1px solid var(--gl-rule); background: var(--gl-surface-1); overflow: hidden; }
+@media (max-width: 480px) {
+  /* On a phone the box fills the page instead of floating on the texture. */
+  .gl-error { padding: 0; place-items: stretch; }
+  .gl-error__box { max-width: none; border: 0; }
+}

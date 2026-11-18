@@ -24,8 +24,8 @@ export function ArticleTemplate({ nav, header, children, aside, footer, classNam
       {nav != null && <div className="gl-article__nav">{nav}</div>}
       <header className="gl-article__header">{header}</header>
       <div className={cx('gl-article__body', aside != null && 'gl-article__body--aside')}>
-        <main className="gl-article__main">{children}</main>
-        {aside != null && <aside className="gl-article__aside" aria-label="Related">{aside}</aside>}
+        <main className="gl-article__main gl-region">{children}</main>
+        {aside != null && <aside className="gl-article__aside gl-region" aria-label="Related">{aside}</aside>}
       </div>
       {footer != null && <footer className="gl-article__footer">{footer}</footer>}
     </Frame>

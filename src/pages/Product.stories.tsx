@@ -35,12 +35,12 @@ function ProductPage() {
         </Prose>
       }
       related={
-        <div style={{ display: 'grid', gap: 12 }}>
+        <>
           <Label tone="ink">Goes with it</Label>
           <Grid columns="repeat(auto-fill, minmax(220px, 1fr))">
             {related.map((product) => <Cell key={product.id} pad="none"><ProductCard name={product.name} kind={product.kind} price={product.price} rating={product.rating} reviews={product.reviews} tag={product.tag} action={<Button size="sm" icon={<PlusIcon />}>Add</Button>} /></Cell>)}
           </Grid>
-        </div>
+        </>
       }
     >
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: 16 }}>
